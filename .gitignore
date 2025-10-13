@@ -1,0 +1,61 @@
+# =========================
+# Xcode / Swift / iOS
+# =========================
+
+# Build products
+build/
+DerivedData/
+
+# User-specific Xcode settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Archives
+*.xcarchive
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftPM binary artifacts
+.artifacts/
+
+# Others
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# macOS metadata
+.DS_Store
+
+# User interface state (Xcode)
+*.xcuserstate
+
+# Local environment / config files
+.env
