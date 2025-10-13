@@ -58,7 +58,6 @@ private extension WomenCarePointDetailHeaderSectionView {
                 Spacer()
             }
             .frame(maxWidth: .infinity)
-            .padding(.top, 60)
             .padding(.horizontal)
         }
         .frame(maxWidth: .infinity)
