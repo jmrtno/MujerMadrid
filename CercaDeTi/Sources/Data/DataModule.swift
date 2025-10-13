@@ -1,0 +1,27 @@
+//
+//  DataModule.swift
+//  MujerMadrid
+//
+//  Created by Javier Martin on 16/7/25.
+//
+
+import FDependencyInjector
+
+final class DataModule: ModuleContract {
+    static func inject() {
+        DependencyContainer.shared.register((any WomenCarePointRepositoryContract).self,
+                                            WomenCarePointRepository.self)
+        DependencyContainer.shared.register((any WomenCarePointHomeRemoteDataSourceContract).self,
+                                            WomenCarePointHomeRemoteDataSource.self)
+        DependencyContainer.shared.register((any WomenCarePointDetailRemoteDataSourceContract).self,
+                                            WomenCarePointDetailRemoteDataSource.self)
+        DependencyContainer.shared.register((any WomenCarePointDetailLocalDataSourceContract).self,
+                                            WomenCarePointDetailLocalDataSource.self)
+        DependencyContainer.shared.register((any WomenCarePointHomeLocalDataSourceContract).self,
+                                            WomenCarePointHomeLocalDataSource.self)
+        DependencyContainer.shared.register((any WomenCarePointMapperContract).self,
+                                            WomenCarePointMapper.self)
+        DependencyContainer.shared.register((any WomenCarePointAPIContract).self,
+                                            WomenCarePointAPI.self)
+    }
+}

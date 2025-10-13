@@ -1,0 +1,53 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FPresentation
+import Combine
+import FDependencyInjector
+import FNavigation
+@_exported import FPresentation
+import Foundation
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class UniqueOperation<T> {
+  public init()
+  public func getPublisher() -> Combine.AnyPublisher<Swift.Result<T, any Swift.Error>, Swift.Never>
+  #if compiler(>=5.3) && $AsyncAwait
+  public func execute(completion: @escaping () async throws -> T)
+  #endif
+  public func transformedPublisher<U>(defaultValue: U? = nil) -> Combine.AnyPublisher<U?, Swift.Never>
+  @objc deinit
+}
+public protocol SectionMapperContract : FDependencyInjector.Instanciable {
+  associatedtype RenderModel
+  associatedtype ViewModel
+  associatedtype ObservedModel
+  var viewModel: Self.ViewModel { get set }
+  func getObservedPublisher(_ viewModel: Self.ViewModel) -> Combine.AnyPublisher<Self.ObservedModel, Swift.Never>
+  func map(_ model: Self.ObservedModel) -> Self.RenderModel
+}
+public protocol ModularSection : SwiftUI.View {
+  associatedtype ViewModel
+  associatedtype RenderModel
+  var viewModel: Self.ViewModel { get }
+  var publisher: Combine.AnyPublisher<Self.RenderModel, Swift.Never> { get }
+  init(publisher: Combine.AnyPublisher<Self.RenderModel, Swift.Never>, viewModel: Self.ViewModel)
+}
+public protocol NavigationBuilder : FDependencyInjector.Instanciable {
+  func goBack(animated: Swift.Bool, screen: (any FNavigation.NavigationInfo)?, _ completion: (() -> Swift.Void)?)
+}
+public protocol ViewModelContract : FDependencyInjector.Instanciable {
+}
+@_hasMissingDesignatedInitializers public class BuilderClasses {
+  public func build<T, W>(of sectionType: W.Type, of mapperType: T.Type, viewModel: T.ViewModel) -> W where T : FPresentation.SectionMapperContract, W : FPresentation.ModularSection
+  @objc deinit
+}
+@propertyWrapper public struct Dependency<T> {
+  public var wrappedValue: T {
+    get
+    set
+  }
+  public init()
+}

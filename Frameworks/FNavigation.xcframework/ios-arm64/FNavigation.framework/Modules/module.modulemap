@@ -1,0 +1,6 @@
+framework module FNavigation {
+  umbrella header "FNavigation.h"
+  export *
+
+  module * { export * }
+}

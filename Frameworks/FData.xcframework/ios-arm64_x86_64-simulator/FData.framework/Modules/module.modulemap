@@ -1,0 +1,6 @@
+framework module FData {
+  umbrella header "FData.h"
+  export *
+
+  module * { export * }
+}

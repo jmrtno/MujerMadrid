@@ -1,0 +1,6 @@
+framework module FDependencyInjector {
+  umbrella header "FDependencyInjector.h"
+  export *
+
+  module * { export * }
+}

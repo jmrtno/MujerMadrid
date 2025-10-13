@@ -1,0 +1,6 @@
+framework module FPresentation {
+  umbrella header "FPresentation.h"
+  export *
+
+  module * { export * }
+}

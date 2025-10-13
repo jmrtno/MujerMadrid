@@ -1,0 +1,286 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios18.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FComponents
+import Combine
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension FComponents.FCCard {
+  public struct Configuration {
+    public var doubleCard: Swift.Bool
+    public var maxWidth: Swift.Bool
+    public var contentAlignment: SwiftUICore.Alignment
+    public var topLeadingIcon: Swift.String?
+    public var topLeadingLabel: Swift.String?
+    public var topTrailingIcon: Swift.String?
+    public var topTrailingLabel: Swift.String?
+    public init(doubleCard: Swift.Bool, maxWidth: Swift.Bool, contentAlignment: SwiftUICore.Alignment = .center, topLeadingIcon: Swift.String? = nil, topLeadingLabel: Swift.String? = nil, topTrailingIcon: Swift.String? = nil, topTrailingLabel: Swift.String? = nil)
+  }
+  public struct Style {
+    public init(doubleCardBgColor: SwiftUICore.Color = .clear, innerCardBgColor: SwiftUICore.Color, doubleCardBorderColor: SwiftUICore.Color = .clear, innerCardBorderColor: SwiftUICore.Color, topLeadingContentColor: SwiftUICore.Color = .black, topTrailingContentColor: SwiftUICore.Color = .black)
+  }
+  public struct Interaction {
+    public var onTap: () -> Swift.Void
+    public init(onTap: @escaping () -> Swift.Void)
+  }
+  final public class ViewModel : Foundation.ObservableObject {
+    @Combine.Published @_projectedValueProperty($configuration) final public var configuration: FComponents.FCCard<Content>.Configuration {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $configuration: Combine.Published<FComponents.FCCard<Content>.Configuration>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($style) final public var style: FComponents.FCCard<Content>.Style {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $style: Combine.Published<FComponents.FCCard<Content>.Style>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($interaction) final public var interaction: FComponents.FCCard<Content>.Interaction {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $interaction: Combine.Published<FComponents.FCCard<Content>.Interaction>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    public init(configuration: FComponents.FCCard<Content>.Configuration, style: FComponents.FCCard<Content>.Style, interaction: FComponents.FCCard<Content>.Interaction)
+    public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+    @objc deinit
+  }
+}
+
+
+
+@_Concurrency.MainActor @preconcurrency public struct FCCard<Content> : SwiftUICore.View where Content : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(viewModel: FComponents.FCCard<Content>.ViewModel, @SwiftUICore.ViewBuilder content: () -> Content)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11FComponents6FCCardV4bodyQrvp", 0) __<Content>
+}
+extension FComponents.FCCard {
+  @_Concurrency.MainActor @preconcurrency public var mainContentView: some SwiftUICore.View {
+    get
+  }
+}
+
+@_Concurrency.MainActor @preconcurrency public struct FCButton : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(_ viewModel: FComponents.FCButton.ViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11FComponents8FCButtonV4bodyQrvp", 0) __
+}
+
+extension FComponents.FCButton {
+  public struct Configuration {
+    public var label: Swift.String?
+    public var leadingIcon: Swift.String?
+    public var trailingIcon: Swift.String?
+    public var maxWidth: Swift.Bool
+    public var invertCornerRadius: Swift.Bool
+    public init(label: Swift.String? = nil, leadingIcon: Swift.String? = nil, trailingIcon: Swift.String? = nil, maxWidth: Swift.Bool = false, invertCornerRadius: Swift.Bool = false)
+  }
+  public struct ViewState {
+    public static var enabled: FComponents.FCButton.ViewState {
+      get
+    }
+    public static var disabled: FComponents.FCButton.ViewState {
+      get
+    }
+  }
+  public struct Variant {
+    public let type: FComponents.FCButton.Variant.VariantType
+    public enum VariantType {
+      case regular(color: SwiftUICore.Color?)
+      case alternative(color: SwiftUICore.Color)
+      case link
+      case regularGradient(SwiftUICore.LinearGradient)
+      case alternativeGradient(SwiftUICore.LinearGradient)
+    }
+    public init(type: FComponents.FCButton.Variant.VariantType)
+    public static var regular: FComponents.FCButton.Variant {
+      get
+    }
+    public static var alternative: FComponents.FCButton.Variant {
+      get
+    }
+    public static var link: FComponents.FCButton.Variant {
+      get
+    }
+    public static func regularGradient(_ gradient: SwiftUICore.LinearGradient) -> FComponents.FCButton.Variant
+    public static func alternativeGradient(_ gradient: SwiftUICore.LinearGradient) -> FComponents.FCButton.Variant
+  }
+  public struct Style {
+    public init(textColor: SwiftUICore.Color, leadingIconColor: SwiftUICore.Color? = nil, trailingIconColor: SwiftUICore.Color? = nil)
+  }
+  public struct Size {
+    public static var small: FComponents.FCButton.Size {
+      get
+    }
+    public static var medium: FComponents.FCButton.Size {
+      get
+    }
+    public static var large: FComponents.FCButton.Size {
+      get
+    }
+  }
+  public struct Interaction {
+    public var onTap: () -> Swift.Void
+    public init(onTap: @escaping () -> Swift.Void)
+  }
+  final public class ViewModel : Combine.ObservableObject {
+    @Combine.Published @_projectedValueProperty($configuration) final public var configuration: FComponents.FCButton.Configuration {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $configuration: Combine.Published<FComponents.FCButton.Configuration>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($viewState) final public var viewState: FComponents.FCButton.ViewState {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $viewState: Combine.Published<FComponents.FCButton.ViewState>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($variant) final public var variant: FComponents.FCButton.Variant {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $variant: Combine.Published<FComponents.FCButton.Variant>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($style) final public var style: FComponents.FCButton.Style {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $style: Combine.Published<FComponents.FCButton.Style>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($size) final public var size: FComponents.FCButton.Size {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $size: Combine.Published<FComponents.FCButton.Size>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($interaction) final public var interaction: FComponents.FCButton.Interaction {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $interaction: Combine.Published<FComponents.FCButton.Interaction>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    public init(configuration: FComponents.FCButton.Configuration, viewState: FComponents.FCButton.ViewState, variant: FComponents.FCButton.Variant, style: FComponents.FCButton.Style, size: FComponents.FCButton.Size, interaction: FComponents.FCButton.Interaction)
+    public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+    @objc deinit
+  }
+}
+extension FComponents.FCTextField {
+  public struct Configuration {
+    public var placeholder: Swift.String?
+    public var icon: Swift.String?
+    public init(placeholder: Swift.String? = nil, icon: Swift.String? = nil)
+  }
+  public struct Variant {
+    public static var bordered: FComponents.FCTextField.Variant {
+      get
+    }
+    public static var plain: FComponents.FCTextField.Variant {
+      get
+    }
+    public static var basic: FComponents.FCTextField.Variant {
+      get
+    }
+  }
+  final public class ViewModel : Foundation.ObservableObject {
+    @Combine.Published @_projectedValueProperty($configuration) final public var configuration: FComponents.FCTextField.Configuration {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $configuration: Combine.Published<FComponents.FCTextField.Configuration>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    @Combine.Published @_projectedValueProperty($variant) final public var variant: FComponents.FCTextField.Variant {
+      get
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      set
+      @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+      _modify
+    }
+    final public var $variant: Combine.Published<FComponents.FCTextField.Variant>.Publisher {
+      get
+      @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+      set
+    }
+    public init(configuration: FComponents.FCTextField.Configuration, variant: FComponents.FCTextField.Variant)
+    public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+    @objc deinit
+  }
+}
+@_Concurrency.MainActor @preconcurrency public struct FCTextField : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(viewModel: FComponents.FCTextField.ViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11FComponents11FCTextFieldV4bodyQrvp", 0) __
+}
+
+extension FComponents.FCCard : Swift.Sendable {}
+extension FComponents.FCButton : Swift.Sendable {}
+extension FComponents.FCTextField : Swift.Sendable {}

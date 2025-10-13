@@ -1,0 +1,1005 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FPresentation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "FPresentation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UniqueOperation",
+        "printedName": "UniqueOperation",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UniqueOperation",
+                "printedName": "FPresentation.UniqueOperation<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13FPresentation15UniqueOperationC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13FPresentation15UniqueOperationCACyxGycfc",
+            "mangledName": "$s13FPresentation15UniqueOperationCACyxGycfc",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getPublisher",
+            "printedName": "getPublisher()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<Swift.Result<τ_0_0, any Swift.Error>, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<τ_0_0, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation15UniqueOperationC12getPublisher7Combine03AnyE0Vys6ResultOyxs5Error_pGs5NeverOGyF",
+            "mangledName": "$s13FPresentation15UniqueOperationC12getPublisher7Combine03AnyE0Vys6ResultOyxs5Error_pGs5NeverOGyF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() async throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation15UniqueOperationC7execute10completionyxyYaKc_tF",
+            "mangledName": "$s13FPresentation15UniqueOperationC7execute10completionyxyYaKc_tF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "transformedPublisher",
+            "printedName": "transformedPublisher(defaultValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_1_0?, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_1_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_1_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation15UniqueOperationC20transformedPublisher12defaultValue7Combine03AnyE0Vyqd__Sgs5NeverOGAI_tlF",
+            "mangledName": "$s13FPresentation15UniqueOperationC20transformedPublisher12defaultValue7Combine03AnyE0Vyqd__Sgs5NeverOGAI_tlF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0, τ_1_0>",
+            "sugared_genericSig": "<T, U>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13FPresentation15UniqueOperationC",
+        "mangledName": "$s13FPresentation15UniqueOperationC",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<T>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "FPresentation"
+      },
+      {
+        "kind": "Import",
+        "name": "FDependencyInjector",
+        "printedName": "FDependencyInjector",
+        "declKind": "Import",
+        "moduleName": "FPresentation"
+      },
+      {
+        "kind": "Import",
+        "name": "FNavigation",
+        "printedName": "FNavigation",
+        "declKind": "Import",
+        "moduleName": "FPresentation"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FPresentation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SectionMapperContract",
+        "printedName": "SectionMapperContract",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "RenderModel",
+            "printedName": "RenderModel",
+            "declKind": "AssociatedType",
+            "usr": "s:13FPresentation21SectionMapperContractP11RenderModelQa",
+            "mangledName": "$s13FPresentation21SectionMapperContractP11RenderModelQa",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "AssociatedType",
+            "name": "ViewModel",
+            "printedName": "ViewModel",
+            "declKind": "AssociatedType",
+            "usr": "s:13FPresentation21SectionMapperContractP9ViewModelQa",
+            "mangledName": "$s13FPresentation21SectionMapperContractP9ViewModelQa",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "AssociatedType",
+            "name": "ObservedModel",
+            "printedName": "ObservedModel",
+            "declKind": "AssociatedType",
+            "usr": "s:13FPresentation21SectionMapperContractP13ObservedModelQa",
+            "mangledName": "$s13FPresentation21SectionMapperContractP13ObservedModelQa",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewModel",
+            "printedName": "viewModel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ViewModel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvp",
+            "mangledName": "$s13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvp",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.ViewModel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvg",
+                "mangledName": "$s13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvg",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.SectionMapperContract>",
+                "sugared_genericSig": "<Self where Self : FPresentation.SectionMapperContract>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.ViewModel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvs",
+                "mangledName": "$s13FPresentation21SectionMapperContractP9viewModel04ViewF0Qzvs",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.SectionMapperContract>",
+                "sugared_genericSig": "<Self where Self : FPresentation.SectionMapperContract>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation21SectionMapperContractP9viewModel04ViewF0QzvM",
+                "mangledName": "$s13FPresentation21SectionMapperContractP9viewModel04ViewF0QzvM",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.SectionMapperContract>",
+                "sugared_genericSig": "<Self where Self : FPresentation.SectionMapperContract>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getObservedPublisher",
+            "printedName": "getObservedPublisher(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_0_0.ObservedModel, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.ObservedModel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ViewModel"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation21SectionMapperContractP20getObservedPublishery7Combine03AnyG0Vy0F5ModelQzs5NeverOG04ViewJ0QzF",
+            "mangledName": "$s13FPresentation21SectionMapperContractP20getObservedPublishery7Combine03AnyG0Vy0F5ModelQzs5NeverOG04ViewJ0QzF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.SectionMapperContract>",
+            "sugared_genericSig": "<Self where Self : FPresentation.SectionMapperContract>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "map",
+            "printedName": "map(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.RenderModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ObservedModel"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation21SectionMapperContractP3mapy11RenderModelQz08ObservedG0QzF",
+            "mangledName": "$s13FPresentation21SectionMapperContractP3mapy11RenderModelQz08ObservedG0QzF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.SectionMapperContract>",
+            "sugared_genericSig": "<Self where Self : FPresentation.SectionMapperContract>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13FPresentation21SectionMapperContractP",
+        "mangledName": "$s13FPresentation21SectionMapperContractP",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable>",
+        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Instanciable",
+            "printedName": "Instanciable",
+            "usr": "s:19FDependencyInjector12InstanciableP",
+            "mangledName": "$s19FDependencyInjector12InstanciableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ModularSection",
+        "printedName": "ModularSection",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "ViewModel",
+            "printedName": "ViewModel",
+            "declKind": "AssociatedType",
+            "usr": "s:13FPresentation14ModularSectionP9ViewModelQa",
+            "mangledName": "$s13FPresentation14ModularSectionP9ViewModelQa",
+            "moduleName": "FPresentation",
+            "protocolReq": true
+          },
+          {
+            "kind": "AssociatedType",
+            "name": "RenderModel",
+            "printedName": "RenderModel",
+            "declKind": "AssociatedType",
+            "usr": "s:13FPresentation14ModularSectionP11RenderModelQa",
+            "mangledName": "$s13FPresentation14ModularSectionP11RenderModelQa",
+            "moduleName": "FPresentation",
+            "protocolReq": true
+          },
+          {
+            "kind": "Var",
+            "name": "viewModel",
+            "printedName": "viewModel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ViewModel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FPresentation14ModularSectionP9viewModel04ViewE0Qzvp",
+            "mangledName": "$s13FPresentation14ModularSectionP9viewModel04ViewE0Qzvp",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.ViewModel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation14ModularSectionP9viewModel04ViewE0Qzvg",
+                "mangledName": "$s13FPresentation14ModularSectionP9viewModel04ViewE0Qzvg",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.ModularSection>",
+                "sugared_genericSig": "<Self where Self : FPresentation.ModularSection>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "publisher",
+            "printedName": "publisher",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_0_0.RenderModel, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.RenderModel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FPresentation14ModularSectionP9publisher7Combine12AnyPublisherVy11RenderModelQzs5NeverOGvp",
+            "mangledName": "$s13FPresentation14ModularSectionP9publisher7Combine12AnyPublisherVy11RenderModelQzs5NeverOGvp",
+            "moduleName": "FPresentation",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<τ_0_0.RenderModel, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.RenderModel"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation14ModularSectionP9publisher7Combine12AnyPublisherVy11RenderModelQzs5NeverOGvg",
+                "mangledName": "$s13FPresentation14ModularSectionP9publisher7Combine12AnyPublisherVy11RenderModelQzs5NeverOGvg",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.ModularSection>",
+                "sugared_genericSig": "<Self where Self : FPresentation.ModularSection>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(publisher:viewModel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_0_0.RenderModel, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.RenderModel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ViewModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13FPresentation14ModularSectionP9publisher9viewModelx7Combine12AnyPublisherVy06RenderF0Qzs5NeverOG_04ViewF0Qztcfc",
+            "mangledName": "$s13FPresentation14ModularSectionP9publisher9viewModelx7Combine12AnyPublisherVy06RenderF0Qzs5NeverOG_04ViewF0Qztcfc",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.ModularSection>",
+            "sugared_genericSig": "<Self where Self : FPresentation.ModularSection>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13FPresentation14ModularSectionP",
+        "mangledName": "$s13FPresentation14ModularSectionP",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0 : SwiftUI.View>",
+        "sugared_genericSig": "<Self : SwiftUI.View>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationBuilder",
+        "printedName": "NavigationBuilder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "goBack",
+            "printedName": "goBack(animated:screen:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any FNavigation.NavigationInfo)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationInfo",
+                    "printedName": "any FNavigation.NavigationInfo",
+                    "usr": "s:11FNavigation14NavigationInfoP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation17NavigationBuilderP6goBack8animated6screen_ySb_11FNavigation0B4Info_pSgyycSgtF",
+            "mangledName": "$s13FPresentation17NavigationBuilderP6goBack8animated6screen_ySb_11FNavigation0B4Info_pSgyycSgtF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0 where τ_0_0 : FPresentation.NavigationBuilder>",
+            "sugared_genericSig": "<Self where Self : FPresentation.NavigationBuilder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13FPresentation17NavigationBuilderP",
+        "mangledName": "$s13FPresentation17NavigationBuilderP",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable>",
+        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Instanciable",
+            "printedName": "Instanciable",
+            "usr": "s:19FDependencyInjector12InstanciableP",
+            "mangledName": "$s19FDependencyInjector12InstanciableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ViewModelContract",
+        "printedName": "ViewModelContract",
+        "declKind": "Protocol",
+        "usr": "s:13FPresentation17ViewModelContractP",
+        "mangledName": "$s13FPresentation17ViewModelContractP",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable>",
+        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Instanciable",
+            "printedName": "Instanciable",
+            "usr": "s:19FDependencyInjector12InstanciableP",
+            "mangledName": "$s19FDependencyInjector12InstanciableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BuilderClasses",
+        "printedName": "BuilderClasses",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build(of:of:viewModel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_1"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_1.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.ViewModel"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FPresentation14BuilderClassesC5build2ofAE9viewModelq_q_m_xm04ViewG0QztAA21SectionMapperContractRzAA07ModularI0R_r0_lF",
+            "mangledName": "$s13FPresentation14BuilderClassesC5build2ofAE9viewModelq_q_m_xm04ViewG0QztAA21SectionMapperContractRzAA07ModularI0R_r0_lF",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : FPresentation.SectionMapperContract, τ_0_1 : FPresentation.ModularSection>",
+            "sugared_genericSig": "<T, W where T : FPresentation.SectionMapperContract, W : FPresentation.ModularSection>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13FPresentation14BuilderClassesC",
+        "mangledName": "$s13FPresentation14BuilderClassesC",
+        "moduleName": "FPresentation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dependency",
+        "printedName": "Dependency",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FPresentation10DependencyV12wrappedValuexvp",
+            "mangledName": "$s13FPresentation10DependencyV12wrappedValuexvp",
+            "moduleName": "FPresentation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation10DependencyV12wrappedValuexvg",
+                "mangledName": "$s13FPresentation10DependencyV12wrappedValuexvg",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation10DependencyV12wrappedValuexvs",
+                "mangledName": "$s13FPresentation10DependencyV12wrappedValuexvs",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FPresentation10DependencyV12wrappedValuexvM",
+                "mangledName": "$s13FPresentation10DependencyV12wrappedValuexvM",
+                "moduleName": "FPresentation",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dependency",
+                "printedName": "FPresentation.Dependency<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13FPresentation10DependencyV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13FPresentation10DependencyVACyxGycfc",
+            "mangledName": "$s13FPresentation10DependencyVACyxGycfc",
+            "moduleName": "FPresentation",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13FPresentation10DependencyV",
+        "mangledName": "$s13FPresentation10DependencyV",
+        "moduleName": "FPresentation",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<T>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FPresentation\/FPresentation\/UniqueOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 108,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

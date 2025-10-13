@@ -1,0 +1,2055 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "FDependencyInjector",
+        "printedName": "FDependencyInjector",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Router",
+        "printedName": "Router",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Router",
+                "printedName": "FNavigation.Router",
+                "usr": "s:11FNavigation6RouterC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC6sharedACvpZ",
+            "mangledName": "$s11FNavigation6RouterC6sharedACvpZ",
+            "moduleName": "FNavigation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Router",
+                    "printedName": "FNavigation.Router",
+                    "usr": "s:11FNavigation6RouterC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC6sharedACvgZ",
+                "mangledName": "$s11FNavigation6RouterC6sharedACvgZ",
+                "moduleName": "FNavigation",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentView",
+            "printedName": "currentView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.AnyView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyView",
+                    "printedName": "SwiftUI.AnyView",
+                    "usr": "s:7SwiftUI7AnyViewV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvp",
+            "mangledName": "$s11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvp",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.AnyView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyView",
+                        "printedName": "SwiftUI.AnyView",
+                        "usr": "s:7SwiftUI7AnyViewV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvg",
+                "mangledName": "$s11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.AnyView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyView",
+                        "printedName": "SwiftUI.AnyView",
+                        "usr": "s:7SwiftUI7AnyViewV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvs",
+                "mangledName": "$s11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvM",
+                "mangledName": "$s11FNavigation6RouterC11currentView7SwiftUI03AnyD0VSgvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$currentView",
+            "printedName": "$currentView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Optional<SwiftUI.AnyView>>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvp",
+            "mangledName": "$s11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvp",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Optional<SwiftUI.AnyView>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvg",
+                "mangledName": "$s11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Optional<SwiftUI.AnyView>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvs",
+                "mangledName": "$s11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_Gvs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_GvM",
+                "mangledName": "$s11FNavigation6RouterC12$currentView7Combine9PublishedV9PublisherVy7SwiftUI03AnyD0VSg_GvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "presentationType",
+            "printedName": "presentationType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PresentationType",
+                "printedName": "FNavigation.PresentationType",
+                "usr": "c:@M@FNavigation@E@PresentationType"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovp",
+            "mangledName": "$s11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovp",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovg",
+                "mangledName": "$s11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovs",
+                "mangledName": "$s11FNavigation6RouterC16presentationTypeAA012PresentationD0Ovs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC16presentationTypeAA012PresentationD0OvM",
+                "mangledName": "$s11FNavigation6RouterC16presentationTypeAA012PresentationD0OvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$presentationType",
+            "printedName": "$presentationType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<FNavigation.PresentationType>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvp",
+            "mangledName": "$s11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvp",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<FNavigation.PresentationType>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvg",
+                "mangledName": "$s11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<FNavigation.PresentationType>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvs",
+                "mangledName": "$s11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_Gvs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_GvM",
+                "mangledName": "$s11FNavigation6RouterC17$presentationType7Combine9PublishedV9PublisherVyAA012PresentationD0O_GvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "completion",
+            "printedName": "completion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC10completionyycSgvp",
+            "mangledName": "$s11FNavigation6RouterC10completionyycSgvp",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC10completionyycSgvg",
+                "mangledName": "$s11FNavigation6RouterC10completionyycSgvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC10completionyycSgvs",
+                "mangledName": "$s11FNavigation6RouterC10completionyycSgvs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC10completionyycSgvM",
+                "mangledName": "$s11FNavigation6RouterC10completionyycSgvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$completion",
+            "printedName": "$completion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Optional<() -> ()>>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvp",
+            "mangledName": "$s11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvp",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Optional<() -> ()>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvg",
+                "mangledName": "$s11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Optional<() -> ()>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvs",
+                "mangledName": "$s11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_Gvs",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_GvM",
+                "mangledName": "$s11FNavigation6RouterC11$completion7Combine9PublishedV9PublisherVyyycSg_GvM",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "navigateTo",
+            "printedName": "navigateTo(_:animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationInfo",
+                "printedName": "any FNavigation.NavigationInfo",
+                "usr": "s:11FNavigation14NavigationInfoP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation6RouterC10navigateTo_8animated10completionyAA14NavigationInfo_p_SbyycSgtF",
+            "mangledName": "$s11FNavigation6RouterC10navigateTo_8animated10completionyAA14NavigationInfo_p_SbyycSgtF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setRoot",
+            "printedName": "setRoot(_:animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationInfo",
+                "printedName": "any FNavigation.NavigationInfo",
+                "usr": "s:11FNavigation14NavigationInfoP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation6RouterC7setRoot_8animated10completionyAA14NavigationInfo_p_SbyycSgtF",
+            "mangledName": "$s11FNavigation6RouterC7setRoot_8animated10completionyAA14NavigationInfo_p_SbyycSgtF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismissModal",
+            "printedName": "dismissModal(animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation6RouterC12dismissModal8animatedySb_tF",
+            "mangledName": "$s11FNavigation6RouterC12dismissModal8animatedySb_tF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "goBack",
+            "printedName": "goBack(animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation6RouterC6goBack8animated10completionySb_yycSgtF",
+            "mangledName": "$s11FNavigation6RouterC6goBack8animated10completionySb_yycSgtF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11FNavigation6RouterC",
+        "mangledName": "$s11FNavigation6RouterC",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationManager",
+        "printedName": "NavigationManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "router",
+            "printedName": "router",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Router",
+                "printedName": "FNavigation.Router",
+                "usr": "s:11FNavigation6RouterC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation17NavigationManagerV6routerAA6RouterCvp",
+            "mangledName": "$s11FNavigation17NavigationManagerV6routerAA6RouterCvp",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "Custom",
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Router",
+                    "printedName": "FNavigation.Router",
+                    "usr": "s:11FNavigation6RouterC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation17NavigationManagerV6routerAA6RouterCvg",
+                "mangledName": "$s11FNavigation17NavigationManagerV6routerAA6RouterCvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$router",
+            "printedName": "$router",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Wrapper",
+                "printedName": "SwiftUI.EnvironmentObject<FNavigation.Router>.Wrapper",
+                "usr": "s:7SwiftUI17EnvironmentObjectV7WrapperV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation17NavigationManagerV7$router7SwiftUI17EnvironmentObjectV7WrapperVyAA6RouterC_Gvp",
+            "mangledName": "$s11FNavigation17NavigationManagerV7$router7SwiftUI17EnvironmentObjectV7WrapperVyAA6RouterC_Gvp",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Wrapper",
+                    "printedName": "SwiftUI.EnvironmentObject<FNavigation.Router>.Wrapper",
+                    "usr": "s:7SwiftUI17EnvironmentObjectV7WrapperV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation17NavigationManagerV7$router7SwiftUI17EnvironmentObjectV7WrapperVyAA6RouterC_Gvg",
+                "mangledName": "$s11FNavigation17NavigationManagerV7$router7SwiftUI17EnvironmentObjectV7WrapperVyAA6RouterC_Gvg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationManager",
+                "printedName": "FNavigation.NavigationManager",
+                "usr": "s:11FNavigation17NavigationManagerV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation17NavigationManagerV6sharedACvpZ",
+            "mangledName": "$s11FNavigation17NavigationManagerV6sharedACvpZ",
+            "moduleName": "FNavigation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationManager",
+                    "printedName": "FNavigation.NavigationManager",
+                    "usr": "s:11FNavigation17NavigationManagerV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation17NavigationManagerV6sharedACvgZ",
+                "mangledName": "$s11FNavigation17NavigationManagerV6sharedACvgZ",
+                "moduleName": "FNavigation",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Coordinator",
+            "printedName": "Coordinator",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Coordinator",
+                    "printedName": "FNavigation.NavigationManager.Coordinator",
+                    "usr": "s:11FNavigation17NavigationManagerV11CoordinatorC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11FNavigation17NavigationManagerV11CoordinatorCAEycfc",
+                "mangledName": "$s11FNavigation17NavigationManagerV11CoordinatorCAEycfc",
+                "moduleName": "FNavigation",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "init",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC",
+                  "Custom",
+                  "Override"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:11FNavigation17NavigationManagerV11CoordinatorC",
+            "mangledName": "$s11FNavigation17NavigationManagerV11CoordinatorC",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "superclassUsr": "c:objc(cs)NSObject",
+            "hasMissingDesignatedInitializers": true,
+            "superclassNames": [
+              "ObjectiveC.NSObject"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CVarArg",
+                "printedName": "CVarArg",
+                "usr": "s:s7CVarArgP",
+                "mangledName": "$ss7CVarArgP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObservingPublishing",
+                "printedName": "_KeyValueCodingAndObservingPublishing",
+                "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+                "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObserving",
+                "printedName": "_KeyValueCodingAndObserving",
+                "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+                "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "makeCoordinator",
+            "printedName": "makeCoordinator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Coordinator",
+                "printedName": "FNavigation.NavigationManager.Coordinator",
+                "usr": "s:11FNavigation17NavigationManagerV11CoordinatorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation17NavigationManagerV15makeCoordinatorAC0E0CyF",
+            "mangledName": "$s11FNavigation17NavigationManagerV15makeCoordinatorAC0E0CyF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeUIViewController",
+            "printedName": "makeUIViewController(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UINavigationController",
+                "printedName": "UIKit.UINavigationController",
+                "usr": "c:objc(cs)UINavigationController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewControllerRepresentableContext",
+                "printedName": "SwiftUI.UIViewControllerRepresentableContext<FNavigation.NavigationManager>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationManager",
+                    "printedName": "FNavigation.NavigationManager",
+                    "usr": "s:11FNavigation17NavigationManagerV"
+                  }
+                ],
+                "usr": "s:7SwiftUI36UIViewControllerRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation17NavigationManagerV20makeUIViewController7contextSo012UINavigationF0C7SwiftUI0eF20RepresentableContextVyACG_tF",
+            "mangledName": "$s11FNavigation17NavigationManagerV20makeUIViewController7contextSo012UINavigationF0C7SwiftUI0eF20RepresentableContextVyACG_tF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateUIViewController",
+            "printedName": "updateUIViewController(_:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UINavigationController",
+                "printedName": "UIKit.UINavigationController",
+                "usr": "c:objc(cs)UINavigationController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewControllerRepresentableContext",
+                "printedName": "SwiftUI.UIViewControllerRepresentableContext<FNavigation.NavigationManager>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationManager",
+                    "printedName": "FNavigation.NavigationManager",
+                    "usr": "s:11FNavigation17NavigationManagerV"
+                  }
+                ],
+                "usr": "s:7SwiftUI36UIViewControllerRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation17NavigationManagerV22updateUIViewController_7contextySo012UINavigationF0C_7SwiftUI0eF20RepresentableContextVyACGtF",
+            "mangledName": "$s11FNavigation17NavigationManagerV22updateUIViewController_7contextySo012UINavigationF0C_7SwiftUI0eF20RepresentableContextVyACGtF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11FNavigation17NavigationManagerV",
+        "mangledName": "$s11FNavigation17NavigationManagerV",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UIViewControllerRepresentable",
+            "printedName": "UIViewControllerRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UIViewControllerType",
+                "printedName": "UIViewControllerType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UINavigationController",
+                    "printedName": "UIKit.UINavigationController",
+                    "usr": "c:objc(cs)UINavigationController"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Coordinator",
+                "printedName": "Coordinator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Coordinator",
+                    "printedName": "FNavigation.NavigationManager.Coordinator",
+                    "usr": "s:11FNavigation17NavigationManagerV11CoordinatorC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI29UIViewControllerRepresentableP",
+            "mangledName": "$s7SwiftUI29UIViewControllerRepresentableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FDependencyInjector",
+        "printedName": "FDependencyInjector",
+        "declKind": "Import",
+        "moduleName": "FNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationInfo",
+        "printedName": "NavigationInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "presentationType",
+            "printedName": "presentationType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PresentationType",
+                "printedName": "FNavigation.PresentationType",
+                "usr": "c:@M@FNavigation@E@PresentationType"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation14NavigationInfoP16presentationTypeAA012PresentationE0Ovp",
+            "mangledName": "$s11FNavigation14NavigationInfoP16presentationTypeAA012PresentationE0Ovp",
+            "moduleName": "FNavigation",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation14NavigationInfoP16presentationTypeAA012PresentationE0Ovg",
+                "mangledName": "$s11FNavigation14NavigationInfoP16presentationTypeAA012PresentationE0Ovg",
+                "moduleName": "FNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : FNavigation.NavigationInfo>",
+                "sugared_genericSig": "<Self where Self : FNavigation.NavigationInfo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11FNavigation14NavigationInfoP",
+        "mangledName": "$s11FNavigation14NavigationInfoP",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PresentationType",
+        "printedName": "PresentationType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "modal",
+            "printedName": "modal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeModal",
+            "mangledName": "$s11FNavigation16PresentationTypeO5modalyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "push",
+            "printedName": "push",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypePush",
+            "mangledName": "$s11FNavigation16PresentationTypeO4pushyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "fullScreen",
+            "printedName": "fullScreen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeFullScreen",
+            "mangledName": "$s11FNavigation16PresentationTypeO10fullScreenyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "goToRoot",
+            "printedName": "goToRoot",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeGoToRoot",
+            "mangledName": "$s11FNavigation16PresentationTypeO8goToRootyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "goBack",
+            "printedName": "goBack",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeGoBack",
+            "mangledName": "$s11FNavigation16PresentationTypeO6goBackyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "dismissModal",
+            "printedName": "dismissModal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.PresentationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "c:@M@FNavigation@E@PresentationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeDismissModal",
+            "mangledName": "$s11FNavigation16PresentationTypeO12dismissModalyA2CmF",
+            "moduleName": "FNavigation",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FNavigation.PresentationType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PresentationType",
+                    "printedName": "FNavigation.PresentationType",
+                    "usr": "c:@M@FNavigation@E@PresentationType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11FNavigation16PresentationTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11FNavigation16PresentationTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FNavigation16PresentationTypeO8rawValueSivp",
+            "mangledName": "$s11FNavigation16PresentationTypeO8rawValueSivp",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FNavigation16PresentationTypeO8rawValueSivg",
+                "mangledName": "$s11FNavigation16PresentationTypeO8rawValueSivg",
+                "moduleName": "FNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@FNavigation@E@PresentationType",
+        "mangledName": "$s11FNavigation16PresentationTypeO",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenNavigator",
+        "printedName": "ScreenNavigator",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "destinationFor",
+            "printedName": "destinationFor(navigationInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SwiftUI.View)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "any SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationInfo",
+                "printedName": "any FNavigation.NavigationInfo",
+                "usr": "s:11FNavigation14NavigationInfoP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation15ScreenNavigatorP14destinationFor14navigationInfo7SwiftUI4View_pSgAA010NavigationG0_p_tKF",
+            "mangledName": "$s11FNavigation15ScreenNavigatorP14destinationFor14navigationInfo7SwiftUI4View_pSgAA010NavigationG0_p_tKF",
+            "moduleName": "FNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : FNavigation.ScreenNavigator>",
+            "sugared_genericSig": "<Self where Self : FNavigation.ScreenNavigator>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11FNavigation15ScreenNavigatorP",
+        "mangledName": "$s11FNavigation15ScreenNavigatorP",
+        "moduleName": "FNavigation",
+        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable>",
+        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Instanciable",
+            "printedName": "Instanciable",
+            "usr": "s:19FDependencyInjector12InstanciableP",
+            "mangledName": "$s19FDependencyInjector12InstanciableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/Router.swift",
+      "kind": "BooleanLiteral",
+      "offset": 760,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationManager.swift",
+      "kind": "StringLiteral",
+      "offset": 992,
+      "length": 11,
+      "value": "\"FNavigation.Coordinator\""
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 201,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 215,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 235,
+      "length": 8,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 6,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 269,
+      "length": 12,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 201,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 215,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 235,
+      "length": 8,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 6,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "kind": "IntegerLiteral",
+      "offset": 269,
+      "length": 12,
+      "value": "5"
+    }
+  ]
+}

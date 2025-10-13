@@ -1,0 +1,37 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FDependencyInjector
+@_exported import FDependencyInjector
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class DependencyContainer {
+  public static let shared: FDependencyInjector.DependencyContainer
+  public var services: [Swift.String : [any FDependencyInjector.Instanciable.Type]]
+  public var cachedServices: [Swift.String : [any FDependencyInjector.Instanciable]]
+  public func register<T, P>(_ protocolType: T.Type, _ creation: P.Type)
+  public func resolve<T>(_ protocolType: T.Type) -> T?
+  public func getAllInstancesForAProtocol<T>(_ protocolType: T.Type) -> [T]
+  @objc deinit
+}
+public protocol Instanciable : AnyObject {
+  init()
+}
+public protocol ModuleContract {
+  static func inject()
+}
+public protocol InjectionContract : AnyObject {
+  static func execute()
+}
+public protocol UseCaseContract : FDependencyInjector.Instanciable {
+}
+@propertyWrapper public struct Injected<T> {
+  public var service: T
+  public init()
+  public var wrappedValue: T {
+    get
+    set
+  }
+}

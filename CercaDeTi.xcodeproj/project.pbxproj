@@ -1,0 +1,870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; };
+		ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
+		ED5ED85E2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */; };
+		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
+		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
+		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
+		EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* CercaDeTi.swift */; };
+		EDB57D862E4166EC00430CB0 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D842E4166EC00430CB0 /* DataModule.swift */; };
+		EDB57D872E4166EC00430CB0 /* WomenCarePointRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D822E4166EC00430CB0 /* WomenCarePointRepository.swift */; };
+		EDB57D882E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */; };
+		EDB57D892E4166EC00430CB0 /* WomenCarePointDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D7E2E4166EC00430CB0 /* WomenCarePointDataEntity.swift */; };
+		EDB57D8A2E4166EC00430CB0 /* WomenCarePointMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D802E4166EC00430CB0 /* WomenCarePointMapper.swift */; };
+		EDB57D8B2E4166EC00430CB0 /* WomenCarePointAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D7A2E4166EC00430CB0 /* WomenCarePointAPI.swift */; };
+		EDB57D952E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D912E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift */; };
+		EDB57D962E4166F100430CB0 /* WomenCarePointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D8C2E4166F100430CB0 /* WomenCarePointModel.swift */; };
+		EDB57D972E4166F100430CB0 /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D932E4166F100430CB0 /* DomainModule.swift */; };
+		EDB57D982E4166F100430CB0 /* WomenCarePointRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D8E2E4166F100430CB0 /* WomenCarePointRepositoryContract.swift */; };
+		EDB57D992E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */; };
+		EDB57DDE2E4166F500430CB0 /* IncomingNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD52E4166F500430CB0 /* IncomingNavigation.swift */; };
+		EDB57DDF2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DAB2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift */; };
+		EDB57DE22E4166F500430CB0 /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */; };
+		EDB57DE42E4166F500430CB0 /* NavigationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD62E4166F500430CB0 /* NavigationModule.swift */; };
+		EDB57DE52E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9C2E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift */; };
+		EDB57DE62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift */; };
+		EDB57DE72E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DBD2E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift */; };
+		EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC12E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift */; };
+		EDB57DEA2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA92E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift */; };
+		EDB57DEB2E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */; };
+		EDB57DED2E4166F500430CB0 /* WomenCarePointHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD22E4166F500430CB0 /* WomenCarePointHomeScreen.swift */; };
+		EDB57DEF2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */; };
+		EDB57DF02E4166F500430CB0 /* WomenCarePointDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB62E4166F500430CB0 /* WomenCarePointDetailBuilder.swift */; };
+		EDB57DF32E4166F500430CB0 /* WomenCarePointHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DCF2E4166F500430CB0 /* WomenCarePointHomeBuilder.swift */; };
+		EDB57DF52E4166F500430CB0 /* WomenCarePointDetailContentSectionRenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9E2E4166F500430CB0 /* WomenCarePointDetailContentSectionRenderModel.swift */; };
+		EDB57DF62E4166F500430CB0 /* WomenCarePointDetailContentSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA02E4166F500430CB0 /* WomenCarePointDetailContentSectionViewModelContract.swift */; };
+		EDB57DF72E4166F500430CB0 /* WomenCarePointHomeFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DBC2E4166F500430CB0 /* WomenCarePointHomeFooterSectionView.swift */; };
+		EDB57DF82E4166F500430CB0 /* WomenCarePointHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD02E4166F500430CB0 /* WomenCarePointHomeModule.swift */; };
+		EDB57DF92E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC32E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift */; };
+		EDB57DFA2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9D2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift */; };
+		EDB57DFB2E4166F500430CB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DDA2E4166F500430CB0 /* LocationManager.swift */; };
+		EDB57DFD2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA62E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift */; };
+		EDB57DFE2E4166F500430CB0 /* CrossLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB12E4166F500430CB0 /* CrossLoaderSectionView.swift */; };
+		EDB57E002E4166F500430CB0 /* WomenCarePointHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD32E4166F500430CB0 /* WomenCarePointHomeViewModel.swift */; };
+		EDB57E012E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DAC2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift */; };
+		EDB57E022E4166F500430CB0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DDB2E4166F500430CB0 /* Utils.swift */; };
+		EDB57E062E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA82E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift */; };
+		EDB57E0A2E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB82E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift */; };
+		EDB57E0B2E4166F500430CB0 /* WomenCarePointDetailContentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9F2E4166F500430CB0 /* WomenCarePointDetailContentSectionView.swift */; };
+		EDB57E0C2E4166F500430CB0 /* WomenCarePointDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DBA2E4166F500430CB0 /* WomenCarePointDetailViewModel.swift */; };
+		EDB57E0D2E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC22E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift */; };
+		EDB57E0E2E4166F500430CB0 /* WomenCarePointDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB92E4166F500430CB0 /* WomenCarePointDetailScreen.swift */; };
+		EDB57E102E4166F500430CB0 /* WomenCarePointDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB72E4166F500430CB0 /* WomenCarePointDetailModule.swift */; };
+		EDB57E112E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC42E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift */; };
+		EDB57E122E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA42E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift */; };
+		EDB57E132E4166F500430CB0 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD72E4166F500430CB0 /* Navigator.swift */; };
+		EDB57E142E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD12E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift */; };
+		EDB7DDAF2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7DDAD2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
+		EDB7DDB02E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7DDAC2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */; };
+		EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */; };
+		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
+		EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; };
+		EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD0F3292E8271E5002EF349 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3232E8271E5002EF349 /* FComponents.xcframework */; };
+		EDD0F32A2E8271E5002EF349 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3232E8271E5002EF349 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; };
+		EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */; };
+		EDD0F32E2E8271E5002EF349 /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDD0F3312E8271E5002EF349 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EDD0F32E2E8271E5002EF349 /* FNavigation.xcframework in Embed Frameworks */,
+				EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */,
+				EDD0F32A2E8271E5002EF349 /* FComponents.xcframework in Embed Frameworks */,
+				EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */,
+				ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
+		ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailLocalDataSource.swift; sourceTree = "<group>"; };
+		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
+		EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cerca de Ti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDB57D712E41667A00430CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDB57D732E41667A00430CB0 /* CercaDeTi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaDeTi.swift; sourceTree = "<group>"; };
+		EDB57D7A2E4166EC00430CB0 /* WomenCarePointAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointAPI.swift; sourceTree = "<group>"; };
+		EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeRemoteDataSource.swift; sourceTree = "<group>"; };
+		EDB57D7E2E4166EC00430CB0 /* WomenCarePointDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDataEntity.swift; sourceTree = "<group>"; };
+		EDB57D802E4166EC00430CB0 /* WomenCarePointMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointMapper.swift; sourceTree = "<group>"; };
+		EDB57D822E4166EC00430CB0 /* WomenCarePointRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointRepository.swift; sourceTree = "<group>"; };
+		EDB57D842E4166EC00430CB0 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		EDB57D8C2E4166F100430CB0 /* WomenCarePointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointModel.swift; sourceTree = "<group>"; };
+		EDB57D8E2E4166F100430CB0 /* WomenCarePointRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointRepositoryContract.swift; sourceTree = "<group>"; };
+		EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWomenCarePointDetailUseCase.swift; sourceTree = "<group>"; };
+		EDB57D912E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWomenCarePointHomeUseCase.swift; sourceTree = "<group>"; };
+		EDB57D932E4166F100430CB0 /* DomainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModule.swift; sourceTree = "<group>"; };
+		EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionMapper.swift; sourceTree = "<group>"; };
+		EDB57D9C2E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionModule.swift; sourceTree = "<group>"; };
+		EDB57D9D2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionObservedModel.swift; sourceTree = "<group>"; };
+		EDB57D9E2E4166F500430CB0 /* WomenCarePointDetailContentSectionRenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionRenderModel.swift; sourceTree = "<group>"; };
+		EDB57D9F2E4166F500430CB0 /* WomenCarePointDetailContentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionView.swift; sourceTree = "<group>"; };
+		EDB57DA02E4166F500430CB0 /* WomenCarePointDetailContentSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDB57DA42E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionMapper.swift; sourceTree = "<group>"; };
+		EDB57DA62E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionObservedModel.swift; sourceTree = "<group>"; };
+		EDB57DA82E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionModule.swift; sourceTree = "<group>"; };
+		EDB57DA92E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionRenderModel.swift; sourceTree = "<group>"; };
+		EDB57DAB2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDB57DAC2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailHeaderSectionView.swift; sourceTree = "<group>"; };
+		EDB57DB12E4166F500430CB0 /* CrossLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossLoaderSectionView.swift; sourceTree = "<group>"; };
+		EDB57DB62E4166F500430CB0 /* WomenCarePointDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailBuilder.swift; sourceTree = "<group>"; };
+		EDB57DB72E4166F500430CB0 /* WomenCarePointDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailModule.swift; sourceTree = "<group>"; };
+		EDB57DB82E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailNavigationBuilder.swift; sourceTree = "<group>"; };
+		EDB57DB92E4166F500430CB0 /* WomenCarePointDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailScreen.swift; sourceTree = "<group>"; };
+		EDB57DBA2E4166F500430CB0 /* WomenCarePointDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailViewModel.swift; sourceTree = "<group>"; };
+		EDB57DBC2E4166F500430CB0 /* WomenCarePointHomeFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeFooterSectionView.swift; sourceTree = "<group>"; };
+		EDB57DBD2E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeFooterSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDB57DC12E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionMapper.swift; sourceTree = "<group>"; };
+		EDB57DC22E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionModule.swift; sourceTree = "<group>"; };
+		EDB57DC32E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionObservedModel.swift; sourceTree = "<group>"; };
+		EDB57DC42E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionRenderModel.swift; sourceTree = "<group>"; };
+		EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
+		EDB57DC62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDB57DCF2E4166F500430CB0 /* WomenCarePointHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeBuilder.swift; sourceTree = "<group>"; };
+		EDB57DD02E4166F500430CB0 /* WomenCarePointHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeModule.swift; sourceTree = "<group>"; };
+		EDB57DD12E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeNavigationBuilder.swift; sourceTree = "<group>"; };
+		EDB57DD22E4166F500430CB0 /* WomenCarePointHomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeScreen.swift; sourceTree = "<group>"; };
+		EDB57DD32E4166F500430CB0 /* WomenCarePointHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeViewModel.swift; sourceTree = "<group>"; };
+		EDB57DD52E4166F500430CB0 /* IncomingNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingNavigation.swift; sourceTree = "<group>"; };
+		EDB57DD62E4166F500430CB0 /* NavigationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModule.swift; sourceTree = "<group>"; };
+		EDB57DD72E4166F500430CB0 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
+		EDB57DDA2E4166F500430CB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EDB57DDB2E4166F500430CB0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EDB57E162E41672600430CB0 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = ../frameworks/FComponents.xcframework; sourceTree = "<group>"; };
+		EDB57E172E41672600430CB0 /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = ../frameworks/FData.xcframework; sourceTree = "<group>"; };
+		EDB57E182E41672600430CB0 /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = ../frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
+		EDB57E192E41672600430CB0 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = ../frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
+		EDB57E1A2E41672600430CB0 /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = ../frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
+		EDB7DDAC2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
+		EDB7DDAD2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionView.swift; sourceTree = "<group>"; };
+		EDD0F3222E8271E5002EF349 /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
+		EDD0F3232E8271E5002EF349 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
+		EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
+		EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
+		EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDB57D5B2E41667200430CB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */,
+				EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */,
+				EDD0F3292E8271E5002EF349 /* FComponents.xcframework in Frameworks */,
+				EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */,
+				ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED5ED85B2E84189C00062C14 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */,
+				ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		ED5ED85C2E8418A700062C14 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */,
+				EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		EDB57D552E41667200430CB0 = {
+			isa = PBXGroup;
+			children = (
+				EDB57D742E41667A00430CB0 /* CercaDeTi */,
+				EDB57E152E41672500430CB0 /* Frameworks */,
+				EDB57D5F2E41667200430CB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDB57D5F2E41667200430CB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDB57D702E41667A00430CB0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDB57D742E41667A00430CB0 /* CercaDeTi */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D792E4166DE00430CB0 /* Sources */,
+				EDB57D702E41667A00430CB0 /* Preview Content */,
+				EDB57D712E41667A00430CB0 /* Assets.xcassets */,
+				EDB57D732E41667A00430CB0 /* CercaDeTi.swift */,
+			);
+			path = CercaDeTi;
+			sourceTree = "<group>";
+		};
+		EDB57D792E4166DE00430CB0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D852E4166EC00430CB0 /* Data */,
+				EDB57D942E4166F100430CB0 /* Domain */,
+				EDB57DDD2E4166F500430CB0 /* Presentation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EDB57D7B2E4166EC00430CB0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D7A2E4166EC00430CB0 /* WomenCarePointAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EDB57D7D2E4166EC00430CB0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				ED5ED85C2E8418A700062C14 /* Remote */,
+				ED5ED85B2E84189C00062C14 /* Local */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EDB57D7F2E4166EC00430CB0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D7E2E4166EC00430CB0 /* WomenCarePointDataEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EDB57D812E4166EC00430CB0 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D802E4166EC00430CB0 /* WomenCarePointMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		EDB57D832E4166EC00430CB0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D822E4166EC00430CB0 /* WomenCarePointRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EDB57D852E4166EC00430CB0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D7B2E4166EC00430CB0 /* API */,
+				EDB57D7D2E4166EC00430CB0 /* DataSource */,
+				EDB57D7F2E4166EC00430CB0 /* Entities */,
+				EDB57D812E4166EC00430CB0 /* Mappers */,
+				EDB57D832E4166EC00430CB0 /* Repositories */,
+				EDB57D842E4166EC00430CB0 /* DataModule.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EDB57D8D2E4166F100430CB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D8C2E4166F100430CB0 /* WomenCarePointModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB57D8F2E4166F100430CB0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D8E2E4166F100430CB0 /* WomenCarePointRepositoryContract.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EDB57D922E4166F100430CB0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */,
+				EDB57D912E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EDB57D942E4166F100430CB0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D8D2E4166F100430CB0 /* Models */,
+				EDB57D8F2E4166F100430CB0 /* Repositories */,
+				EDB57D922E4166F100430CB0 /* UseCases */,
+				EDB57D932E4166F100430CB0 /* DomainModule.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EDB57DA32E4166F500430CB0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */,
+				EDB57D9C2E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift */,
+				EDB57D9D2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift */,
+				EDB57D9E2E4166F500430CB0 /* WomenCarePointDetailContentSectionRenderModel.swift */,
+				EDB57D9F2E4166F500430CB0 /* WomenCarePointDetailContentSectionView.swift */,
+				EDB57DA02E4166F500430CB0 /* WomenCarePointDetailContentSectionViewModelContract.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		EDB57DAD2E4166F500430CB0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DA42E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift */,
+				EDB57DA62E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift */,
+				EDB57DA82E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift */,
+				EDB57DA92E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift */,
+				EDB57DAB2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift */,
+				EDB57DAC2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EDB57DB52E4166F500430CB0 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DA32E4166F500430CB0 /* Content */,
+				EDB57DAD2E4166F500430CB0 /* Header */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		EDB57DBB2E4166F500430CB0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DB52E4166F500430CB0 /* Sections */,
+				EDB57DB62E4166F500430CB0 /* WomenCarePointDetailBuilder.swift */,
+				EDB57DB72E4166F500430CB0 /* WomenCarePointDetailModule.swift */,
+				EDB57DB82E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift */,
+				EDB57DB92E4166F500430CB0 /* WomenCarePointDetailScreen.swift */,
+				EDB57DBA2E4166F500430CB0 /* WomenCarePointDetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		EDB57DC02E4166F500430CB0 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DBC2E4166F500430CB0 /* WomenCarePointHomeFooterSectionView.swift */,
+				EDB57DBD2E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		EDB57DC72E4166F500430CB0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DC12E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift */,
+				EDB57DC22E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift */,
+				EDB57DC32E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift */,
+				EDB57DC42E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift */,
+				EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */,
+				EDB57DC62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		EDB57DCE2E4166F500430CB0 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DC02E4166F500430CB0 /* Footer */,
+				EDB57DC72E4166F500430CB0 /* List */,
+				EDB7DDAE2E9D1EF90088D8C9 /* Header */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		EDB57DD42E4166F500430CB0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DCE2E4166F500430CB0 /* Sections */,
+				EDB57DCF2E4166F500430CB0 /* WomenCarePointHomeBuilder.swift */,
+				EDB57DD02E4166F500430CB0 /* WomenCarePointHomeModule.swift */,
+				EDB57DD12E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift */,
+				EDB57DD22E4166F500430CB0 /* WomenCarePointHomeScreen.swift */,
+				EDB57DD32E4166F500430CB0 /* WomenCarePointHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EDB57DD82E4166F500430CB0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DD52E4166F500430CB0 /* IncomingNavigation.swift */,
+				EDB57DD62E4166F500430CB0 /* NavigationModule.swift */,
+				EDB57DD72E4166F500430CB0 /* Navigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EDB57DDC2E4166F500430CB0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */,
+				EDB57DDA2E4166F500430CB0 /* LocationManager.swift */,
+				EDB57DDB2E4166F500430CB0 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EDB57DDD2E4166F500430CB0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EDC976C82E9C1C9E004BB6B3 /* Cross */,
+				EDB57DBB2E4166F500430CB0 /* Detail */,
+				EDB57DD42E4166F500430CB0 /* Home */,
+				EDB57DD82E4166F500430CB0 /* Navigation */,
+				EDB57DDC2E4166F500430CB0 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EDB57E152E41672500430CB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDD0F3232E8271E5002EF349 /* FComponents.xcframework */,
+				EDD0F3222E8271E5002EF349 /* FData.xcframework */,
+				EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */,
+				EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */,
+				EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */,
+				EDB57E162E41672600430CB0 /* FComponents.xcframework */,
+				EDB57E172E41672600430CB0 /* FData.xcframework */,
+				EDB57E182E41672600430CB0 /* FDependencyInjector.xcframework */,
+				EDB57E192E41672600430CB0 /* FNavigation.xcframework */,
+				EDB57E1A2E41672600430CB0 /* FPresentation.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDB7DDAE2E9D1EF90088D8C9 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EDB7DDAC2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */,
+				EDB7DDAD2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EDC976C82E9C1C9E004BB6B3 /* Cross */ = {
+			isa = PBXGroup;
+			children = (
+				EDC976CA2E9C1CB5004BB6B3 /* Loader */,
+				EDC976C92E9C1CA8004BB6B3 /* Error */,
+			);
+			path = Cross;
+			sourceTree = "<group>";
+		};
+		EDC976C92E9C1CA8004BB6B3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */,
+				EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		EDC976CA2E9C1CB5004BB6B3 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DB12E4166F500430CB0 /* CrossLoaderSectionView.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDB57D5D2E41667200430CB0 /* CercaDeTi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "CercaDeTi" */;
+			buildPhases = (
+				EDB57D5A2E41667200430CB0 /* Sources */,
+				EDB57D5B2E41667200430CB0 /* Frameworks */,
+				EDB57D5C2E41667200430CB0 /* Resources */,
+				EDD0F3312E8271E5002EF349 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CercaDeTi;
+			packageProductDependencies = (
+			);
+			productName = MujerSegura;
+			productReference = EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB57D562E41667200430CB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					EDB57D5D2E41667200430CB0 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "CercaDeTi" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDB57D552E41667200430CB0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EDB57D5F2E41667200430CB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDB57D5D2E41667200430CB0 /* CercaDeTi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDB57D5C2E41667200430CB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */,
+				EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB57D5A2E41667200430CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */,
+				EDB57D862E4166EC00430CB0 /* DataModule.swift in Sources */,
+				ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */,
+				EDB57D872E4166EC00430CB0 /* WomenCarePointRepository.swift in Sources */,
+				EDB57D882E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift in Sources */,
+				EDB57D952E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift in Sources */,
+				EDB57D962E4166F100430CB0 /* WomenCarePointModel.swift in Sources */,
+				EDB57DDE2E4166F500430CB0 /* IncomingNavigation.swift in Sources */,
+				EDB57DDF2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift in Sources */,
+				EDB57DE22E4166F500430CB0 /* ExpandableTextView.swift in Sources */,
+				EDB57DE42E4166F500430CB0 /* NavigationModule.swift in Sources */,
+				EDB57DE52E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift in Sources */,
+				EDB57DE62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift in Sources */,
+				EDB57DE72E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift in Sources */,
+				EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */,
+				EDB57DEA2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift in Sources */,
+				EDB57DEB2E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift in Sources */,
+				ED5ED85E2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift in Sources */,
+				EDB57DED2E4166F500430CB0 /* WomenCarePointHomeScreen.swift in Sources */,
+				EDB57DEF2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift in Sources */,
+				EDB57DF02E4166F500430CB0 /* WomenCarePointDetailBuilder.swift in Sources */,
+				EDB57DF32E4166F500430CB0 /* WomenCarePointHomeBuilder.swift in Sources */,
+				EDB57DF52E4166F500430CB0 /* WomenCarePointDetailContentSectionRenderModel.swift in Sources */,
+				EDB57DF62E4166F500430CB0 /* WomenCarePointDetailContentSectionViewModelContract.swift in Sources */,
+				EDB57DF72E4166F500430CB0 /* WomenCarePointHomeFooterSectionView.swift in Sources */,
+				EDB57DF82E4166F500430CB0 /* WomenCarePointHomeModule.swift in Sources */,
+				EDB57DF92E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift in Sources */,
+				EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */,
+				EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */,
+				EDB57DFA2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift in Sources */,
+				EDB57DFB2E4166F500430CB0 /* LocationManager.swift in Sources */,
+				EDB57DFD2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift in Sources */,
+				EDB57DFE2E4166F500430CB0 /* CrossLoaderSectionView.swift in Sources */,
+				EDB57E002E4166F500430CB0 /* WomenCarePointHomeViewModel.swift in Sources */,
+				EDB57E012E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift in Sources */,
+				EDB57E022E4166F500430CB0 /* Utils.swift in Sources */,
+				EDB57E062E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift in Sources */,
+				EDB57E0A2E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift in Sources */,
+				EDB7DDAF2E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */,
+				EDB7DDB02E9D1EF90088D8C9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */,
+				EDB57E0B2E4166F500430CB0 /* WomenCarePointDetailContentSectionView.swift in Sources */,
+				EDB57E0C2E4166F500430CB0 /* WomenCarePointDetailViewModel.swift in Sources */,
+				EDB57E0D2E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift in Sources */,
+				EDB57E0E2E4166F500430CB0 /* WomenCarePointDetailScreen.swift in Sources */,
+				EDB57E102E4166F500430CB0 /* WomenCarePointDetailModule.swift in Sources */,
+				EDB57E112E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift in Sources */,
+				ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */,
+				EDB57E122E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift in Sources */,
+				EDB57E132E4166F500430CB0 /* Navigator.swift in Sources */,
+				EDB57E142E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift in Sources */,
+				EDB57D972E4166F100430CB0 /* DomainModule.swift in Sources */,
+				EDB57D982E4166F100430CB0 /* WomenCarePointRepositoryContract.swift in Sources */,
+				EDB57D992E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift in Sources */,
+				EDB57D892E4166EC00430CB0 /* WomenCarePointDataEntity.swift in Sources */,
+				EDB57D8A2E4166EC00430CB0 /* WomenCarePointMapper.swift in Sources */,
+				EDB57D8B2E4166EC00430CB0 /* WomenCarePointAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EDB57D6A2E41667600430CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDB57D6B2E41667600430CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDB57D6D2E41667600430CB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CercaDeTi/Preview Content\"";
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.javicode.CercaDeTi;
+				PRODUCT_NAME = "Cerca de Ti";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDB57D6E2E41667600430CB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CercaDeTi/Preview Content\"";
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.javicode.CercaDeTi;
+				PRODUCT_NAME = "Cerca de Ti";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "CercaDeTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB57D6A2E41667600430CB0 /* Debug */,
+				EDB57D6B2E41667600430CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "CercaDeTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB57D6D2E41667600430CB0 /* Debug */,
+				EDB57D6E2E41667600430CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDB57D562E41667200430CB0 /* Project object */;
+}
