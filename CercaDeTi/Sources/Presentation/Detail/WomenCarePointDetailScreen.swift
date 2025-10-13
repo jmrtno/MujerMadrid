@@ -50,7 +50,6 @@ public struct WomenCarePointDetailScreen<Top: View,
     public var body: some View {
         ZStack(alignment: .top) {
             top
-                .ignoresSafeArea()
                 .hiddenOrRemoved(showError, remove: true)
             VStack {
                 ScrollView {
