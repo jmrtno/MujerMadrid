@@ -6,15 +6,23 @@
 //
 
 public struct WomenCarePointHomeListSectionObservedModel {
+    /// information from centers
     public var data: [WomenCarePointModel.EventModel]?
+    /// Boolean that show/hide centers list
     public var showList: Bool
     
+    /// Initializer for `WomenCarePointHomeListSectionObservedModel`
+    /// - Parameters:
+    ///  - data: information from centers
+    ///  - showList: Boolean that show/hide centers list
     public init(data: [WomenCarePointModel.EventModel]?, showList: Bool) {
         self.data = data
         self.showList = showList
     }
     
-    public static var empty: WomenCarePointHomeListSectionObservedModel {
-        return WomenCarePointHomeListSectionObservedModel(data: [], showList: false)
+    /// empty initializer
+    init() {
+        data = []
+        showList = false
     }
 }

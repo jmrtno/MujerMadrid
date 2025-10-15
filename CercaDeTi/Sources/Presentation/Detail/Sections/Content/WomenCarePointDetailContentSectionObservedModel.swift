@@ -7,14 +7,17 @@
 import MapKit
 
 public struct WomenCarePointDetailContentSectionObservedModel {
+    /// information from centers
     public var data: [WomenCarePointModel.EventModel]?
-    // public var showLoading: Bool
     
+    /// Initializer for `WomenCarePointDetailContentSectionObservedModel`
+    /// - Parameters:
+    ///  - data: information from centers
     public init(data: [WomenCarePointModel.EventModel]? = nil) {
         self.data = data
     }
-    
-    public static var empty: WomenCarePointDetailContentSectionObservedModel {
-        return WomenCarePointDetailContentSectionObservedModel(data: [] /* showLoading: true */)
+    /// empty initializer
+    init() {
+        data = []
     }
 }

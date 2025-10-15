@@ -1,5 +1,5 @@
 //
-//  WomenCarePointDetailContentRenderModel.swift
+//  WomenCarePointDetailContentSectionRenderModel.swift
 //  MujerMadrid
 //
 //  Created by Javier Martin on 18/7/25.
@@ -7,28 +7,52 @@
 import MapKit
 
 public struct WomenCarePointDetailContentSectionRenderModel {
-    
+    /// information from centers
     public let center: Center
-    
+
+    /// Initializer for `WomenCarePointDetailContentSectionRenderModel`
+    /// - Parameters:
+    ///  - centers: information from centers
     public init(center: Center) {
         self.center = center
     }
-
+    
+    /// empty init
     init() {
         center = .init()
     }
     
     public struct Center: Identifiable {
-        public var id: String
+        /// Center id
+        public let id: String
+        /// Center name
         public let title: String
+        /// Center description
         public let description: String
+        /// Center services
         public let services: String
+        /// Center street address
         public let streetAddress: String
+        /// Center postal code
         public let postalCode: String
+        /// Center locality
         public let locality: String
+        /// Center schedule
         public let schedule: String
+        /// Center location
         public let location: Location
         
+        /// Initializer for `Center`
+        /// - Parameters:
+        ///  - id: Center id
+        ///  - title: Center name
+        ///  - description: Center description
+        ///  - services: Center services
+        ///  - streetAddress: Center address
+        ///  - postalCode: Center postal code
+        ///  - locality: Center locality
+        ///  - schedule: Center schedule
+        ///  - location: Center location
         public init(id: String,
                     title: String,
                     description: String,
@@ -49,6 +73,7 @@ public struct WomenCarePointDetailContentSectionRenderModel {
             self.location = location
         }
 
+        /// empty initializer
         init() {
             id = ""
             title = ""
@@ -63,14 +88,21 @@ public struct WomenCarePointDetailContentSectionRenderModel {
     }
     
     open class Location: Codable {
-        let latitude: Double
-        let longitude: Double
+        /// Center latitude
+        public let latitude: Double
+        /// Center longitude
+        public let longitude: Double
         
+        /// Initializer for `Location`
+        /// - Parameters:
+        ///  - latitude: Center latitude
+        ///  - longitude: Center longitude
         public init(latitude: Double, longitude: Double) {
             self.latitude = latitude
             self.longitude = longitude
         }
 
+        /// empty initializer
         init() {
             latitude = 0.0
             longitude = 0.0

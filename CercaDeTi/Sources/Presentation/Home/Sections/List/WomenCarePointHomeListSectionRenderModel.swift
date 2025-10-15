@@ -1,29 +1,56 @@
 //
-//  WomenCarePointHomeListRenderModel.swift
+//  WomenCarePointHomeListSectionRenderModel.swift
 //  MujerMadrid
 //
 //  Created by Javier Martin on 18/7/25.
 //
 
 public struct WomenCarePointHomeListSectionRenderModel {
-    
+    /// information from centers
     public let centers: [Centers]
+    /// Boolean that show/hide centers list
     public var showList: Bool
     
+    /// Initializer for `WomenCarePointHomeListSectionRenderModel`
+    /// - Parameters:
+    ///  - centers: information from centers
+    ///  - showList: Boolean that show/hide centers list
     public init(centers: [Centers], showList: Bool) {
         self.centers = centers
         self.showList = showList
     }
-    
+
+    /// empty init
+    init() {
+        centers = []
+        showList = false
+    }
+
     public struct Centers: Identifiable {
-        public var id: String
+        /// Centers id
+        public let id: String
+        /// Centers name
         public let title: String
+        /// Center saddress
         public let streetAddress: String
+        /// Centers postal code
         public let postalCode: String
+        /// Centesr locality
         public let locality: String
+        /// Centers schedule
         public let schedule: String
+        /// Centers location
         public let location: Location
         
+        /// Initializer for `Centers`
+        /// - Parameters:
+        ///  - id: Centers id
+        ///  - title: Centers name
+        ///  - streetAddress: Centers address
+        ///  - postalCode: Centers postal code
+        ///  - locality: Centers locality
+        ///  - schedule: Centers schedule
+        ///  - location: Centers location
         public init(id: String,
                     title: String,
                     streetAddress: String,
@@ -39,28 +66,38 @@ public struct WomenCarePointHomeListSectionRenderModel {
             self.schedule = schedule
             self.location = location
         }
+
+        /// empty init
+        init() {
+            id = ""
+            title = ""
+            streetAddress = ""
+            postalCode = ""
+            locality = ""
+            schedule = ""
+            location = .init()
+        }
     }
     
     open class Location: Codable {
-        let latitude: Double
-        let longitude: Double
+        /// Centers latitude
+        public let latitude: Double
+        /// Centers longitude
+        public let longitude: Double
         
+        /// Initializer for `Location`
+        /// - Parameters:
+        ///  - latitude: Cente's latitude
+        ///  - longitude: Centers longitude
         public init(latitude: Double, longitude: Double) {
             self.latitude = latitude
             self.longitude = longitude
         }
-    }
-
-    static var empty: WomenCarePointHomeListSectionRenderModel {
-        return WomenCarePointHomeListSectionRenderModel(
-            centers: [WomenCarePointHomeListSectionRenderModel.Centers(id: "",
-                                                                       title: "",
-                                                                       streetAddress: "",
-                                                                       postalCode: "",
-                                                                       locality: "",
-                                                                       schedule: "",
-                                                                       location: Location(latitude: 0.0,
-                                                                                          longitude: 0.0))],
-            showList: false)
+        
+        /// empty init
+        init() {
+            latitude = 0.0
+            longitude = 0.0
+        }
     }
 }
