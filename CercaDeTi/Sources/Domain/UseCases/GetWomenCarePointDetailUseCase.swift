@@ -30,7 +30,6 @@ class GetWomenCarePointDetailUseCase: GetWomenCarePointDetailUseCaseContract {
     
     open func run(_ params: GetWomenCarePointDetailParameters) async throws -> WomenCarePointModel {
         let centersDetail = try await womenCarePointRepository.getWomanCarePointDetailInformation(centerId: params.centerId)
-        try await womenCarePointRepository.saveDetailDataToLocal(centers: centersDetail)
         return WomenCarePointModel(data: centersDetail.data)
     }
 }
