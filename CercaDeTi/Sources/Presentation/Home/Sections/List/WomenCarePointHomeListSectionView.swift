@@ -11,7 +11,7 @@ struct WomenCarePointHomeListSectionView: View {
     let publisher: AnyPublisher<WomenCarePointHomeListSectionRenderModel, Never>
 
     // MARK: - State
-    @State private var renderModel = WomenCarePointHomeListSectionRenderModel.empty
+    @State private var renderModel: WomenCarePointHomeListSectionRenderModel = .init()
     @State private var selectedMapItem: MKMapItem?
     @State private var mapItemToCenter: [MKMapItem: WomenCarePointHomeListSectionRenderModel.Centers] = [:]
     @State private var cameraPosition: MapCameraPosition = .automatic

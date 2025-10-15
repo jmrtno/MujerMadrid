@@ -49,7 +49,7 @@ open class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
     }
 
     // MARK: - Published
-    @Published public var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .empty
+    @Published public var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .init()
     @Published var isLoading = false
     @Published var isError = false
     private let locationManager = CLLocationManager()

@@ -66,7 +66,7 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
     }
 
     // MARK: - Published
-    @Published public var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .empty
+    @Published public var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .init()
     @Published public var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
     @Published var isLoading = false
     @Published var isError = false
