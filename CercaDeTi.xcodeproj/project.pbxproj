@@ -10,7 +10,6 @@
 		ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; };
 		ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
-		ED5ED85E2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
 		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
 		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
@@ -97,7 +96,6 @@
 
 /* Begin PBXFileReference section */
 		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
-		ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailLocalDataSource.swift; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
 		EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cerca de Ti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		ED5ED85B2E84189C00062C14 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				ED5ED85D2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift */,
 				ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */,
 			);
 			path = Local;
@@ -607,7 +604,6 @@
 				EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */,
 				EDB57DEA2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift in Sources */,
 				EDB57DEB2E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift in Sources */,
-				ED5ED85E2E841ED100062C14 /* WomenCarePointDetailLocalDataSource.swift in Sources */,
 				EDB57DED2E4166F500430CB0 /* WomenCarePointHomeScreen.swift in Sources */,
 				EDB57DEF2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift in Sources */,
 				EDB57DF02E4166F500430CB0 /* WomenCarePointDetailBuilder.swift in Sources */,
