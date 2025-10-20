@@ -86,3 +86,13 @@ private extension WomenCarePointHomeFooterSectionView {
         FCButton(viewModelButton)
     }
 }
+
+#Preview {
+    struct MockViewModel: WomenCarePointHomeFooterSectionViewModelContract {
+        func callNumber(number: String) {
+            print("Se intentaría llamar al número: \(number)")
+        }
+    }
+
+    return WomenCarePointHomeFooterSectionView(viewModel: MockViewModel())
+}

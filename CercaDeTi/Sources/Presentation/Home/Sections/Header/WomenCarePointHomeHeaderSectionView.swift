@@ -32,28 +32,46 @@ private extension WomenCarePointHomeHeaderSectionView {
     @ViewBuilder
     var contentView: some View {
         VStack(alignment: .leading) {
-            Text("Centros de atención a la mujer")
-                .font(.title)
-                .bold()
-            HStack {
-                Text("Encuentra tu centro más cercano")
-                    .font(.subheadline)
-                toogleButton
+            HStack(spacing: 0) {
+                Image("icon_app")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 65, height: 65)
+                VStack(alignment: .leading) {
+                    Text("Cerca de Ti")
+                        .font(.title)
+                        .bold()
+                    Text("Centros de atención a la mujer ubicados en Madrid")
+                        .font(.subheadline)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(nil)
+                }
             }
+            .padding(.horizontal, 7)
+            toogleButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 16)
     }
 
     @ViewBuilder
     var toogleButton: some View {
         Toggle(isOn: $isOn) {
-            Text("Mostrar lista")
+            Text("Mostrar como lista")
                 .font(.subheadline)
-                .frame(maxWidth: .infinity, alignment: .trailing)
         }
+        .padding(.horizontal, 16)
         .onChange(of: isOn) {
             viewModel.didTapToggle()
         }
     }
+}
+
+#Preview {
+    struct MockViewModel: WomenCarePointHomeHeaderSectionViewModelContract {
+        func didTapToggle() {
+            print("Se pulsa el boton toggle")
+        }
+    }
+    return WomenCarePointHomeHeaderSectionView(viewModel: MockViewModel())
 }

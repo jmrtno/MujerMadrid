@@ -26,7 +26,7 @@ private extension CrossLoaderSectionView {
         ZStack {
             Color.white
             VStack {
-                Image("icon_loader")
+                Image("icon_app")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
