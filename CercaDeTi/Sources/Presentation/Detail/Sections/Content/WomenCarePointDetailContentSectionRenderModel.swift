@@ -6,7 +6,7 @@
 //
 import MapKit
 
-public struct WomenCarePointDetailContentSectionRenderModel {
+struct WomenCarePointDetailContentSectionRenderModel {
     /// information from centers
     public let center: Center
 
@@ -22,7 +22,7 @@ public struct WomenCarePointDetailContentSectionRenderModel {
         center = .init()
     }
     
-    public struct Center: Identifiable {
+    struct Center: Identifiable {
         /// Center id
         public let id: String
         /// Center name
@@ -87,7 +87,7 @@ public struct WomenCarePointDetailContentSectionRenderModel {
         }
     }
     
-    open class Location: Codable {
+    struct Location: Codable {
         /// Center latitude
         public let latitude: Double
         /// Center longitude

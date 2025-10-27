@@ -12,7 +12,7 @@ public protocol WomenCarePointDetailRemoteDataSourceContract: Instanciable {
     func getDetailInformation(centerId: String) async throws -> WomenCarePointDataEntity
 }
 
-open class WomenCarePointDetailRemoteDataSource: WomenCarePointDetailRemoteDataSourceContract {
+final class WomenCarePointDetailRemoteDataSource: WomenCarePointDetailRemoteDataSourceContract {
     var womenCarePointMapper: WomenCarePointMapperContract
     var womenCarePointAPI: WomenCarePointAPIContract
     
@@ -29,7 +29,7 @@ open class WomenCarePointDetailRemoteDataSource: WomenCarePointDetailRemoteDataS
         self.womenCarePointAPI = womenCarePointAPI
     }
 
-    open func getDetailInformation(centerId: String) async throws -> WomenCarePointDataEntity {
+    public func getDetailInformation(centerId: String) async throws -> WomenCarePointDataEntity {
         let resultAPI: Data = try await womenCarePointAPI.getWomanCarePointDetailInfo(centerId: centerId).execute()
         return try womenCarePointMapper.map(resultAPI)
     }

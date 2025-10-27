@@ -12,7 +12,7 @@ import Foundation
 import MapKit
 
 /// Dependencies of the WomenCarePointDetailViewModel
-open class WomenCarePointDetailViewModelDependencies {
+final class WomenCarePointDetailViewModelDependencies {
     /// identifier to access the screen
     public let centerId: String
 
@@ -24,7 +24,7 @@ open class WomenCarePointDetailViewModelDependencies {
     }
 }
 
-public protocol WomenCarePointDetailViewModelContract: ViewModelContract {
+protocol WomenCarePointDetailViewModelContract: ViewModelContract {
     // MARK: Dependencies
     /// Setup the dependencies of the viewModel
     /// - Parameter dependencies: dependencies of the viewModel
@@ -42,7 +42,7 @@ public protocol WomenCarePointDetailViewModelContract: ViewModelContract {
     var paddingSize: CGFloat { get }
 }
 
-open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
+final class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
                                           WomenCarePointDetailContentSectionViewModelContract,
                                           WomenCarePointDetailHeaderSectionViewModelContract,
                                           CrossErrorSectionViewModelContract {
@@ -75,19 +75,19 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
     private let longNameIds: Set<String> = ["11952990", "11089192"]
     
     // MARK: - Publishers
-    open var womenCarePointDetailInformationPublisher: AnyPublisher<WomenCarePointDetailContentSectionObservedModel, Never> {
+    public var womenCarePointDetailInformationPublisher: AnyPublisher<WomenCarePointDetailContentSectionObservedModel, Never> {
         $womenCarePointDetailInformationPublished.eraseToAnyPublisher()
     }
     
-    open var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
+    public var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
         $womenCarePointCenterHeaderInfoPublished.eraseToAnyPublisher()
     }
     
-    open var loaderPublisher: AnyPublisher<Bool, Never> {
+    public var loaderPublisher: AnyPublisher<Bool, Never> {
         $isLoading.eraseToAnyPublisher()
     }
 
-    open var errorPublisher: AnyPublisher<Bool, Never> {
+    public var errorPublisher: AnyPublisher<Bool, Never> {
         $isError.eraseToAnyPublisher()
     }
     
@@ -95,29 +95,29 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
     public var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
     
     /// This method is called when the view appears
-    open func notifyAppearance() {
+    public func notifyAppearance() {
         getWomenCarePointDetailData()
     }
     
     // MARK: - Dependencies
     /// Setup the dependencies of the viewModel
     /// - Parameter dependencies: dependencies of the viewModel
-    open func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
+    public func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
         self.centerId = dependencies.centerId
     }
     
     // MARK: - InitialData
     /// Loads the initial data
-    open func getWomenCarePointDetailData() {
+    public func getWomenCarePointDetailData() {
         loadData(for: centerId)
     }
     
     // MARK: - Section Inputs
-    open func goBack() {
+    public func goBack() {
         navigationBuilder.goBack(animated: true, screen: nil, nil)
     }
 
-    open func navigateTo(latitud: Double, longitud: Double) {
+    public func navigateTo(latitud: Double, longitud: Double) {
         let destinationCoordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
         let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate)
         let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
@@ -135,7 +135,7 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationMapItem], launchOptions: options)
     }
 
-    open var paddingSize: CGFloat {
+    public var paddingSize: CGFloat {
         if smallNameIds.contains(centerId) {
             return 140
         } else if longNameIds.contains(centerId) {
@@ -145,7 +145,7 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
         }
     }
 
-    open var headerHeight: CGFloat {
+    public var headerHeight: CGFloat {
         if smallNameIds.contains(centerId) {
             return 220
         } else if longNameIds.contains(centerId) {
@@ -155,7 +155,7 @@ open class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
         }
     }
 
-    open func didTapTryAgain() {
+    public func didTapTryAgain() {
         self.isLoading = true
         self.isError = false
         loadData(for: centerId)

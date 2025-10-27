@@ -9,20 +9,20 @@ import FDependencyInjector
 import FData
 import Foundation
 
-public protocol WomenCarePointMapperContract: Sendable, Instanciable {
+protocol WomenCarePointMapperContract: Sendable, Instanciable {
     func map(_ input: Data) throws -> WomenCarePointDataEntity
     func map(_ input: WomenCarePointDataEntity) throws -> WomenCarePointModel
     func map(_ input: WomenCarePointModel) throws -> WomenCarePointDataEntity
 }
 
-open class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContract {
+final class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContract {
     public required init() {}
     
-    open func map(_ input: Data) throws -> WomenCarePointDataEntity {
+    public func map(_ input: Data) throws -> WomenCarePointDataEntity {
         return try input.map(WomenCarePointDataEntity.self)
     }
     
-    open func map(_ input: WomenCarePointDataEntity) throws -> WomenCarePointModel {
+    public func map(_ input: WomenCarePointDataEntity) throws -> WomenCarePointModel {
         guard let dataInfo = input.graph else {
             return WomenCarePointModel(data: [])
         }
@@ -79,7 +79,7 @@ open class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContra
         return WomenCarePointModel(data: data)
     }
     
-    open func map(_ input: WomenCarePointModel) throws -> WomenCarePointDataEntity {
+    public func map(_ input: WomenCarePointModel) throws -> WomenCarePointDataEntity {
         let events: [WomenCarePointDataEntity.Event?] = input.data.map { modelEvent in
             let location = modelEvent.location.map {
                 WomenCarePointDataEntity.Location(

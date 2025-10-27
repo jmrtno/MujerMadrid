@@ -11,7 +11,7 @@ import FPresentation
 import SwiftUI
 
 /// Builder of Detail
-open class WomenCarePointDetailBuilder {
+final class WomenCarePointDetailBuilder {
     /// ViewModel of the screen
     public var viewModel: WomenCarePointDetailViewModelContract
     /// Identifier of the product needed to navigate to the screen.
@@ -33,7 +33,7 @@ open class WomenCarePointDetailBuilder {
     /// 2. Set up dependencies of the viewModel Ex: `viewModel.setupDependencies()`
     /// 3. Use ``WomenCarePointDetailScreen`` init using helper functions of this class, replacing the ones that you
     ///   want to customize
-    open func build() -> any View {
+    public func build() -> any View {
         viewModel.setupDependencies(WomenCarePointDetailViewModelDependencies(centerId: centerId))
         return WomenCarePointDetailScreen(viewModel: viewModel,
                                           top: getTopView,
@@ -46,7 +46,7 @@ open class WomenCarePointDetailBuilder {
     /// Function that sets the current identifier
     /// - Parameter centerId: identifier of the product
     /// - Returns: Self view with modifications
-    open func setIdentifier(centerId: String) -> WomenCarePointDetailBuilder {
+    public func setIdentifier(centerId: String) -> WomenCarePointDetailBuilder {
         self.centerId = centerId
         return self
     }

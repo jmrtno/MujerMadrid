@@ -5,7 +5,7 @@
 //  Created by Javier Martin on 18/7/25.
 //
 
-public struct WomenCarePointHomeListSectionRenderModel {
+struct WomenCarePointHomeListSectionRenderModel {
     /// information from centers
     public let centers: [Centers]
     /// Boolean that show/hide centers list
@@ -26,7 +26,7 @@ public struct WomenCarePointHomeListSectionRenderModel {
         showList = false
     }
 
-    public struct Centers: Identifiable {
+    struct Centers: Identifiable {
         /// Centers id
         public let id: String
         /// Centers name
@@ -79,7 +79,7 @@ public struct WomenCarePointHomeListSectionRenderModel {
         }
     }
     
-    open class Location: Codable {
+    final class Location: Codable {
         /// Centers latitude
         public let latitude: Double
         /// Centers longitude

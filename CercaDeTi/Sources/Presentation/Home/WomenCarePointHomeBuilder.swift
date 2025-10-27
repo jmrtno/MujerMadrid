@@ -11,7 +11,7 @@ import FPresentation
 import SwiftUI
 
 /// Builder of Home
-open class WomenCarePointHomeBuilder {
+final class WomenCarePointHomeBuilder {
     /// ViewModel of the screen
     public var viewModel: WomenCarePointHomeViewModelContract
 
@@ -31,7 +31,7 @@ open class WomenCarePointHomeBuilder {
     /// 2. Set up dependencies of the viewModel Ex: `viewModel.setupDependencies()`
     /// 3. Use ``WomenCarePointHomeScreen`` init using helper functions of this class, replacing the ones that you
     ///   want to customize
-    open func build() -> any View {
+    public func build() -> any View {
         viewModel.setupDependencies(WomenCarePointHomeViewModelDependencies())
         return WomenCarePointHomeScreen(viewModel: viewModel,
                                         top: getTopView,

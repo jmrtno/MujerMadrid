@@ -6,7 +6,7 @@
 //
 import MapKit
 
-public struct WomenCarePointDetailContentSectionObservedModel {
+struct WomenCarePointDetailContentSectionObservedModel {
     /// information from centers
     public var data: [WomenCarePointModel.EventModel]?
     

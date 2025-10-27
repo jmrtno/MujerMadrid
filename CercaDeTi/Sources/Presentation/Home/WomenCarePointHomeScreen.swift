@@ -10,11 +10,11 @@ import FDependencyInjector
 import FPresentation
 import SwiftUI
 
-public struct WomenCarePointHomeScreen<Top: View,
-                                       Content: View,
-                                       Bottom: View,
-                                       Overlay: View,
-                                       Error: View>: View {
+struct WomenCarePointHomeScreen<Top: View,
+                                Content: View,
+                                Bottom: View,
+                                Overlay: View,
+                                Error: View>: View {
     private let content: Content
     private let top: Top
     private let bottom: Bottom

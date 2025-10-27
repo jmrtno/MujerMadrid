@@ -7,7 +7,7 @@
 
 import Combine
 
-public protocol WomenCarePointHomeListSectionViewModelContract {
+protocol WomenCarePointHomeListSectionViewModelContract {
     // MARK: - Outputs
     var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> { get }
     // MARK: - Inputs

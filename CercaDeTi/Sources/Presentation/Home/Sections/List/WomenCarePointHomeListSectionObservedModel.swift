@@ -5,7 +5,7 @@
 //  Created by Javier Martin on 18/7/25.
 //
 
-public struct WomenCarePointHomeListSectionObservedModel {
+struct WomenCarePointHomeListSectionObservedModel {
     /// information from centers
     public var data: [WomenCarePointModel.EventModel]?
     /// Boolean that show/hide centers list

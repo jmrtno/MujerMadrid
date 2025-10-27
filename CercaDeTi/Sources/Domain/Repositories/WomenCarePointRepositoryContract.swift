@@ -7,7 +7,7 @@
 
 import FDependencyInjector
 
-public protocol WomenCarePointRepositoryContract: Instanciable {
+protocol WomenCarePointRepositoryContract: Instanciable {
 
     func getWomanCarePointHomeInformation() async throws -> WomenCarePointModel
     func getWomanCarePointDetailInformation(centerId: String) async throws -> WomenCarePointModel

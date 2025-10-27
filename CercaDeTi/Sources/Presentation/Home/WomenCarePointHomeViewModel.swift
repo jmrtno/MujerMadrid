@@ -11,9 +11,9 @@ import MapKit
 import SwiftUI
 
 /// Dependencies of the WomenCarePointHomeViewModel
-open class WomenCarePointHomeViewModelDependencies {}
+final class WomenCarePointHomeViewModelDependencies {}
 
-public protocol WomenCarePointHomeViewModelContract: ViewModelContract {
+protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     // MARK: Dependencies
     func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies)
     
@@ -26,7 +26,7 @@ public protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     var loaderPublisher: AnyPublisher<Bool, Never> { get }
 }
 
-open class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
+final class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
                                         WomenCarePointHomeListSectionViewModelContract,
                                         WomenCarePointHomeFooterSectionViewModelContract,
                                         WomenCarePointHomeHeaderSectionViewModelContract,
@@ -55,15 +55,15 @@ open class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
     private let locationManager = CLLocationManager()
     
     // MARK: - Publishers
-    open var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> {
+    public var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> {
         $womenCarePointInformationPublished.eraseToAnyPublisher()
     }
     
-    open var loaderPublisher: AnyPublisher<Bool, Never> {
+    public var loaderPublisher: AnyPublisher<Bool, Never> {
         $isLoading.eraseToAnyPublisher()
     }
 
-    open var errorPublisher: AnyPublisher<Bool, Never> {
+    public var errorPublisher: AnyPublisher<Bool, Never> {
         $isError.eraseToAnyPublisher()
     }
 
@@ -71,35 +71,35 @@ open class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
     public var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
     
     /// Called when the view appears
-    open func notifyAppearance() {
+    public func notifyAppearance() {
         requestLocationPermissionsIfNeeded()
     }
     
     // MARK: - Dependencies
-    open func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
+    public func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
     
     // MARK: - Initial Data
-    open func getWomenCarePointInformationData() {
+    public func getWomenCarePointInformationData() {
         loadData()
     }
     
     // MARK: - Section Inputs
-    open func navigateToCarePointDetail(centerId: String) {
+    public func navigateToCarePointDetail(centerId: String) {
         navigationBuilder.navigateToCarePointDetail(centerId: centerId)
     }
     
-    open func callNumber(number: String) {
+    public func callNumber(number: String) {
         if let url = URL(string: "tel://\(number)"),
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
     }
 
-    open func didTapToggle() {
+    public func didTapToggle() {
         womenCarePointInformationPublished.showList.toggle()
     }
 
-    open func didTapTryAgain() {
+    public func didTapTryAgain() {
         self.isLoading = true
         self.isError = false
         loadData()
