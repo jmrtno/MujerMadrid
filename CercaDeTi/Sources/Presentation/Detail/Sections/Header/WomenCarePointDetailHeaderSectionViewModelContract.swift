@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-public protocol WomenCarePointDetailHeaderSectionViewModelContract {
+protocol WomenCarePointDetailHeaderSectionViewModelContract {
     // MARK: - Outputs
     var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> { get }
 

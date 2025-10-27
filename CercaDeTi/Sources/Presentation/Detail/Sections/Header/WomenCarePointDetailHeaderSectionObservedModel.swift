@@ -5,7 +5,7 @@
 //  Created by Javier Martin on 18/7/25.
 //
 
-public struct WomenCarePointDetailHeaderSectionObservedModel {
+struct WomenCarePointDetailHeaderSectionObservedModel {
     /// Center name
     public var title: String
     /// Center description

@@ -5,7 +5,7 @@
 //  Created by Javier Martin on 18/7/25.
 //
 
-public struct WomenCarePointDetailHeaderSectionRenderModel {
+struct WomenCarePointDetailHeaderSectionRenderModel {
     /// Center name
     public let title: String
     /// Center type

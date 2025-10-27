@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-public struct Utils {
+struct Utils {
     func formatLocality(_ input: String?) -> String {
         guard let input, !input.isEmpty else { return "" }
         
