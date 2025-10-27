@@ -10,11 +10,11 @@ import FDependencyInjector
 import FPresentation
 import SwiftUI
 
-public struct WomenCarePointDetailScreen<Top: View,
-                                         Content: View,
-                                         Bottom: View,
-                                         Error: View,
-                                         Overlay: View>: View {
+struct WomenCarePointDetailScreen<Top: View,
+                                  Content: View,
+                                  Bottom: View,
+                                  Error: View,
+                                  Overlay: View>: View {
     private let content: Content
     private let top: Top
     private let bottom: Bottom
@@ -60,7 +60,7 @@ public struct WomenCarePointDetailScreen<Top: View,
             .hiddenOrRemoved(showError, remove: true)
             .background(Color.white)
             .clipShape(
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
             )
             .padding(.top, viewModel.paddingSize)
             .ignoresSafeArea(edges: .bottom)
@@ -81,8 +81,4 @@ public struct WomenCarePointDetailScreen<Top: View,
             showLoader = $0
         }
     }
-}
-
-private extension WomenCarePointDetailScreen {
-
 }
