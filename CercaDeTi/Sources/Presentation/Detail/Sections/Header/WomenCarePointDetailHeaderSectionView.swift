@@ -95,14 +95,10 @@ private extension WomenCarePointDetailHeaderSectionView {
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(Color.white.opacity(0.2))
-            .cornerRadius(12)
+            .cornerRadius(15)
             .foregroundColor(.white)
             .fixedSize(horizontal: false, vertical: true)
             .multilineTextAlignment(.leading)
             .lineLimit(nil)
     }
 }
-
-//#Preview {
-//    WomenCarePointDetailHeaderSectionViewV2()
-//}
