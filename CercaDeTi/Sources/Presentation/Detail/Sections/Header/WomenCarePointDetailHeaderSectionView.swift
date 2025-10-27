@@ -52,25 +52,21 @@ private extension WomenCarePointDetailHeaderSectionView {
                 backButton
                     .frame(maxWidth: .infinity, alignment: .leading)
                 iconAndTitle
-                    .frame(maxWidth: .infinity, alignment: .center)
                 centerType
-                    .frame(maxWidth: .infinity, alignment: .center)
                 Spacer()
             }
-            .frame(maxWidth: .infinity)
             .padding(.horizontal)
         }
-        .frame(maxWidth: .infinity)
         .frame(height: viewModel.headerHeight)
     }
 
     var backButton: some View {
-        Button(action: {
+        Button {
             viewModel.goBack()
-        }, label: {
+        } label: {
             Image(systemName: "arrow.backward")
                 .foregroundColor(.white)
-        })
+        }
     }
 
     var iconAndTitle: some View {
@@ -83,10 +79,9 @@ private extension WomenCarePointDetailHeaderSectionView {
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
-                .lineLimit(nil)
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     var centerType: some View {
@@ -95,10 +90,7 @@ private extension WomenCarePointDetailHeaderSectionView {
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(Color.white.opacity(0.2))
-            .cornerRadius(15)
+            .cornerRadius(20)
             .foregroundColor(.white)
-            .fixedSize(horizontal: false, vertical: true)
-            .multilineTextAlignment(.leading)
-            .lineLimit(nil)
     }
 }
