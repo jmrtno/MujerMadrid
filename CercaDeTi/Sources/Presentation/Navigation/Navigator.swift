@@ -13,7 +13,7 @@ import SwiftUI
 
 // Una clase responsable de devolver la vista apropiada basada en la información de navegación.
 /// - handleDestinationFor(navigationInfo:): Devuelve la vista correspondiente según la información de navegación.
-open class Navigator: ScreenNavigator {
+final class Navigator: ScreenNavigator {
     
     public required init() {}
 
@@ -26,7 +26,7 @@ open class Navigator: ScreenNavigator {
     }
     
     /// Maneja la vista de destino para la información de navegación dada.
-    open func handleDestinationFor(navigationInfo: IncomingNavigation) throws -> (any View)? {
+    public func handleDestinationFor(navigationInfo: IncomingNavigation) throws -> (any View)? {
         switch navigationInfo {
         case .home:
             return WomenCarePointHomeBuilder()

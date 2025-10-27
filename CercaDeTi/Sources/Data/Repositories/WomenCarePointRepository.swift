@@ -8,7 +8,7 @@
 import FDependencyInjector
 import Foundation
 
-open class WomenCarePointRepository: @unchecked Sendable,
+final class WomenCarePointRepository: @unchecked Sendable,
                                      WomenCarePointRepositoryContract {
     let homeRemoteDataSource: WomenCarePointHomeRemoteDataSourceContract
     let detailRemoteDataSource: WomenCarePointDetailRemoteDataSourceContract
@@ -36,7 +36,7 @@ open class WomenCarePointRepository: @unchecked Sendable,
         self.getWomenCarePointEntityMapper = getWomenCarePointEntityMapper
     }
     
-    open func getWomanCarePointHomeInformation() async throws -> WomenCarePointModel {
+    public func getWomanCarePointHomeInformation() async throws -> WomenCarePointModel {
         let localCenters = try await getCentersHomeInfoFromLocalData()
         if localCenters.data.isEmpty {
             return try await getCentersHomeInfoFromRemoteData()
@@ -44,12 +44,12 @@ open class WomenCarePointRepository: @unchecked Sendable,
         return localCenters
     }
 
-    open func saveHomeDataToLocal(centers: WomenCarePointModel) async throws {
+    public func saveHomeDataToLocal(centers: WomenCarePointModel) async throws {
         let entity = try getWomenCarePointEntityMapper.map(centers)
         await homeLocalDataSource.setLocalHomeInformation(entity: entity)
     }
 
-    open func getWomanCarePointDetailInformation(centerId: String) async throws -> WomenCarePointModel {
+    public func getWomanCarePointDetailInformation(centerId: String) async throws -> WomenCarePointModel {
         return try await getCentersDetailInfoFromRemoteData(centerId: centerId)
     }
 }

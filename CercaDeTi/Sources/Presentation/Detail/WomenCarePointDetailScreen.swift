@@ -10,7 +10,7 @@ import FDependencyInjector
 import FPresentation
 import SwiftUI
 
-public struct WomenCarePointDetailScreen<Top: View,
+struct WomenCarePointDetailScreen<Top: View,
                                          Content: View,
                                          Bottom: View,
                                          Error: View,

@@ -14,7 +14,7 @@ public protocol WomenCarePointAPIContract: Instanciable {
     func getWomanCarePointDetailInfo(centerId: String) -> any HTTPAPIContract
 }
 
-open class WomenCarePointAPI: WomenCarePointAPIContract {
+final class WomenCarePointAPI: WomenCarePointAPIContract {
     public required init() {
         /* Required by the injector */
     }

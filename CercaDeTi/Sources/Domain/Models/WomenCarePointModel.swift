@@ -7,14 +7,14 @@
 
 import Foundation
 
-open class WomenCarePointModel: Codable {
+final class WomenCarePointModel: Codable {
     public let data: [EventModel]
     
     public init(data: [EventModel]) {
         self.data = data
     }
     
-    open class EventModel: Codable {
+    final class EventModel: Codable {
         let id: String?
         let uid: String?
         let dtstart: String?
@@ -73,7 +73,7 @@ open class WomenCarePointModel: Codable {
         }
     }
     
-    open class LocationModel: Codable {
+    final class LocationModel: Codable {
         let latitude: Double?
         let longitude: Double?
         
@@ -83,7 +83,7 @@ open class WomenCarePointModel: Codable {
         }
     }
 
-    open class AddressModel: Codable {
+    final class AddressModel: Codable {
         let locality: String?
         let postalCode: String?
         let streetAddress: String?
@@ -99,8 +99,7 @@ open class WomenCarePointModel: Codable {
         }
     }
     
-    // Para claves como "area" o "district" que contienen un @id
-    open class IDWrapperModel: Codable {
+    final class IDWrapperModel: Codable {
         let id: String?
         
         public init(id: String?) {
@@ -108,7 +107,7 @@ open class WomenCarePointModel: Codable {
         }
     }
 
-    open class OrganizationModel: Codable {
+    public class OrganizationModel: Codable {
         let accesibility: String?
         let services: String?
         let schedule: String?
@@ -124,7 +123,7 @@ open class WomenCarePointModel: Codable {
         }
     }
 
-    open class RecurrenceModel: Codable {
+    public class RecurrenceModel: Codable {
         let interval: Int?
         let days: String?
         let frequency: String?

@@ -8,7 +8,7 @@
 import Foundation
 import FDependencyInjector
 
-public protocol GetWomenCarePointDetailUseCaseContract: UseCaseContract {
+protocol GetWomenCarePointDetailUseCaseContract: UseCaseContract {
     func run(_ params: GetWomenCarePointDetailParameters) async throws -> WomenCarePointModel
 }
 
@@ -28,7 +28,7 @@ class GetWomenCarePointDetailUseCase: GetWomenCarePointDetailUseCaseContract {
         self.womenCarePointRepository = womenCarePointRepository
     }
     
-    open func run(_ params: GetWomenCarePointDetailParameters) async throws -> WomenCarePointModel {
+    public func run(_ params: GetWomenCarePointDetailParameters) async throws -> WomenCarePointModel {
         let centersDetail = try await womenCarePointRepository.getWomanCarePointDetailInformation(centerId: params.centerId)
         return WomenCarePointModel(data: centersDetail.data)
     }
