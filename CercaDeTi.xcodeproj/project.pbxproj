@@ -11,6 +11,8 @@
 		ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
+		EDB12C9D2EAF975500A041A2 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB57E162E41672600430CB0 /* FComponents.xcframework */; };
+		EDB12C9E2EAF975500A041A2 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDB57E162E41672600430CB0 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
 		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
 		EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* CercaDeTi.swift */; };
@@ -68,8 +70,6 @@
 		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
 		EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; };
 		EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EDD0F3292E8271E5002EF349 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3232E8271E5002EF349 /* FComponents.xcframework */; };
-		EDD0F32A2E8271E5002EF349 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3232E8271E5002EF349 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; };
 		EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */; };
@@ -85,9 +85,9 @@
 			files = (
 				EDD0F32E2E8271E5002EF349 /* FNavigation.xcframework in Embed Frameworks */,
 				EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */,
-				EDD0F32A2E8271E5002EF349 /* FComponents.xcframework in Embed Frameworks */,
 				EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */,
 				ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */,
+				EDB12C9E2EAF975500A041A2 /* FComponents.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,9 +172,9 @@
 			files = (
 				EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */,
 				EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */,
-				EDD0F3292E8271E5002EF349 /* FComponents.xcframework in Frameworks */,
 				EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */,
 				ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */,
+				EDB12C9D2EAF975500A041A2 /* FComponents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

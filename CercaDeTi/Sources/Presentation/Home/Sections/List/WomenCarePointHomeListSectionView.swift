@@ -80,7 +80,7 @@ private extension WomenCarePointHomeListSectionView {
             if !renderModel.showList {
                 mapView
                     .frame(height: 400)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
                 if let selected = selectedMapItem,
                    let center = mapItemToCenter[selected] {
                     getItemView(item: center)
