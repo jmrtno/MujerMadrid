@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "FNavigation",
+    "printedName": "FNavigation",
     "children": [
       {
         "kind": "Import",
@@ -1003,6 +1003,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ObservableObject",
             "printedName": "ObservableObject",
             "children": [
@@ -1068,6 +1082,7 @@
             "mangledName": "$s11FNavigation17NavigationManagerV6routerAA6RouterCvp",
             "moduleName": "FNavigation",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "ProjectedValueProperty",
               "AccessControl",
@@ -1113,6 +1128,7 @@
             "moduleName": "FNavigation",
             "implicit": true,
             "declAttributes": [
+              "Preconcurrency",
               "Custom"
             ],
             "accessors": [
@@ -1157,6 +1173,7 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1212,6 +1229,7 @@
                 "declAttributes": [
                   "Dynamic",
                   "ObjC",
+                  "Preconcurrency",
                   "Custom",
                   "Override"
                 ],
@@ -1223,6 +1241,7 @@
             "mangledName": "$s11FNavigation17NavigationManagerV11CoordinatorC",
             "moduleName": "FNavigation",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment",
@@ -1234,6 +1253,20 @@
               "ObjectiveC.NSObject"
             ],
             "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
               {
                 "kind": "Conformance",
                 "name": "Equatable",
@@ -1282,6 +1315,13 @@
                 "printedName": "CustomDebugStringConvertible",
                 "usr": "s:s28CustomDebugStringConvertibleP",
                 "mangledName": "$ss28CustomDebugStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
               }
             ]
           },
@@ -1302,6 +1342,7 @@
             "mangledName": "$s11FNavigation17NavigationManagerV15makeCoordinatorAC0E0CyF",
             "moduleName": "FNavigation",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
@@ -1339,6 +1380,7 @@
             "mangledName": "$s11FNavigation17NavigationManagerV20makeUIViewController7contextSo012UINavigationF0C7SwiftUI0eF20RepresentableContextVyACG_tF",
             "moduleName": "FNavigation",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
@@ -1381,6 +1423,7 @@
             "mangledName": "$s11FNavigation17NavigationManagerV22updateUIViewController_7contextySo012UINavigationF0C_7SwiftUI0eF20RepresentableContextVyACGtF",
             "moduleName": "FNavigation",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1392,11 +1435,26 @@
         "mangledName": "$s11FNavigation17NavigationManagerV",
         "moduleName": "FNavigation",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "UIViewControllerRepresentable",
@@ -1453,6 +1511,13 @@
             ],
             "usr": "s:7SwiftUI4ViewP",
             "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -1527,6 +1592,22 @@
         "moduleName": "FNavigation",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1865,6 +1946,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1939,6 +2034,10 @@
             "genericSig": "<τ_0_0 where τ_0_0 : FNavigation.ScreenNavigator>",
             "sugared_genericSig": "<Self where Self : FNavigation.ScreenNavigator>",
             "protocolReq": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
             "throwing": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -1948,12 +2047,33 @@
         "usr": "s:11FNavigation15ScreenNavigatorP",
         "mangledName": "$s11FNavigation15ScreenNavigatorP",
         "moduleName": "FNavigation",
-        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable>",
-        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable>",
+        "genericSig": "<τ_0_0 : FDependencyInjector.Instanciable, τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : FDependencyInjector.Instanciable, Self : Swift.Sendable>",
         "declAttributes": [
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Instanciable",
@@ -1968,84 +2088,42 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/Router.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/Router.swift",
       "kind": "BooleanLiteral",
       "offset": 760,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationManager.swift",
-      "kind": "StringLiteral",
-      "offset": 992,
-      "length": 11,
-      "value": "\"FNavigation.Coordinator\""
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
       "kind": "IntegerLiteral",
       "offset": 201,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
       "kind": "IntegerLiteral",
       "offset": 215,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
       "kind": "IntegerLiteral",
       "offset": 235,
       "length": 8,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
       "kind": "IntegerLiteral",
       "offset": 253,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 269,
-      "length": 12,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 201,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 215,
-      "length": 10,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 235,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 253,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/N326961\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
+      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 12,
