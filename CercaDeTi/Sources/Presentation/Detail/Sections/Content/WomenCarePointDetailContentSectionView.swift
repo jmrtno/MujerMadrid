@@ -10,7 +10,7 @@ import Combine
 import FComponents
 import FNavigation
 import FPresentation
-import MapKit
+@preconcurrency import MapKit
 import SwiftUI
 
 struct WomenCarePointDetailContentSectionView: View {

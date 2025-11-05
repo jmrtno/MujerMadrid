@@ -8,11 +8,11 @@
 import Foundation
 import FDependencyInjector
 
-protocol GetWomenCarePointHomeUseCaseContract: UseCaseContract {
+protocol GetWomenCarePointHomeUseCaseContract: UseCaseContract, Sendable {
     func run() async throws -> WomenCarePointModel
 }
 
-class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract {
+class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract, @unchecked Sendable {
     let womenCarePointRepository: WomenCarePointRepositoryContract
 
     required init() {

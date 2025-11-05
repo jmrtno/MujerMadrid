@@ -26,11 +26,12 @@ protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     var loaderPublisher: AnyPublisher<Bool, Never> { get }
 }
 
-final class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
-                                        WomenCarePointHomeListSectionViewModelContract,
-                                        WomenCarePointHomeFooterSectionViewModelContract,
-                                        WomenCarePointHomeHeaderSectionViewModelContract,
-                                        CrossErrorSectionViewModelContract {
+final class WomenCarePointHomeViewModel: @unchecked Sendable,
+                                         WomenCarePointHomeViewModelContract,
+                                         WomenCarePointHomeListSectionViewModelContract,
+                                         WomenCarePointHomeFooterSectionViewModelContract,
+                                         WomenCarePointHomeHeaderSectionViewModelContract,
+                                         CrossErrorSectionViewModelContract {
 
     // MARK: - UseCase
     let getWomenCarePointUseCase: GetWomenCarePointHomeUseCaseContract
@@ -89,9 +90,11 @@ final class WomenCarePointHomeViewModel: WomenCarePointHomeViewModelContract,
     }
     
     public func callNumber(number: String) {
-        if let url = URL(string: "tel://\(number)"),
-           UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
+        Task { @MainActor in
+            if let url = URL(string: "tel://\(number)"),
+               UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
         }
     }
 

@@ -52,13 +52,15 @@ struct ExpandableText: View {
                 .onPreferenceChange(TextHeightPreferenceKey.self) { fullHeight in
                     let lineHeight: CGFloat = UIFont.preferredFont(forTextStyle: .body).lineHeight
                     let maxHeight = CGFloat(lineLimit) * lineHeight
-                    callback(fullHeight > maxHeight)
+                    Task { @MainActor in
+                        callback(fullHeight > maxHeight)
+                    }
                 }
         }
     }
 
     struct TextHeightPreferenceKey: PreferenceKey {
-        static var defaultValue: CGFloat = .zero
+        static let defaultValue: CGFloat = .zero
         static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
             value = nextValue()
         }
