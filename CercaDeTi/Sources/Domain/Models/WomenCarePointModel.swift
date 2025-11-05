@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class WomenCarePointModel: Codable {
+final class WomenCarePointModel: @unchecked Sendable, Codable {
     public let data: [EventModel]
     
     public init(data: [EventModel]) {
