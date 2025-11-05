@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; };
-		ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
-		EDB12C9D2EAF975500A041A2 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB57E162E41672600430CB0 /* FComponents.xcframework */; };
-		EDB12C9E2EAF975500A041A2 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDB57E162E41672600430CB0 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED9D20412EBB3BE5008F2EED /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; };
+		ED9D20422EBB3BE5008F2EED /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED9D20432EBB3BE5008F2EED /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203D2EBB3BE5008F2EED /* FNavigation.xcframework */; };
+		ED9D20442EBB3BE5008F2EED /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203D2EBB3BE5008F2EED /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED9D20452EBB3BE5008F2EED /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */; };
+		ED9D20462EBB3BE5008F2EED /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; };
+		ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D20402EBB3BE5008F2EED /* FData.xcframework */; };
+		ED9D204A2EBB3BE5008F2EED /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D20402EBB3BE5008F2EED /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
 		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
 		EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* CercaDeTi.swift */; };
@@ -68,12 +74,6 @@
 		EDB7DDB52E9D256A0088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
 		EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */; };
 		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
-		EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; };
-		EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3222E8271E5002EF349 /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; };
-		EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */; };
-		EDD0F32E2E8271E5002EF349 /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,11 +83,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EDD0F32E2E8271E5002EF349 /* FNavigation.xcframework in Embed Frameworks */,
-				EDD0F32C2E8271E5002EF349 /* FPresentation.xcframework in Embed Frameworks */,
-				EDD0F3282E8271E5002EF349 /* FData.xcframework in Embed Frameworks */,
-				ED151FC62E95D0520021B9B4 /* FDependencyInjector.xcframework in Embed Frameworks */,
-				EDB12C9E2EAF975500A041A2 /* FComponents.xcframework in Embed Frameworks */,
+				ED9D20442EBB3BE5008F2EED /* FNavigation.xcframework in Embed Frameworks */,
+				ED9D20422EBB3BE5008F2EED /* FDependencyInjector.xcframework in Embed Frameworks */,
+				ED9D204A2EBB3BE5008F2EED /* FData.xcframework in Embed Frameworks */,
+				ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */,
+				ED9D20462EBB3BE5008F2EED /* FComponents.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +97,11 @@
 /* Begin PBXFileReference section */
 		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
+		ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
+		ED9D203D2EBB3BE5008F2EED /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
+		ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
+		ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
+		ED9D20402EBB3BE5008F2EED /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
 		EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cerca de Ti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB57D712E41667A00430CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,20 +154,10 @@
 		EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 		EDB57DDA2E4166F500430CB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EDB57DDB2E4166F500430CB0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		EDB57E162E41672600430CB0 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = ../frameworks/FComponents.xcframework; sourceTree = "<group>"; };
-		EDB57E172E41672600430CB0 /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = ../frameworks/FData.xcframework; sourceTree = "<group>"; };
-		EDB57E182E41672600430CB0 /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = ../frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
-		EDB57E192E41672600430CB0 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = ../frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
-		EDB57E1A2E41672600430CB0 /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = ../frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
 		EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
 		EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionView.swift; sourceTree = "<group>"; };
-		EDD0F3222E8271E5002EF349 /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
-		EDD0F3232E8271E5002EF349 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
-		EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
-		EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
-		EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD0F32D2E8271E5002EF349 /* FNavigation.xcframework in Frameworks */,
-				EDD0F32B2E8271E5002EF349 /* FPresentation.xcframework in Frameworks */,
-				EDD0F3272E8271E5002EF349 /* FData.xcframework in Frameworks */,
-				ED151FC52E95D0520021B9B4 /* FDependencyInjector.xcframework in Frameworks */,
-				EDB12C9D2EAF975500A041A2 /* FComponents.xcframework in Frameworks */,
+				ED9D20432EBB3BE5008F2EED /* FNavigation.xcframework in Frameworks */,
+				ED9D20412EBB3BE5008F2EED /* FDependencyInjector.xcframework in Frameworks */,
+				ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */,
+				ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */,
+				ED9D20452EBB3BE5008F2EED /* FComponents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,11 +193,23 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		ED9D203B2EBB3BE5008F2EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */,
+				ED9D20402EBB3BE5008F2EED /* FData.xcframework */,
+				ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */,
+				ED9D203D2EBB3BE5008F2EED /* FNavigation.xcframework */,
+				ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDB57D552E41667200430CB0 = {
 			isa = PBXGroup;
 			children = (
 				EDB57D742E41667A00430CB0 /* CercaDeTi */,
-				EDB57E152E41672500430CB0 /* Frameworks */,
+				ED9D203B2EBB3BE5008F2EED /* Frameworks */,
 				EDB57D5F2E41667200430CB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -457,23 +464,6 @@
 				EDB57DDC2E4166F500430CB0 /* Utils */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		EDB57E152E41672500430CB0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EDD0F3232E8271E5002EF349 /* FComponents.xcframework */,
-				EDD0F3222E8271E5002EF349 /* FData.xcframework */,
-				EDD0F3262E8271E5002EF349 /* FDependencyInjector.xcframework */,
-				EDD0F3252E8271E5002EF349 /* FNavigation.xcframework */,
-				EDD0F3242E8271E5002EF349 /* FPresentation.xcframework */,
-				EDB57E162E41672600430CB0 /* FComponents.xcframework */,
-				EDB57E172E41672600430CB0 /* FData.xcframework */,
-				EDB57E182E41672600430CB0 /* FDependencyInjector.xcframework */,
-				EDB57E192E41672600430CB0 /* FNavigation.xcframework */,
-				EDB57E1A2E41672600430CB0 /* FPresentation.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EDB7DDB12E9D25310088D8C9 /* Header */ = {
