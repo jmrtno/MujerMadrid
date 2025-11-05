@@ -11,6 +11,7 @@ import FPresentation
 import SwiftUI
 
 /// Builder of Home
+@MainActor
 final class WomenCarePointHomeBuilder {
     /// ViewModel of the screen
     public var viewModel: WomenCarePointHomeViewModelContract

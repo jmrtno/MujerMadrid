@@ -42,10 +42,11 @@ protocol WomenCarePointDetailViewModelContract: ViewModelContract {
     var paddingSize: CGFloat { get }
 }
 
-final class WomenCarePointDetailViewModel: WomenCarePointDetailViewModelContract,
-                                          WomenCarePointDetailContentSectionViewModelContract,
-                                          WomenCarePointDetailHeaderSectionViewModelContract,
-                                          CrossErrorSectionViewModelContract {
+final class WomenCarePointDetailViewModel: @unchecked Sendable,
+                                           WomenCarePointDetailViewModelContract,
+                                           WomenCarePointDetailContentSectionViewModelContract,
+                                           WomenCarePointDetailHeaderSectionViewModelContract,
+                                           CrossErrorSectionViewModelContract {
     // MARK: - Dependencies
     @Dependency public var centerId: String
 
@@ -169,24 +170,38 @@ private extension WomenCarePointDetailViewModel {
             self.isLoading = true
             do {
                 let useCase = self.getWomenCarePointUseCase
-                let params =  GetWomenCarePointDetailParameters(centerId: self.centerId)
+                let params = GetWomenCarePointDetailParameters(centerId: self.centerId)
                 let info = try await useCase.run(params)
-
                 self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(
                     data: info.data
                 )
-
                 self.womenCarePointCenterHeaderInfoPublished.title = info.data.first?.title ?? ""
                 self.womenCarePointCenterHeaderInfoPublished.description = info.data.first?.organization?.organizationDesc ?? ""
                 self.womenCarePointCenterHeaderInfoPublished.services = info.data.first?.organization?.services ?? ""
                 self.isError = false
                 self.isLoading = false
-                
             } catch {
                 self.isLoading = false
                 self.isError = true
+
+                let nsError = error as NSError
+                print("🔴 ERROR EN DETAIL:")
+                print("• Domain:", nsError.domain)
+                print("• Code:", nsError.code)
+                print("• Description:", nsError.localizedDescription)
+                print("• UserInfo:", nsError.userInfo)
+
+                // Si viene respuesta HTTP, la pintamos
+                if let response = nsError.userInfo["NSErrorFailingURLResponseKey"] as? HTTPURLResponse {
+                    print("🌐 HTTP Status:", response.statusCode)
+                }
+
+                // Si viene cuerpo en la respuesta, lo leemos
+                if let data = nsError.userInfo["NSErrorFailingURLResponseDataKey"] as? Data,
+                   let body = String(data: data, encoding: .utf8) {
+                    print("📦 Response Body:\n", body)
+                }
             }
         }
     }
-
 }
