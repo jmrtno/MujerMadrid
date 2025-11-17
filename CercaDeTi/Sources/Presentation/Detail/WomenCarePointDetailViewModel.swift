@@ -122,17 +122,14 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         let destinationCoordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
         let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate)
         let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-        destinationMapItem.name = womenCarePointCenterHeaderInfoPublished.title // opcional, muestra el nombre en Maps
+        destinationMapItem.name = womenCarePointCenterHeaderInfoPublished.title
 
-        // Punto de partida = ubicación actual
         let currentLocationMapItem = MKMapItem.forCurrentLocation()
 
-        // Opciones para mostrar la ruta en coche (puedes cambiar a .walking, .transit, etc.)
         let options = [
             MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
         ]
 
-        // Abre la app de Mapas con la ruta
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationMapItem], launchOptions: options)
     }
 
@@ -191,12 +188,10 @@ private extension WomenCarePointDetailViewModel {
                 print("• Description:", nsError.localizedDescription)
                 print("• UserInfo:", nsError.userInfo)
 
-                // Si viene respuesta HTTP, la pintamos
                 if let response = nsError.userInfo["NSErrorFailingURLResponseKey"] as? HTTPURLResponse {
                     print("🌐 HTTP Status:", response.statusCode)
                 }
 
-                // Si viene cuerpo en la respuesta, lo leemos
                 if let data = nsError.userInfo["NSErrorFailingURLResponseDataKey"] as? Data,
                    let body = String(data: data, encoding: .utf8) {
                     print("📦 Response Body:\n", body)

@@ -32,23 +32,28 @@ private extension WomenCarePointHomeFooterSectionView {
     @ViewBuilder
     var contentView: some View {
         ZStack(alignment: .top) {
-            // --- Sombra difusa debajo del footer ---
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color.black.opacity(0.1), // más opaco justo debajo del footer
-                    .clear                    // difuminado hacia abajo
+                    Color.black.opacity(0.1),
+                    .clear
                 ]),
                 startPoint: .bottom,
                 endPoint: .top
             )
-            .frame(height: 12) // controla el grosor/altura de la sombra
-            .offset(y: -16)    // ajusta cuánto "sube" la sombra para pegarse al borde superior
+            .frame(height: 12)
+            .offset(y: -16)
 
-            // --- Footer real ---
             HStack {
-                Text("Servicio de atención gratuito a todas las formas de violencia contra las mujeres")
-                    .font(.caption)
-                button
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    /// iPad alternative view
+                    Text("Servicio de atención gratuito a todas las formas de violencia de género: 016")
+                        .font(.caption)
+                        .padding()
+                } else {
+                    Text("Servicio de atención gratuito a todas las formas de violencia de género")
+                        .font(.caption)
+                    button
+                }
             }
             .padding(.horizontal)
             .background(Color.white)

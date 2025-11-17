@@ -10,20 +10,17 @@ struct Utils {
     func formatLocality(_ input: String?) -> String {
         guard let input, !input.isEmpty else { return "" }
         
-        // Elimina paréntesis y espacios, ejemplo: "(MADRID)" -> "MADRID"
         let cleaned = input
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .replacingOccurrences(of: "(", with: "")
             .replacingOccurrences(of: ")", with: "")
         
-        // Capitaliza solo la primera letra
         return cleaned.prefix(1).capitalized + cleaned.dropFirst().lowercased()
     }
     
     func formatStreetAddress(_ input: String?) -> String {
         guard let input, !input.isEmpty else { return "" }
 
-        // Si la dirección empieza por "Reservada", devolverla tal como viene
         if input.trimmingCharacters(in: .whitespacesAndNewlines)
                 .lowercased()
                 .hasPrefix("reservada") {
@@ -52,9 +49,9 @@ struct Utils {
     
     func normalized(_ text: String) -> String {
         return text
-            .replacingOccurrences(of: "\\s+([\\.\\:])", with: "$1", options: .regularExpression) // elimina espacios antes de "." y ":"
-            .replacingOccurrences(of: "([\\.\\:])\\s+", with: "$1 ", options: .regularExpression) // deja solo un espacio después de "." y ":"
-            .replacingOccurrences(of: "\\s{2,}", with: " ", options: .regularExpression) // cualquier espacio doble o más, lo deja en uno solo
+            .replacingOccurrences(of: "\\s+([\\.\\:])", with: "$1", options: .regularExpression)
+            .replacingOccurrences(of: "([\\.\\:])\\s+", with: "$1 ", options: .regularExpression)
+            .replacingOccurrences(of: "\\s{2,}", with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
@@ -75,7 +72,6 @@ extension Color {
 }
 
 extension View {
-    /// Hide view and optionally remove it from the hierarchy.
     @ViewBuilder
     @MainActor
     public func hiddenOrRemoved(_ hide: Bool, remove: Bool = false) -> some View {

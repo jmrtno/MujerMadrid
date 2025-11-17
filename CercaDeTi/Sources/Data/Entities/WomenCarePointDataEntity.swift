@@ -124,7 +124,6 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         }
     }
     
-    // Para claves como "area" o "district" que contienen un @id
     public class IDWrapper: Codable {
         let id: String?
 
