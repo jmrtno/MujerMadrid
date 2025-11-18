@@ -414,7 +414,7 @@
 		EDB57DCE2E4166F500430CB0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				EDF0FC682ECD0D470079816C /* Header */,
+				EDF0FC692ECD0E910079816C /* Top */,
 				EDB57DC02E4166F500430CB0 /* Footer */,
 				EDB57DC72E4166F500430CB0 /* List */,
 			);
@@ -492,13 +492,13 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
-		EDF0FC682ECD0D470079816C /* Header */ = {
+		EDF0FC692ECD0E910079816C /* Top */ = {
 			isa = PBXGroup;
 			children = (
 				EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
 				EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */,
 			);
-			path = Header;
+			path = Top;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
