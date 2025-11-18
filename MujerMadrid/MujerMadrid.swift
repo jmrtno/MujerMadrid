@@ -1,6 +1,6 @@
 //
-//  CercaDeTiApp.swift
-//  CercaDeTi
+//  MujerMadrid.swift
+//  MujerMadrid
 //
 //  Created by Javier Martin on 5/8/25.
 //
@@ -10,7 +10,7 @@ import FDependencyInjector
 import SwiftUI
 
 @main
-struct CercaDeTi: App {
+struct MujerMadrid: App {
     init() {
         DomainModule.inject()
         DataModule.inject()
