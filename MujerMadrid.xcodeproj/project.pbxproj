@@ -414,7 +414,7 @@
 		EDB57DCE2E4166F500430CB0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				EDB7DDB12E9D25310088D8C9 /* Header */,
+				EDF0FC682ECD0D470079816C /* Header */,
 				EDB57DC02E4166F500430CB0 /* Footer */,
 				EDB57DC72E4166F500430CB0 /* List */,
 			);
@@ -466,15 +466,6 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		EDB7DDB12E9D25310088D8C9 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
-				EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
 		EDC976C82E9C1C9E004BB6B3 /* Cross */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +490,15 @@
 				EDB57DB12E4166F500430CB0 /* CrossLoaderSectionView.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		EDF0FC682ECD0D470079816C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
+				EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
