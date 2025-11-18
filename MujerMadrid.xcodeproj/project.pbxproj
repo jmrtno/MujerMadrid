@@ -21,7 +21,7 @@
 		ED9D209D2EBB95BC008F2EED /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
 		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
-		EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* CercaDeTi.swift */; };
+		EDB57D782E41667A00430CB0 /* MujerMadrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* MujerMadrid.swift */; };
 		EDB57D862E4166EC00430CB0 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D842E4166EC00430CB0 /* DataModule.swift */; };
 		EDB57D872E4166EC00430CB0 /* WomenCarePointRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D822E4166EC00430CB0 /* WomenCarePointRepository.swift */; };
 		EDB57D882E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */; };
@@ -102,10 +102,10 @@
 		ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
 		ED9D20402EBB3BE5008F2EED /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
 		ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
-		EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cerca de Ti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mujer Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB57D712E41667A00430CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDB57D732E41667A00430CB0 /* CercaDeTi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaDeTi.swift; sourceTree = "<group>"; };
+		EDB57D732E41667A00430CB0 /* MujerMadrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MujerMadrid.swift; sourceTree = "<group>"; };
 		EDB57D7A2E4166EC00430CB0 /* WomenCarePointAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointAPI.swift; sourceTree = "<group>"; };
 		EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		EDB57D7E2E4166EC00430CB0 /* WomenCarePointDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDataEntity.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		EDB57D552E41667200430CB0 = {
 			isa = PBXGroup;
 			children = (
-				EDB57D742E41667A00430CB0 /* CercaDeTi */,
+				EDB57D742E41667A00430CB0 /* MujerMadrid */,
 				ED9D203B2EBB3BE5008F2EED /* Frameworks */,
 				EDB57D5F2E41667200430CB0 /* Products */,
 			);
@@ -217,7 +217,7 @@
 		EDB57D5F2E41667200430CB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */,
+				EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,15 +230,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EDB57D742E41667A00430CB0 /* CercaDeTi */ = {
+		EDB57D742E41667A00430CB0 /* MujerMadrid */ = {
 			isa = PBXGroup;
 			children = (
 				EDB57D792E4166DE00430CB0 /* Sources */,
 				EDB57D702E41667A00430CB0 /* Preview Content */,
 				EDB57D712E41667A00430CB0 /* Assets.xcassets */,
-				EDB57D732E41667A00430CB0 /* CercaDeTi.swift */,
+				EDB57D732E41667A00430CB0 /* MujerMadrid.swift */,
 			);
-			path = CercaDeTi;
+			path = MujerMadrid;
 			sourceTree = "<group>";
 		};
 		EDB57D792E4166DE00430CB0 /* Sources */ = {
@@ -504,9 +504,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDB57D5D2E41667200430CB0 /* CercaDeTi */ = {
+		EDB57D5D2E41667200430CB0 /* MujerMadrid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "CercaDeTi" */;
+			buildConfigurationList = EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "MujerMadrid" */;
 			buildPhases = (
 				EDB57D5A2E41667200430CB0 /* Sources */,
 				EDB57D5B2E41667200430CB0 /* Frameworks */,
@@ -517,11 +517,11 @@
 			);
 			dependencies = (
 			);
-			name = CercaDeTi;
+			name = MujerMadrid;
 			packageProductDependencies = (
 			);
 			productName = MujerSegura;
-			productReference = EDB57D5E2E41667200430CB0 /* Cerca de Ti.app */;
+			productReference = EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -539,7 +539,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "CercaDeTi" */;
+			buildConfigurationList = EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "MujerMadrid" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -553,7 +553,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDB57D5D2E41667200430CB0 /* CercaDeTi */,
+				EDB57D5D2E41667200430CB0 /* MujerMadrid */,
 			);
 		};
 /* End PBXProject section */
@@ -575,7 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB57D782E41667A00430CB0 /* CercaDeTi.swift in Sources */,
+				EDB57D782E41667A00430CB0 /* MujerMadrid.swift in Sources */,
 				EDB57D862E4166EC00430CB0 /* DataModule.swift in Sources */,
 				ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */,
 				EDB57D872E4166EC00430CB0 /* WomenCarePointRepository.swift in Sources */,
@@ -766,11 +766,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"CercaDeTi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
 				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -785,7 +786,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
-				PRODUCT_NAME = "Cerca de Ti";
+				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -802,11 +803,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"CercaDeTi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
 				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -821,7 +823,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
-				PRODUCT_NAME = "Cerca de Ti";
+				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -832,7 +834,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "CercaDeTi" */ = {
+		EDB57D592E41667200430CB0 /* Build configuration list for PBXProject "MujerMadrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDB57D6A2E41667600430CB0 /* Debug */,
@@ -841,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "CercaDeTi" */ = {
+		EDB57D6C2E41667600430CB0 /* Build configuration list for PBXNativeTarget "MujerMadrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDB57D6D2E41667600430CB0 /* Debug */,

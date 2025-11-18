@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDB57D5D2E41667200430CB0"
-               BuildableName = "Cerca de Ti.app"
-               BlueprintName = "CercaDeTi"
-               ReferencedContainer = "container:CercaDeTi.xcodeproj">
+               BuildableName = "Mujer Madrid.app"
+               BlueprintName = "MujerMadrid"
+               ReferencedContainer = "container:MujerMadrid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDB57D5D2E41667200430CB0"
-            BuildableName = "Cerca de Ti.app"
-            BlueprintName = "CercaDeTi"
-            ReferencedContainer = "container:CercaDeTi.xcodeproj">
+            BuildableName = "Mujer Madrid.app"
+            BlueprintName = "MujerMadrid"
+            ReferencedContainer = "container:MujerMadrid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDB57D5D2E41667200430CB0"
-            BuildableName = "Cerca de Ti.app"
-            BlueprintName = "CercaDeTi"
-            ReferencedContainer = "container:CercaDeTi.xcodeproj">
+            BuildableName = "Mujer Madrid.app"
+            BlueprintName = "MujerMadrid"
+            ReferencedContainer = "container:MujerMadrid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
