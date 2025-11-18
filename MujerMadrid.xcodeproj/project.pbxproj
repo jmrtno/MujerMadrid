@@ -72,8 +72,8 @@
 		EDB57E142E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD12E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift */; };
 		EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */; };
 		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
-		EDCE64712ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */; };
-		EDCE64722ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
+		EDCE64802ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE647F2ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
+		EDCE64822ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE64812ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,8 +156,8 @@
 		EDB57DDB2E4166F500430CB0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionView.swift; sourceTree = "<group>"; };
-		EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
-		EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDCE647F2ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
+		EDCE64812ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,7 +414,7 @@
 		EDB57DCE2E4166F500430CB0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				EDCE64682ECD262E0081A5D9 /* Header */,
+				EDCE647E2ECD2C590081A5D9 /* Header */,
 				EDB57DC02E4166F500430CB0 /* Footer */,
 				EDB57DC72E4166F500430CB0 /* List */,
 			);
@@ -492,11 +492,11 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
-		EDCE64682ECD262E0081A5D9 /* Header */ = {
+		EDCE647E2ECD2C590081A5D9 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */,
-				EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
+				EDCE64812ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */,
+				EDCE647F2ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -576,12 +576,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB57D782E41667A00430CB0 /* MujerMadrid.swift in Sources */,
+				EDCE64802ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */,
 				EDB57D862E4166EC00430CB0 /* DataModule.swift in Sources */,
 				ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */,
 				EDB57D872E4166EC00430CB0 /* WomenCarePointRepository.swift in Sources */,
 				EDB57D882E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift in Sources */,
 				EDB57D952E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift in Sources */,
 				EDB57D962E4166F100430CB0 /* WomenCarePointModel.swift in Sources */,
+				EDCE64822ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */,
 				EDB57DDE2E4166F500430CB0 /* IncomingNavigation.swift in Sources */,
 				EDB57DDF2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift in Sources */,
 				EDB57DE22E4166F500430CB0 /* ExpandableTextView.swift in Sources */,
@@ -609,8 +611,6 @@
 				EDB57DFE2E4166F500430CB0 /* CrossLoaderSectionView.swift in Sources */,
 				EDB57E002E4166F500430CB0 /* WomenCarePointHomeViewModel.swift in Sources */,
 				EDB57E012E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift in Sources */,
-				EDCE64712ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */,
-				EDCE64722ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */,
 				EDB57E022E4166F500430CB0 /* Utils.swift in Sources */,
 				EDB57E062E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift in Sources */,
 				EDB57E0A2E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift in Sources */,
