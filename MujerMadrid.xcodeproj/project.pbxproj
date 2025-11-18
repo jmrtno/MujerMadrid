@@ -70,10 +70,10 @@
 		EDB57E122E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA42E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift */; };
 		EDB57E132E4166F500430CB0 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD72E4166F500430CB0 /* Navigator.swift */; };
 		EDB57E142E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD12E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift */; };
-		EDB7DDB32E9D25480088D8C9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */; };
-		EDB7DDB52E9D256A0088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
 		EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */; };
 		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
+		EDCE64712ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */; };
+		EDCE64722ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -154,10 +154,10 @@
 		EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 		EDB57DDA2E4166F500430CB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EDB57DDB2E4166F500430CB0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
-		EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDBA2C1B2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionView.swift; sourceTree = "<group>"; };
+		EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
+		EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,7 +414,7 @@
 		EDB57DCE2E4166F500430CB0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				EDF0FC692ECD0E910079816C /* Header */,
+				EDCE64682ECD262E0081A5D9 /* Header */,
 				EDB57DC02E4166F500430CB0 /* Footer */,
 				EDB57DC72E4166F500430CB0 /* List */,
 			);
@@ -492,11 +492,11 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
-		EDF0FC692ECD0E910079816C /* Header */ = {
+		EDCE64682ECD262E0081A5D9 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				EDB7DDB42E9D25580088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
-				EDB7DDB22E9D25390088D8C9 /* WomenCarePointHomeHeaderSectionView.swift */,
+				EDCE646F2ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */,
+				EDCE64702ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -583,12 +583,10 @@
 				EDB57D952E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift in Sources */,
 				EDB57D962E4166F100430CB0 /* WomenCarePointModel.swift in Sources */,
 				EDB57DDE2E4166F500430CB0 /* IncomingNavigation.swift in Sources */,
-				EDB7DDB32E9D25480088D8C9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */,
 				EDB57DDF2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift in Sources */,
 				EDB57DE22E4166F500430CB0 /* ExpandableTextView.swift in Sources */,
 				EDB57DE42E4166F500430CB0 /* NavigationModule.swift in Sources */,
 				EDB57DE52E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift in Sources */,
-				EDB7DDB52E9D256A0088D8C9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */,
 				EDB57DE62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift in Sources */,
 				EDB57DE72E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift in Sources */,
 				EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */,
@@ -611,6 +609,8 @@
 				EDB57DFE2E4166F500430CB0 /* CrossLoaderSectionView.swift in Sources */,
 				EDB57E002E4166F500430CB0 /* WomenCarePointHomeViewModel.swift in Sources */,
 				EDB57E012E4166F500430CB0 /* WomenCarePointDetailHeaderSectionView.swift in Sources */,
+				EDCE64712ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */,
+				EDCE64722ECD269B0081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */,
 				EDB57E022E4166F500430CB0 /* Utils.swift in Sources */,
 				EDB57E062E4166F500430CB0 /* WomenCarePointDetailHeaderSectionModule.swift in Sources */,
 				EDB57E0A2E4166F500430CB0 /* WomenCarePointDetailNavigationBuilder.swift in Sources */,
