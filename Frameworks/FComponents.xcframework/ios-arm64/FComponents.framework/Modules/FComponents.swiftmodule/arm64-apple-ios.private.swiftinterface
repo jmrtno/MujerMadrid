@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios18.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FComponents
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios17.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FComponents
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import Combine
 import Swift
 import SwiftUI
@@ -16,7 +17,9 @@ extension FComponents.FCCard {
     public var topLeadingLabel: Swift.String?
     public var topTrailingIcon: Swift.String?
     public var topTrailingLabel: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(doubleCard: Swift.Bool, maxWidth: Swift.Bool, contentAlignment: SwiftUICore.Alignment = .center, topLeadingIcon: Swift.String? = nil, topLeadingLabel: Swift.String? = nil, topTrailingIcon: Swift.String? = nil, topTrailingLabel: Swift.String? = nil)
+    #endif
   }
   public struct Style {
     public init(doubleCardBgColor: SwiftUICore.Color = .clear, innerCardBgColor: SwiftUICore.Color, doubleCardBorderColor: SwiftUICore.Color = .clear, innerCardBorderColor: SwiftUICore.Color, topLeadingContentColor: SwiftUICore.Color = .black, topTrailingContentColor: SwiftUICore.Color = .black)
@@ -25,7 +28,7 @@ extension FComponents.FCCard {
     public var onTap: () -> Swift.Void
     public init(onTap: @escaping () -> Swift.Void)
   }
-  final public class ViewModel : Foundation.ObservableObject {
+  final public class ViewModel : Combine.ObservableObject {
     @Combine.Published @_projectedValueProperty($configuration) final public var configuration: FComponents.FCCard<Content>.Configuration {
       get
       @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
@@ -98,7 +101,9 @@ extension FComponents.FCButton {
     public var trailingIcon: Swift.String?
     public var maxWidth: Swift.Bool
     public var invertCornerRadius: Swift.Bool
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(label: Swift.String? = nil, leadingIcon: Swift.String? = nil, trailingIcon: Swift.String? = nil, maxWidth: Swift.Bool = false, invertCornerRadius: Swift.Bool = false)
+    #endif
   }
   public struct ViewState {
     public static var enabled: FComponents.FCButton.ViewState {
@@ -131,7 +136,9 @@ extension FComponents.FCButton {
     public static func alternativeGradient(_ gradient: SwiftUICore.LinearGradient) -> FComponents.FCButton.Variant
   }
   public struct Style {
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(textColor: SwiftUICore.Color, leadingIconColor: SwiftUICore.Color? = nil, trailingIconColor: SwiftUICore.Color? = nil)
+    #endif
   }
   public struct Size {
     public static var small: FComponents.FCButton.Size {
@@ -230,7 +237,9 @@ extension FComponents.FCTextField {
   public struct Configuration {
     public var placeholder: Swift.String?
     public var icon: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(placeholder: Swift.String? = nil, icon: Swift.String? = nil)
+    #endif
   }
   public struct Variant {
     public static var bordered: FComponents.FCTextField.Variant {
@@ -243,7 +252,7 @@ extension FComponents.FCTextField {
       get
     }
   }
-  final public class ViewModel : Foundation.ObservableObject {
+  final public class ViewModel : Combine.ObservableObject {
     @Combine.Published @_projectedValueProperty($configuration) final public var configuration: FComponents.FCTextField.Configuration {
       get
       @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
