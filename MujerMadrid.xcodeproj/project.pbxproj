@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED4CE2D42EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */; };
+		ED4CE2DA2EE8C9A200F20F85 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */; };
+		ED4CE2DB2EE8C9A200F20F85 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
 		ED9D20412EBB3BE5008F2EED /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; };
 		ED9D20422EBB3BE5008F2EED /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED9D20452EBB3BE5008F2EED /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */; };
-		ED9D20462EBB3BE5008F2EED /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; };
 		ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D20402EBB3BE5008F2EED /* FData.xcframework */; };
@@ -42,7 +43,6 @@
 		EDB57DE72E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DBD2E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift */; };
 		EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC12E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift */; };
 		EDB57DEA2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DA92E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift */; };
-		EDB57DEB2E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */; };
 		EDB57DED2E4166F500430CB0 /* WomenCarePointHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD22E4166F500430CB0 /* WomenCarePointHomeScreen.swift */; };
 		EDB57DEF2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */; };
 		EDB57DF02E4166F500430CB0 /* WomenCarePointDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DB62E4166F500430CB0 /* WomenCarePointDetailBuilder.swift */; };
@@ -87,7 +87,7 @@
 				ED9D209D2EBB95BC008F2EED /* FNavigation.xcframework in Embed Frameworks */,
 				ED9D204A2EBB3BE5008F2EED /* FData.xcframework in Embed Frameworks */,
 				ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */,
-				ED9D20462EBB3BE5008F2EED /* FComponents.xcframework in Embed Frameworks */,
+				ED4CE2DB2EE8C9A200F20F85 /* FComponents.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,10 +95,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
+		ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
 		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
 		ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
-		ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
 		ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
 		ED9D20402EBB3BE5008F2EED /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
 		ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 		EDB57DC22E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionModule.swift; sourceTree = "<group>"; };
 		EDB57DC32E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionObservedModel.swift; sourceTree = "<group>"; };
 		EDB57DC42E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionRenderModel.swift; sourceTree = "<group>"; };
-		EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
 		EDB57DC62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDB57DCF2E4166F500430CB0 /* WomenCarePointHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeBuilder.swift; sourceTree = "<group>"; };
 		EDB57DD02E4166F500430CB0 /* WomenCarePointHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeModule.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				ED9D209C2EBB95BC008F2EED /* FNavigation.xcframework in Frameworks */,
 				ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */,
 				ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */,
-				ED9D20452EBB3BE5008F2EED /* FComponents.xcframework in Frameworks */,
+				ED4CE2DA2EE8C9A200F20F85 /* FComponents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +196,8 @@
 		ED9D203B2EBB3BE5008F2EED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */,
 				ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */,
-				ED9D203E2EBB3BE5008F2EED /* FComponents.xcframework */,
 				ED9D20402EBB3BE5008F2EED /* FData.xcframework */,
 				ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */,
 				ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */,
@@ -405,7 +405,7 @@
 				EDB57DC22E4166F500430CB0 /* WomenCarePointHomeListSectionModule.swift */,
 				EDB57DC32E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift */,
 				EDB57DC42E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift */,
-				EDB57DC52E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift */,
+				ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */,
 				EDB57DC62E4166F500430CB0 /* WomenCarePointHomeListSectionViewModelContract.swift */,
 			);
 			path = List;
@@ -532,7 +532,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					EDB57D5D2E41667200430CB0 = {
 						CreatedOnToolsVersion = 16.2;
@@ -593,7 +593,6 @@
 				EDB57DE72E4166F500430CB0 /* WomenCarePointHomeFooterSectionViewModelContract.swift in Sources */,
 				EDB57DE92E4166F500430CB0 /* WomenCarePointHomeListSectionMapper.swift in Sources */,
 				EDB57DEA2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionRenderModel.swift in Sources */,
-				EDB57DEB2E4166F500430CB0 /* WomenCarePointHomeListSectionView.swift in Sources */,
 				EDB57DED2E4166F500430CB0 /* WomenCarePointHomeScreen.swift in Sources */,
 				EDB57DEF2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift in Sources */,
 				EDB57DF02E4166F500430CB0 /* WomenCarePointDetailBuilder.swift in Sources */,
@@ -605,6 +604,7 @@
 				EDB57DF92E4166F500430CB0 /* WomenCarePointHomeListSectionObservedModel.swift in Sources */,
 				EDBA2C1E2E9B02E400F8B75F /* CrossErrorSectionViewModelContract.swift in Sources */,
 				EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */,
+				ED4CE2D42EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift in Sources */,
 				EDB57DFA2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift in Sources */,
 				EDB57DFB2E4166F500430CB0 /* LocationManager.swift in Sources */,
 				EDB57DFD2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionObservedModel.swift in Sources */,
@@ -671,6 +671,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -695,6 +696,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -735,6 +737,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -752,6 +755,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -765,9 +769,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
-				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
@@ -779,12 +782,12 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
 				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -802,9 +805,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
-				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
@@ -816,12 +818,12 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
 				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";
