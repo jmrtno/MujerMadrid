@@ -62,7 +62,6 @@ private extension WomenCarePointHomeHeaderSectionView {
             toogleButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.white)
     }
 
     @ViewBuilder
