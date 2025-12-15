@@ -14,6 +14,7 @@ struct ExpandableText: View {
     private func expandedText(text: String) -> some View {
         VStack(alignment: .leading) {
             Text(text)
+                .foregroundStyle(.black)
                 .lineLimit(expanded ? nil : 4)
                 .background(
                     TextHeightReader(text: text, lineLimit: 4) { exceeds in

@@ -48,9 +48,11 @@ private extension WomenCarePointHomeHeaderSectionView {
                 VStack(alignment: .leading) {
                     Text("Mujer Madrid")
                         .font(.title)
+                        .foregroundStyle(.black)
                         .bold()
                     Text("Información y acceso rápido a centros de atención a mujeres")
                         .font(.subheadline)
+                        .foregroundStyle(.black)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
@@ -60,6 +62,7 @@ private extension WomenCarePointHomeHeaderSectionView {
             toogleButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.white)
     }
 
     @ViewBuilder
@@ -67,8 +70,10 @@ private extension WomenCarePointHomeHeaderSectionView {
         Toggle(isOn: $isOn) {
             Text("Mostrar como lista")
                 .font(.subheadline)
+                .foregroundStyle(.black)
         }
         .padding(.horizontal, 16)
+        .colorScheme(.light)
         .onChange(of: isOn) {
             viewModel.didTapToggle()
         }
