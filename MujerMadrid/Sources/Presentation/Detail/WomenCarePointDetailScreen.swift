@@ -71,6 +71,8 @@ struct WomenCarePointDetailScreen<Top: View,
                 overlay
             }
         }
+        .frame(maxWidth: .infinity)
+        .background(.white)
         .onAppear {
             viewModel.notifyAppearance()
         }
