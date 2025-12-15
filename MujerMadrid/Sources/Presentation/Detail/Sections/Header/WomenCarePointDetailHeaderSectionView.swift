@@ -18,7 +18,11 @@ struct WomenCarePointDetailHeaderSectionView: View {
     let publisher: AnyPublisher<WomenCarePointDetailHeaderSectionRenderModel, Never>
     
     // MARK: Environments & State
+    @Environment(\.verticalSizeClass)
+    private var verticalSizeClass
+    
     @SwiftUI.State private var renderModel: WomenCarePointDetailHeaderSectionRenderModel = .init()
+    
     
     // MARK: Life cycle
     init(viewModel: WomenCarePointDetailHeaderSectionViewModelContract,
@@ -53,9 +57,9 @@ private extension WomenCarePointDetailHeaderSectionView {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 iconAndTitle
                 centerType
-                Spacer()
             }
             .padding(.horizontal)
+            .padding(.top, verticalSizeClass == .compact ? 12 : 0)
         }
         .frame(height: viewModel.headerHeight)
     }

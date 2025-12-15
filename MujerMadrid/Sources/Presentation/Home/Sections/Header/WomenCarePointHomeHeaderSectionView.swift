@@ -22,6 +22,9 @@ struct WomenCarePointHomeHeaderSectionView: View {
     let viewModel: WomenCarePointHomeHeaderSectionViewModelContract
     
     // MARK: Environments & State
+    @Environment(\.verticalSizeClass)
+    private var verticalSizeClass
+
     @State private var isOn = false
     
     // MARK: Life cycle
@@ -62,6 +65,7 @@ private extension WomenCarePointHomeHeaderSectionView {
             toogleButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.top, verticalSizeClass == .compact ? 12 : 0)
     }
 
     @ViewBuilder
