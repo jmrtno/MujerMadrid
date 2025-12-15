@@ -48,15 +48,18 @@ private extension WomenCarePointHomeFooterSectionView {
                     /// iPad alternative view
                     Text("Servicio de atención gratuito a todas las formas de violencia de género: 016")
                         .font(.caption)
+                        .foregroundStyle(.black)
                         .padding()
                 } else {
                     Text("Servicio de atención gratuito a todas las formas de violencia de género")
                         .font(.caption)
+                        .foregroundStyle(.black)
                     button
                 }
             }
             .padding(.horizontal)
-            .background(Color.white)
+            .frame(maxWidth: .infinity)
+            .background(.white)
         }
     }
 

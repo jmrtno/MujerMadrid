@@ -78,6 +78,7 @@ private extension WomenCarePointDetailContentSectionView {
                         .foregroundColor(Color(hex: "9E67D5"))
                     Text(title)
                         .font(.title3)
+                        .foregroundStyle(.black)
                         .bold()
                 }
                 .padding(.bottom, 4)
@@ -171,6 +172,7 @@ private extension WomenCarePointDetailContentSectionView {
                         .foregroundColor(Color.black.opacity(0.7))
                     Text("\(renderModel.center.streetAddress), \(postalCode)\(renderModel.center.locality)")
                         .font(.subheadline)
+                        .foregroundStyle(.black)
                 }
                 .padding(.bottom, 4)
                 
@@ -184,6 +186,7 @@ private extension WomenCarePointDetailContentSectionView {
                         .foregroundColor(Color.black.opacity(0.7))
                     Text(renderModel.center.schedule)
                         .font(.subheadline)
+                        .foregroundStyle(.black)
                 }
                 .padding(.bottom, 4)
             }

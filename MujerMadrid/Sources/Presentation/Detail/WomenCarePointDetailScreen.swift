@@ -58,7 +58,7 @@ struct WomenCarePointDetailScreen<Top: View,
                 bottom
             }
             .hiddenOrRemoved(showError, remove: true)
-            .background(Color.white)
+            .background(.white)
             .clipShape(
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
             )

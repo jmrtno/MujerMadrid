@@ -88,6 +88,7 @@ private extension WomenCarePointHomeListSectionView {
                 if let hidden = hiddenCenter {
                     Text("\(hidden.title) (no visible en el mapa)")
                         .font(.headline)
+                        .foregroundStyle(.black)
                     getItemView(item: hidden)
                 }
             } else {
@@ -154,6 +155,7 @@ private extension WomenCarePointHomeListSectionView {
                     }
                 }
                 .font(.subheadline)
+                .foregroundStyle(.black)
                 Spacer()
                 VStack {
                     Spacer()
