@@ -135,7 +135,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
 
     public var paddingSize: CGFloat {
         if smallNameIds.contains(centerId) {
-            return 140
+            return 150
         } else if longNameIds.contains(centerId) {
             return 175
         } else {
