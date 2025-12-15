@@ -31,36 +31,21 @@ private extension WomenCarePointHomeFooterSectionView {
 
     @ViewBuilder
     var contentView: some View {
-        ZStack(alignment: .top) {
-            LinearGradient(
-                gradient: Gradient(colors: [
-                    Color.black.opacity(0.1),
-                    .clear
-                ]),
-                startPoint: .bottom,
-                endPoint: .top
-            )
-            .frame(height: 12)
-            .offset(y: -16)
-
-            HStack {
-                if UIDevice.current.userInterfaceIdiom == .pad {
-                    /// iPad alternative view
-                    Text("Servicio de atención gratuito a todas las formas de violencia de género: 016")
-                        .font(.caption)
-                        .foregroundStyle(.black)
-                        .padding()
-                } else {
-                    Text("Servicio de atención gratuito a todas las formas de violencia de género")
-                        .font(.caption)
-                        .foregroundStyle(.black)
-                    button
-                }
+        HStack {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                /// iPad alternative view
+                Text("Servicio de atención gratuito a todas las formas de violencia de género: 016")
+                    .font(.caption)
+                    .foregroundStyle(.black)
+                    .padding()
+            } else {
+                Text("Servicio de atención gratuito a todas las formas de violencia de género")
+                    .font(.caption)
+                    .foregroundStyle(.black)
+                button
             }
-            .padding(.horizontal)
-            .frame(maxWidth: .infinity)
-            .background(.white)
         }
+        .padding(.horizontal)
     }
 
     @ViewBuilder
