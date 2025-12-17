@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FPresentation
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FPresentation
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import Combine
 import FDependencyInjector
 import FNavigation
@@ -13,11 +14,13 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public class UniqueOperation<T> {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getPublisher() -> Combine.AnyPublisher<Swift.Result<T, any Swift.Error>, Swift.Never>
-  #if compiler(>=5.3) && $AsyncAwait
-  public func execute(completion: @escaping () async throws -> T)
   #endif
+  public func execute(completion: @escaping () async throws -> T)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func transformedPublisher<U>(defaultValue: U? = nil) -> Combine.AnyPublisher<U?, Swift.Never>
+  #endif
   @objc deinit
 }
 public protocol SectionMapperContract : FDependencyInjector.Instanciable {
@@ -28,7 +31,7 @@ public protocol SectionMapperContract : FDependencyInjector.Instanciable {
   func getObservedPublisher(_ viewModel: Self.ViewModel) -> Combine.AnyPublisher<Self.ObservedModel, Swift.Never>
   func map(_ model: Self.ObservedModel) -> Self.RenderModel
 }
-public protocol ModularSection : SwiftUI.View {
+public protocol ModularSection : SwiftUICore.View {
   associatedtype ViewModel
   associatedtype RenderModel
   var viewModel: Self.ViewModel { get }
@@ -36,7 +39,9 @@ public protocol ModularSection : SwiftUI.View {
   init(publisher: Combine.AnyPublisher<Self.RenderModel, Swift.Never>, viewModel: Self.ViewModel)
 }
 public protocol NavigationBuilder : FDependencyInjector.Instanciable {
+  #if compiler(>=5.3) && $NonescapableTypes
   func goBack(animated: Swift.Bool, screen: (any FNavigation.NavigationInfo)?, _ completion: (() -> Swift.Void)?)
+  #endif
 }
 public protocol ViewModelContract : FDependencyInjector.Instanciable {
 }

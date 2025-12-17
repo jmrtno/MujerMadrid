@@ -1,10 +1,3 @@
-//
-//  WomenCarePointHomeListSectionRenderModel.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
 struct WomenCarePointHomeListSectionRenderModel {
     /// information from centers
     public let centers: [Centers]

@@ -3,13 +3,10 @@ import FPresentation
 import SwiftUI
 
 struct CrossLoaderSectionView: View {
-    // MARK: Modular variables
-    
+
     // MARK: Environments & State
     @State private var isExpanded = false
-    
-    // MARK: Life cycle
-    
+
     var body: some View {
         loaderContainer
     }

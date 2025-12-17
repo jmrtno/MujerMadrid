@@ -1,10 +1,3 @@
-//
-//  DataModule.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 16/7/25.
-//
-
 import FDependencyInjector
 
 final class DataModule: ModuleContract {

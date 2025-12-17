@@ -1,10 +1,3 @@
-//
-//  WomenCarePointDetailModule.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 19/7/25.
-//
-
 import FDependencyInjector
 
 final class WomenCarePointDetailModule: ModuleContract {

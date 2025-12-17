@@ -1,18 +1,3 @@
-//
-//  WomenCarePointHomeHeaderSectionView.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/11/25.
-//
-
-
-//
-//  WomenCarePointHomeHeaderSectionView.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 13/10/25.
-//
-
 import FComponents
 import FNavigation
 import SwiftUI
@@ -28,6 +13,8 @@ struct WomenCarePointHomeHeaderSectionView: View {
     @State private var isOn = false
     
     // MARK: Life cycle
+    
+    /// Initializes the view with the provided view model.
     init(viewModel: WomenCarePointHomeHeaderSectionViewModelContract) {
         self.viewModel = viewModel
     }

@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ED4CE2D42EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */; };
-		ED4CE2DA2EE8C9A200F20F85 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */; };
-		ED4CE2DB2EE8C9A200F20F85 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
-		ED9D20412EBB3BE5008F2EED /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; };
-		ED9D20422EBB3BE5008F2EED /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; };
-		ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D20402EBB3BE5008F2EED /* FData.xcframework */; };
-		ED9D204A2EBB3BE5008F2EED /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D20402EBB3BE5008F2EED /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED9D209C2EBB95BC008F2EED /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */; };
-		ED9D209D2EBB95BC008F2EED /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDB57D752E41667A00430CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */; };
 		EDB57D762E41667A00430CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB57D712E41667A00430CB0 /* Assets.xcassets */; };
 		EDB57D782E41667A00430CB0 /* MujerMadrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D732E41667A00430CB0 /* MujerMadrid.swift */; };
@@ -74,20 +64,30 @@
 		EDBA2C1F2E9B02E400F8B75F /* CrossErrorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */; };
 		EDCE64802ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE647F2ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */; };
 		EDCE64822ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE64812ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */; };
+		EDD8DCFB2EF0DF8700CDBB31 /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF62EF0DF8600CDBB31 /* FNavigation.xcframework */; };
+		EDD8DCFC2EF0DF8700CDBB31 /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF62EF0DF8600CDBB31 /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD8DCFD2EF0DF8700CDBB31 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF72EF0DF8600CDBB31 /* FComponents.xcframework */; };
+		EDD8DCFE2EF0DF8700CDBB31 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF72EF0DF8600CDBB31 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD8DCFF2EF0DF8700CDBB31 /* FPresentation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF82EF0DF8700CDBB31 /* FPresentation.xcframework */; };
+		EDD8DD002EF0DF8700CDBB31 /* FPresentation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF82EF0DF8700CDBB31 /* FPresentation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD8DD012EF0DF8700CDBB31 /* FData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF92EF0DF8700CDBB31 /* FData.xcframework */; };
+		EDD8DD022EF0DF8700CDBB31 /* FData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCF92EF0DF8700CDBB31 /* FData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD8DD032EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCFA2EF0DF8700CDBB31 /* FDependencyInjector.xcframework */; };
+		EDD8DD042EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD8DCFA2EF0DF8700CDBB31 /* FDependencyInjector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EDD0F3312E8271E5002EF349 /* Embed Frameworks */ = {
+		EDD8DD052EF0DF8700CDBB31 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ED9D20422EBB3BE5008F2EED /* FDependencyInjector.xcframework in Embed Frameworks */,
-				ED9D209D2EBB95BC008F2EED /* FNavigation.xcframework in Embed Frameworks */,
-				ED9D204A2EBB3BE5008F2EED /* FData.xcframework in Embed Frameworks */,
-				ED9D20482EBB3BE5008F2EED /* FPresentation.xcframework in Embed Frameworks */,
-				ED4CE2DB2EE8C9A200F20F85 /* FComponents.xcframework in Embed Frameworks */,
+				EDD8DD022EF0DF8700CDBB31 /* FData.xcframework in Embed Frameworks */,
+				EDD8DD002EF0DF8700CDBB31 /* FPresentation.xcframework in Embed Frameworks */,
+				EDD8DCFE2EF0DF8700CDBB31 /* FComponents.xcframework in Embed Frameworks */,
+				EDD8DCFC2EF0DF8700CDBB31 /* FNavigation.xcframework in Embed Frameworks */,
+				EDD8DD042EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,13 +96,8 @@
 
 /* Begin PBXFileReference section */
 		ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
-		ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
 		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
-		ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
-		ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
-		ED9D20402EBB3BE5008F2EED /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
-		ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
 		EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mujer Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB57D712E41667A00430CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +153,11 @@
 		EDBA2C1C2E9B02E400F8B75F /* CrossErrorSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossErrorSectionView.swift; sourceTree = "<group>"; };
 		EDCE647F2ECD2C710081A5D9 /* WomenCarePointHomeHeaderSectionViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionViewModelContract.swift; sourceTree = "<group>"; };
 		EDCE64812ECD2C840081A5D9 /* WomenCarePointHomeHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionView.swift; sourceTree = "<group>"; };
+		EDD8DCF62EF0DF8600CDBB31 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
+		EDD8DCF72EF0DF8600CDBB31 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FComponents.xcframework; path = Frameworks/FComponents.xcframework; sourceTree = "<group>"; };
+		EDD8DCF82EF0DF8700CDBB31 /* FPresentation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FPresentation.xcframework; path = Frameworks/FPresentation.xcframework; sourceTree = "<group>"; };
+		EDD8DCF92EF0DF8700CDBB31 /* FData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FData.xcframework; path = Frameworks/FData.xcframework; sourceTree = "<group>"; };
+		EDD8DCFA2EF0DF8700CDBB31 /* FDependencyInjector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FDependencyInjector.xcframework; path = Frameworks/FDependencyInjector.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,11 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED9D20412EBB3BE5008F2EED /* FDependencyInjector.xcframework in Frameworks */,
-				ED9D209C2EBB95BC008F2EED /* FNavigation.xcframework in Frameworks */,
-				ED9D20492EBB3BE5008F2EED /* FData.xcframework in Frameworks */,
-				ED9D20472EBB3BE5008F2EED /* FPresentation.xcframework in Frameworks */,
-				ED4CE2DA2EE8C9A200F20F85 /* FComponents.xcframework in Frameworks */,
+				EDD8DD012EF0DF8700CDBB31 /* FData.xcframework in Frameworks */,
+				EDD8DCFF2EF0DF8700CDBB31 /* FPresentation.xcframework in Frameworks */,
+				EDD8DCFD2EF0DF8700CDBB31 /* FComponents.xcframework in Frameworks */,
+				EDD8DCFB2EF0DF8700CDBB31 /* FNavigation.xcframework in Frameworks */,
+				EDD8DD032EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,14 +193,22 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		ED6CCAB52EF3419F0089F7A6 /* ExpandableText */ = {
+			isa = PBXGroup;
+			children = (
+				EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */,
+			);
+			path = ExpandableText;
+			sourceTree = "<group>";
+		};
 		ED9D203B2EBB3BE5008F2EED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED4CE2D92EE8C9A200F20F85 /* FComponents.xcframework */,
-				ED9D209B2EBB95BC008F2EED /* FNavigation.xcframework */,
-				ED9D20402EBB3BE5008F2EED /* FData.xcframework */,
-				ED9D203C2EBB3BE5008F2EED /* FDependencyInjector.xcframework */,
-				ED9D203F2EBB3BE5008F2EED /* FPresentation.xcframework */,
+				EDD8DCF72EF0DF8600CDBB31 /* FComponents.xcframework */,
+				EDD8DCF92EF0DF8700CDBB31 /* FData.xcframework */,
+				EDD8DCFA2EF0DF8700CDBB31 /* FDependencyInjector.xcframework */,
+				EDD8DCF62EF0DF8600CDBB31 /* FNavigation.xcframework */,
+				EDD8DCF82EF0DF8700CDBB31 /* FPresentation.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 		EDB57DA32E4166F500430CB0 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CCAB52EF3419F0089F7A6 /* ExpandableText */,
 				EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */,
 				EDB57D9C2E4166F500430CB0 /* WomenCarePointDetailContentSectionModule.swift */,
 				EDB57D9D2E4166F500430CB0 /* WomenCarePointDetailContentSectionObservedModel.swift */,
@@ -447,7 +456,6 @@
 		EDB57DDC2E4166F500430CB0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */,
 				EDB57DDA2E4166F500430CB0 /* LocationManager.swift */,
 				EDB57DDB2E4166F500430CB0 /* Utils.swift */,
 			);
@@ -511,7 +519,7 @@
 				EDB57D5A2E41667200430CB0 /* Sources */,
 				EDB57D5B2E41667200430CB0 /* Frameworks */,
 				EDB57D5C2E41667200430CB0 /* Resources */,
-				EDD0F3312E8271E5002EF349 /* Embed Frameworks */,
+				EDD8DD052EF0DF8700CDBB31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -771,6 +779,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
@@ -787,7 +796,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
 				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,6 +816,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MujerMadrid/Preview Content\"";
+				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
@@ -823,7 +833,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javidev.CercaDeTiApp;
 				PRODUCT_NAME = "Mujer Madrid";
 				PROVISIONING_PROFILE_SPECIFIER = "";

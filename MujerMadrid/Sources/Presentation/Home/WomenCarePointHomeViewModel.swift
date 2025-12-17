@@ -1,8 +1,3 @@
-//
-//  WomenCarePointHomeViewModel.swift
-//  MujerMadrid
-//
-
 import Combine
 import FDependencyInjector
 import Foundation
@@ -13,12 +8,17 @@ import SwiftUI
 /// Dependencies of the WomenCarePointHomeViewModel
 final class WomenCarePointHomeViewModelDependencies {}
 
+/// Contract defining the public interface of the WomenCarePointHomeViewModel
 protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     // MARK: Dependencies
+    /// Setup the dependencies of the ViewModel
+    /// - Parameter dependencies: dependencies required by the ViewModel
     func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies)
     
     // MARK: Inputs
+    /// Called when the view appears
     func notifyAppearance()
+    /// Load initial information of care points
     func getWomenCarePointInformationData()
 
     // MARK: Publishers
@@ -26,6 +26,7 @@ protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     var loaderPublisher: AnyPublisher<Bool, Never> { get }
 }
 
+/// ViewModel for the WomenCarePoint Home screen
 final class WomenCarePointHomeViewModel: @unchecked Sendable,
                                          WomenCarePointHomeViewModelContract,
                                          WomenCarePointHomeListSectionViewModelContract,
@@ -34,8 +35,10 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
                                          CrossErrorSectionViewModelContract {
 
     // MARK: - UseCase
+    /// UseCase to fetch care points information
     let getWomenCarePointUseCase: GetWomenCarePointHomeUseCaseContract
     
+    /// Default initializer injected by FDependencyInjector
     public required init() {
         @Injected var useCase: GetWomenCarePointHomeUseCaseContract
         @Injected var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
@@ -43,52 +46,67 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
         self.navigationBuilder = navigationBuilder
     }
     
+    /// Custom initializer for testing or manual injection
     init(useCase: GetWomenCarePointHomeUseCaseContract,
          navigationBuilder: WomenCarePointHomeNavigationBuilderContract) {
         self.getWomenCarePointUseCase = useCase
         self.navigationBuilder = navigationBuilder
     }
 
-    // MARK: - Published
+    // MARK: - Published Properties
+    /// Observed model containing the list of care points to display in the Home screen.
     @Published public var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .init()
+    /// Indicates whether the loader should be shown.
     @Published var isLoading = false
+    /// Indicates whether an error occurred while fetching data.
     @Published var isError = false
+
+    /// CLLocationManager instance used to request location permissions if needed.
     private let locationManager = CLLocationManager()
-    
+
     // MARK: - Publishers
+    
+    /// Publisher that emits updates of the Home list section model.
     public var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> {
         $womenCarePointInformationPublished.eraseToAnyPublisher()
     }
-    
+
+    /// Publisher that emits the loading state.
     public var loaderPublisher: AnyPublisher<Bool, Never> {
         $isLoading.eraseToAnyPublisher()
     }
 
+    /// Publisher that emits the error state.
     public var errorPublisher: AnyPublisher<Bool, Never> {
         $isError.eraseToAnyPublisher()
     }
 
-    /// NavigationBuilder use to navigate to another screen
+    /// NavigationBuilder used to navigate to another screen
     public var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
     
+    // MARK: - Inputs
     /// Called when the view appears
     public func notifyAppearance() {
         requestLocationPermissionsIfNeeded()
     }
     
-    // MARK: - Dependencies
+    /// Setup dependencies
+    /// - Parameter dependencies: injected dependencies
     public func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
     
-    // MARK: - Initial Data
+    /// Load the initial information of care points
     public func getWomenCarePointInformationData() {
         loadData()
     }
     
-    // MARK: - Section Inputs
+    /// Navigate to the detail screen of a care point
+    /// - Parameter centerId: identifier of the care point
     public func navigateToCarePointDetail(centerId: String) {
         navigationBuilder.navigateToCarePointDetail(centerId: centerId)
     }
     
+    /// Call a phone number
+    /// - Parameter number: phone number as a string
     public func callNumber(number: String) {
         Task { @MainActor in
             if let url = URL(string: "tel://\(number)"),
@@ -98,10 +116,12 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
         }
     }
 
+    /// Toggle between map/list view
     public func didTapToggle() {
         womenCarePointInformationPublished.showList.toggle()
     }
 
+    /// Retry loading data after an error
     public func didTapTryAgain() {
         self.isLoading = true
         self.isError = false
@@ -109,7 +129,9 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     }
 }
 
+// MARK: - Private Methods
 private extension WomenCarePointHomeViewModel {
+    /// Loads care points information using the use case
     func loadData() {
         Task { @MainActor [weak self] in
             guard let self else { return }
@@ -125,6 +147,7 @@ private extension WomenCarePointHomeViewModel {
         }
     }
     
+    /// Requests location permissions if not yet determined
     private func requestLocationPermissionsIfNeeded() {
         let status = locationManager.authorizationStatus
         if status == .notDetermined {

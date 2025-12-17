@@ -1,11 +1,3 @@
-//
-//  WomenCarePointDetailHeaderSectionView.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
-
 import Combine
 import FComponents
 import FNavigation
@@ -24,7 +16,9 @@ struct WomenCarePointDetailHeaderSectionView: View {
     @SwiftUI.State private var renderModel: WomenCarePointDetailHeaderSectionRenderModel = .init()
     
     
-    // MARK: Life cycle
+    // MARK: - Life cycle
+
+    /// Initializes the Women Care Point detail header section view.
     init(viewModel: WomenCarePointDetailHeaderSectionViewModelContract,
          publisher: AnyPublisher<WomenCarePointDetailHeaderSectionRenderModel, Never>) {
         self.viewModel = viewModel

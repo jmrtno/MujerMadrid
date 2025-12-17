@@ -1,12 +1,10 @@
-//
-//  Utils.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 23/7/25.
-//
 import SwiftUI
 
+/// Utility functions for string formatting and text normalization
 struct Utils {
+    /// Capitalizes the first letter of a locality and removes parentheses
+    /// - Parameter input: The input string representing a locality
+    /// - Returns: Formatted locality string
     func formatLocality(_ input: String?) -> String {
         guard let input, !input.isEmpty else { return "" }
         
@@ -18,15 +16,20 @@ struct Utils {
         return cleaned.prefix(1).capitalized + cleaned.dropFirst().lowercased()
     }
     
+    /// Formats a street address according to capitalization rules
+    /// - Parameter input: The street address
+    /// - Returns: Properly formatted street address
     func formatStreetAddress(_ input: String?) -> String {
         guard let input, !input.isEmpty else { return "" }
 
+        /// Special case for addresses starting with "reservada"
         if input.trimmingCharacters(in: .whitespacesAndNewlines)
                 .lowercased()
                 .hasPrefix("reservada") {
             return input
         }
 
+        /// Words that should remain lowercase unless first word
         let lowercaseWords = [
             "de", "del", "la", "las", "el", "los", "y", "en", "a", "por", "con", "al"
         ]
@@ -47,6 +50,9 @@ struct Utils {
         return formattedWords.joined(separator: " ")
     }
     
+    /// Normalizes spacing and punctuation in a text
+    /// - Parameter text: Input string
+    /// - Returns: Cleaned string
     func normalized(_ text: String) -> String {
         return text
             .replacingOccurrences(of: "\\s+([\\.\\:])", with: "$1", options: .regularExpression)
@@ -56,10 +62,13 @@ struct Utils {
     }
 }
 
+// MARK: - Color Extension
+
 extension Color {
+    /// Initialize Color from hex string (e.g., "#FF00AA" or "FF00AA")
     init(hex: String) {
         let scanner = Scanner(string: hex)
-        _ = scanner.scanString("#")
+        _ = scanner.scanString("#") // skip leading "#"
         var rgb: UInt64 = 0
         scanner.scanHexInt64(&rgb)
         
@@ -71,7 +80,13 @@ extension Color {
     }
 }
 
+// MARK: - View Extension
+
 extension View {
+    /// Conditionally hide or remove a view
+    /// - Parameters:
+    ///   - hide: If true, the view will be hidden
+    ///   - remove: If true and hide is true, the view will be removed from the hierarchy
     @ViewBuilder
     @MainActor
     public func hiddenOrRemoved(_ hide: Bool, remove: Bool = false) -> some View {

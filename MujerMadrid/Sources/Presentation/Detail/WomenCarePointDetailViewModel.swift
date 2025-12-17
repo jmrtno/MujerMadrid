@@ -1,123 +1,154 @@
-//
-//  WomenCarePointDetailViewModel.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 17/7/25.
-//
-
 import Combine
 import FDependencyInjector
 import FPresentation
 import Foundation
 import MapKit
 
-/// Dependencies of the WomenCarePointDetailViewModel
+/// Dependencies required to initialize `WomenCarePointDetailViewModel`.
 final class WomenCarePointDetailViewModelDependencies {
-    /// identifier to access the screen
+    /// Identifier of the Women Care Point center.
     public let centerId: String
 
-    /// Initializer of the dependencies
-    /// - Parameters:
-    ///   - centerId: identifier of the product of the holders and beneficiaries
+    /// Initializes the dependencies.
+    /// - Parameter centerId: Identifier of the center.
     public init(centerId: String) {
         self.centerId = centerId
     }
 }
 
+/// Contract defining the interface for the `WomenCarePointDetailViewModel`.
 protocol WomenCarePointDetailViewModelContract: ViewModelContract {
     // MARK: Dependencies
-    /// Setup the dependencies of the viewModel
-    /// - Parameter dependencies: dependencies of the viewModel
+
+    /// Sets up the dependencies of the view model.
+    /// - Parameter dependencies: Dependencies required by the view model.
     func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies)
-    
+
     // MARK: Inputs
-    /// This method is called when the view appears
+
+    /// Called when the view appears.
     func notifyAppearance()
+
+    /// Triggers fetching of Women Care Point detail data.
     func getWomenCarePointDetailData()
 
     // MARK: Publishers
+
+    /// Publisher emitting `true` when an error occurs.
     var errorPublisher: AnyPublisher<Bool, Never> { get }
+
+    /// Publisher emitting `true` when loading data.
     var loaderPublisher: AnyPublisher<Bool, Never> { get }
 
+    /// Padding size for layout purposes.
     var paddingSize: CGFloat { get }
 }
 
+/// ViewModel for the Women Care Point detail screen.
+///
+/// Conforms to multiple contracts to handle content sections, header section, and error handling.
 final class WomenCarePointDetailViewModel: @unchecked Sendable,
                                            WomenCarePointDetailViewModelContract,
                                            WomenCarePointDetailContentSectionViewModelContract,
                                            WomenCarePointDetailHeaderSectionViewModelContract,
                                            CrossErrorSectionViewModelContract {
     // MARK: - Dependencies
+
+    /// Injected center identifier.
     @Dependency public var centerId: String
 
-    // MARK: - UseCase
+    // MARK: - Use Case
+
+    /// Use case for fetching Women Care Point detail data.
     let getWomenCarePointUseCase: GetWomenCarePointDetailUseCaseContract
-    
+
+    /// Required initializer for dependency injection.
     public required init() {
         @Injected var useCase: GetWomenCarePointDetailUseCaseContract
         @Injected var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
         self.getWomenCarePointUseCase = useCase
         self.navigationBuilder = navigationBuilder
     }
-    
+
+    /// Initializes with explicit dependencies.
+    /// - Parameters:
+    ///   - useCase: Use case for fetching detail data.
+    ///   - navigationBuilder: Navigation builder for handling navigation actions.
     init(useCase: GetWomenCarePointDetailUseCaseContract,
          navigationBuilder: WomenCarePointDetailNavigationBuilderContract) {
         self.getWomenCarePointUseCase = useCase
         self.navigationBuilder = navigationBuilder
     }
 
-    // MARK: - Published
+    // MARK: - Published Properties
+
+    /// Published Women Care Point detail content.
     @Published public var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .init()
+    /// Published Women Care Point header information.
     @Published public var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
+    /// Loading state.
     @Published var isLoading = false
+    /// Error state.
     @Published var isError = false
+
     private let locationManager = LocationManager()
     private let smallNameIds: Set<String> = ["5433767", "184260"]
     private let longNameIds: Set<String> = ["11952990", "11089192"]
-    
+
     // MARK: - Publishers
+
+    /// Publisher emitting the detail content section observed model.
     public var womenCarePointDetailInformationPublisher: AnyPublisher<WomenCarePointDetailContentSectionObservedModel, Never> {
         $womenCarePointDetailInformationPublished.eraseToAnyPublisher()
     }
-    
+
+    /// Publisher emitting the header section observed model.
     public var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
         $womenCarePointCenterHeaderInfoPublished.eraseToAnyPublisher()
     }
-    
+
+    /// Publisher emitting the loading state.
     public var loaderPublisher: AnyPublisher<Bool, Never> {
         $isLoading.eraseToAnyPublisher()
     }
 
+    /// Publisher emitting the error state.
     public var errorPublisher: AnyPublisher<Bool, Never> {
         $isError.eraseToAnyPublisher()
     }
-    
-    /// NavigationBuilder use to navigate to another screen
+
+    // MARK: - Navigation
+
+    /// Navigation builder used to navigate between screens.
     public var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
-    
-    /// This method is called when the view appears
+
+    // MARK: - Inputs
+
+    /// Called when the view appears to fetch initial data.
     public func notifyAppearance() {
         getWomenCarePointDetailData()
     }
-    
-    // MARK: - Dependencies
-    /// Setup the dependencies of the viewModel
-    /// - Parameter dependencies: dependencies of the viewModel
+
+    /// Sets up the dependencies of the view model.
+    /// - Parameter dependencies: Dependencies required by the view model.
     public func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
         self.centerId = dependencies.centerId
     }
-    
-    // MARK: - InitialData
-    /// Loads the initial data
+
+    /// Fetches initial data for the current center.
     public func getWomenCarePointDetailData() {
         loadData(for: centerId)
     }
-    
-    // MARK: - Section Inputs
+
+    /// Navigates back to the previous screen.
     public func goBack() {
         navigationBuilder.goBack(animated: true, screen: nil, nil)
     }
 
+    /// Opens Apple Maps for directions to the specified coordinates.
+    /// - Parameters:
+    ///   - latitud: Latitude of the destination.
+    ///   - longitud: Longitude of the destination.
     public func navigateTo(latitud: Double, longitud: Double) {
         let destinationCoordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
         let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate)
@@ -125,14 +156,12 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         destinationMapItem.name = womenCarePointCenterHeaderInfoPublished.title
 
         let currentLocationMapItem = MKMapItem.forCurrentLocation()
-
-        let options = [
-            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
-        ]
+        let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
 
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationMapItem], launchOptions: options)
     }
 
+    /// Returns the padding size depending on the center ID.
     public var paddingSize: CGFloat {
         if smallNameIds.contains(centerId) {
             return 150
@@ -143,6 +172,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         }
     }
 
+    /// Returns the header height depending on the center ID.
     public var headerHeight: CGFloat {
         if smallNameIds.contains(centerId) {
             return 220
@@ -153,6 +183,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         }
     }
 
+    /// Called when the "Try Again" button is tapped.
     public func didTapTryAgain() {
         self.isLoading = true
         self.isError = false
@@ -160,7 +191,12 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     }
 }
 
+// MARK: - Private Helpers
+
 private extension WomenCarePointDetailViewModel {
+
+    /// Loads Women Care Point data asynchronously.
+    /// - Parameter id: Identifier of the center.
     func loadData(for id: String) {
         Task { @MainActor [weak self] in
             guard let self else { return }
@@ -169,12 +205,12 @@ private extension WomenCarePointDetailViewModel {
                 let useCase = self.getWomenCarePointUseCase
                 let params = GetWomenCarePointDetailParameters(centerId: self.centerId)
                 let info = try await useCase.run(params)
-                self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(
-                    data: info.data
-                )
+
+                self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(data: info.data)
                 self.womenCarePointCenterHeaderInfoPublished.title = info.data.first?.title ?? ""
                 self.womenCarePointCenterHeaderInfoPublished.description = info.data.first?.organization?.organizationDesc ?? ""
                 self.womenCarePointCenterHeaderInfoPublished.services = info.data.first?.organization?.services ?? ""
+
                 self.isError = false
                 self.isLoading = false
             } catch {

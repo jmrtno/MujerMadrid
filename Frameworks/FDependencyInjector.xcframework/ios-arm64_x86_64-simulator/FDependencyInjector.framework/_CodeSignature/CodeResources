@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1+Rhc4UiMI4SDGocXcsI//FtIIo=
+		K4pLeTH3EYnbj8JIpIMrIDh3i7E=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		NdMZEgn6oqQIO2Tn0twmrwIeAU8=
+		61Eugd2pQ4BYaAR3YRZlfaRwG4k=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		vUoV9Tc+4XlnQzklNZLXHHkUA1Y=
+		JKTKtw8zlrDmsgrbhaaMLGtsvSw=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		z4f5dxk6CEaaRbznQbW/mvmtKcs=
+		765zm4wtD+0aRoaYMGvODE381cY=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vUoV9Tc+4XlnQzklNZLXHHkUA1Y=
+		JKTKtw8zlrDmsgrbhaaMLGtsvSw=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ntrwTpHk2ZQdlz17GKyKadgVT6w=
+		PHm7xjYlK8bXpSSpbwx+L6YMImo=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		NdMZEgn6oqQIO2Tn0twmrwIeAU8=
+		61Eugd2pQ4BYaAR3YRZlfaRwG4k=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		97cSMGyae7KJi4B0bJ8c5QpYSuw=
+		tA3vDIK05ggw3fc08a2uCFnvpIM=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JioH78Z8sikQ4J4lsXF7yVvNNgs=
+		New/wZBUmKHmx9xJ+rzktsmw7Uc=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		97cSMGyae7KJi4B0bJ8c5QpYSuw=
+		tA3vDIK05ggw3fc08a2uCFnvpIM=
 		</data>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HHCPF4XPJuPeJD0guk58r9xAuoA=
+		gBBmoDWCNfKGgEaMjDniTw894/I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,70 +70,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kO7OTIUU60AycZ6OkDn0kQo2E1+VQXBU3rV0PGzKIYs=
+			hc0ArW3XRUOYXOa3eJ3+thYNk6OBxoqCKB96WKe7fXo=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fzi2vzpPd8F7HIP2uNk6aDBSgNIRg4ku5C1RoDmelsA=
+			ks37VrfBq56TS9CdxvwfK+oQjuUOPGF6U9TsNJEOWlg=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FxGVWJCTyl8gatxQtVcqo1Sxb725Yok7LItRKtfWQvU=
+			UT4pkuG/ypNoPC2WnmOrVNJrbUSSrHCZ590qNFBNPDQ=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fzi2vzpPd8F7HIP2uNk6aDBSgNIRg4ku5C1RoDmelsA=
+			ks37VrfBq56TS9CdxvwfK+oQjuUOPGF6U9TsNJEOWlg=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SSXQEvCKciXlwE/JqwUAXUZHTg8j1UPidliJrp7ki4w=
+			7fX7hO/ScwJ7Ioj5Fnr06WLVo8ay7feGLWQH3GZoWLw=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kO7OTIUU60AycZ6OkDn0kQo2E1+VQXBU3rV0PGzKIYs=
+			hc0ArW3XRUOYXOa3eJ3+thYNk6OBxoqCKB96WKe7fXo=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CB5jJbxjzIZLg5D1/W10N1K29wLA/dDLj41Mqw0cCCU=
+			JJtbxMs7e9qzg6APR7SdmEB0TU9dnuBVuHEeWdiHi1c=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4dx6+YiEhfFon8IVu37TWHwqWRR05DMc+Y1EtiEu+JM=
+			V8TOc3pU5tGwElXfs6tykyCkzhTF+8VCQfBR5Uz7ZbE=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CB5jJbxjzIZLg5D1/W10N1K29wLA/dDLj41Mqw0cCCU=
+			JJtbxMs7e9qzg6APR7SdmEB0TU9dnuBVuHEeWdiHi1c=
 			</data>
 		</dict>
 		<key>Modules/FDependencyInjector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zJXsPCbw9FxxJ2+I/yYCbQsT4MTsvzOc8ORMq24rWK0=
+			1Z78uugiAqC0GqKSYhTIEX4wKs0mhJcy2pGZcT0VTCw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
