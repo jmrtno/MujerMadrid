@@ -1,10 +1,3 @@
-//
-//  WomenCarePointFooterSectionView.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 19/7/25.
-//
-
 import FComponents
 import FNavigation
 import SwiftUI
@@ -13,9 +6,9 @@ struct WomenCarePointHomeFooterSectionView: View {
     // MARK: Modular Variable
     let viewModel: WomenCarePointHomeFooterSectionViewModelContract
     
-    // MARK: Environments & State
+    // MARK: - Life cycle
     
-    // MARK: Life cycle
+    /// Initializes the view with the provided footer section view model.
     init(viewModel: WomenCarePointHomeFooterSectionViewModelContract) {
         self.viewModel = viewModel
     }

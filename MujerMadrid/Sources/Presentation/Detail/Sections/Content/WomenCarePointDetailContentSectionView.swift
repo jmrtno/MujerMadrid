@@ -1,11 +1,3 @@
-//
-//  WomenCarePointDetailContentSectionView.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
-
 import Combine
 import FComponents
 import FNavigation
@@ -24,6 +16,8 @@ struct WomenCarePointDetailContentSectionView: View {
 
     
     // MARK: Life cycle
+    
+    /// Initializes the section view with a view model and publisher.
     init(viewModel: WomenCarePointDetailContentSectionViewModelContract,
          publisher: AnyPublisher<WomenCarePointDetailContentSectionRenderModel, Never>) {
         self.viewModel = viewModel

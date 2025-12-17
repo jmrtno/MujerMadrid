@@ -1,10 +1,3 @@
-//
-//  MujerMadrid.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 5/8/25.
-//
-
 import FNavigation
 import FDependencyInjector
 import SwiftUI

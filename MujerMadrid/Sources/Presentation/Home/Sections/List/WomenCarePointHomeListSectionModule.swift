@@ -1,10 +1,3 @@
-//
-//  Untitled.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
 import FDependencyInjector
 
 final class WomenCarePointHomeListSectionModule: ModuleContract {

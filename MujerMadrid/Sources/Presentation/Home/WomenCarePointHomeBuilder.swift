@@ -1,16 +1,9 @@
-//
-//  WomenCarePointHomeBuilder.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 17/7/25.
-//
-
 import FComponents
 import FDependencyInjector
 import FPresentation
 import SwiftUI
 
-/// Builder of Home
+/// Builder of the Women Care Point Home screen
 @MainActor
 final class WomenCarePointHomeBuilder {
     /// ViewModel of the screen
@@ -22,17 +15,14 @@ final class WomenCarePointHomeBuilder {
         self.viewModel = viewModel
     }
 
+    /// Init with a specific ViewModel
     init(viewModel: WomenCarePointHomeViewModelContract) {
         self.viewModel = viewModel
     }
     
-    /// This method builds the Home screen.
-    /// If you want to override this method:
-    /// 1. Create a subclass of ClickToPayStep1Builder
-    /// 2. Set up dependencies of the viewModel Ex: `viewModel.setupDependencies()`
-    /// 3. Use ``WomenCarePointHomeScreen`` init using helper functions of this class, replacing the ones that you
-    ///   want to customize
-    public func build() -> any View {
+    /// Builds the Home screen.
+    /// - Returns: A SwiftUI View representing the Women Care Point Home screen
+    public func build() -> some View {
         viewModel.setupDependencies(WomenCarePointHomeViewModelDependencies())
         return WomenCarePointHomeScreen(viewModel: viewModel,
                                         top: getTopView,
@@ -42,46 +32,61 @@ final class WomenCarePointHomeBuilder {
                                         overlay: getOverlayView)
     }
     
-    /// Returns a view containing the loader section.
-    ///
-    /// - Returns: A view representing the loader overlay section.
+    // MARK: - Overlay
+    /// Returns a view containing the loader section
     @ViewBuilder
     public func getOverlayView() -> some View {
         WomenCarePointHomeLoaderSectionView()
     }
 
-    /// This function returns the elements to be placed as top view of the screen.
+    // MARK: - Top View
+    /// Returns the top view of the screen
     @ViewBuilder
     public func getTopView() -> some View {
-        WomenCarePointHomeHeaderSectionView(viewModel: viewModel as! WomenCarePointHomeHeaderSectionViewModelContract)
+        WomenCarePointHomeHeaderSectionView(
+            viewModel: viewModel as! WomenCarePointHomeHeaderSectionViewModelContract
+        )
     }
     
+    // MARK: - Content
+    /// Returns the content view of the screen
     @ViewBuilder
     public func getContentView() -> some View {
         @Injected var mapper: any WomenCarePointHomeListSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointHomeListSectionMapper {
-            let publisher = mapperInstance.getObservedPublisher(viewModel as! WomenCarePointHomeListSectionViewModelContract)
-            let renderPublisher = publisher.map { domainModel in
-                mapperInstance.map(domainModel)
-            }.eraseToAnyPublisher()
-            WomenCarePointHomeListSectionView(viewModel: viewModel as! WomenCarePointHomeListSectionViewModelContract,
-                                              publisher: renderPublisher)
+            let publisher = mapperInstance.getObservedPublisher(
+                viewModel as! WomenCarePointHomeListSectionViewModelContract
+            )
+            let renderPublisher = publisher
+                .map { domainModel in mapperInstance.map(domainModel) }
+                .eraseToAnyPublisher()
+            WomenCarePointHomeListSectionView(
+                viewModel: viewModel as! WomenCarePointHomeListSectionViewModelContract,
+                publisher: renderPublisher
+            )
         }
     }
     
+    // MARK: - Bottom View
+    /// Returns the bottom view of the screen
     @ViewBuilder
     public func getBottomView() -> some View {
-        WomenCarePointHomeFooterSectionView(viewModel: viewModel as! WomenCarePointHomeFooterSectionViewModelContract)
+        WomenCarePointHomeFooterSectionView(
+            viewModel: viewModel as! WomenCarePointHomeFooterSectionViewModelContract
+        )
     }
 
+    // MARK: - Error View
+    /// Returns the error view of the screen
     @ViewBuilder
     public func getErrorView() -> some View {
-        WomenCarePointHomeErrorSectionView(viewModel: viewModel as! WomenCarePointHomeErrorSectionViewModelContract)
+        WomenCarePointHomeErrorSectionView(
+            viewModel: viewModel as! WomenCarePointHomeErrorSectionViewModelContract
+        )
     }
 }
 
+// MARK: - Typealiases for shared sections
 typealias WomenCarePointHomeErrorSectionViewModelContract = CrossErrorSectionViewModelContract
 typealias WomenCarePointHomeErrorSectionView = CrossErrorSectionView
 typealias WomenCarePointHomeLoaderSectionView = CrossLoaderSectionView
-
-

@@ -1,10 +1,3 @@
-//
-//  WomenCarePointHomeListSectionObservedModel.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
 struct WomenCarePointHomeListSectionObservedModel {
     /// information from centers
     public var data: [WomenCarePointModel.EventModel]?

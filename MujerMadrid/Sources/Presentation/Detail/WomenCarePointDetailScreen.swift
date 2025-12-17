@@ -1,10 +1,3 @@
-//
-//  WomenCarePointDetailScreen.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 17/7/25.
-//
-
 import FComponents
 import FDependencyInjector
 import FPresentation

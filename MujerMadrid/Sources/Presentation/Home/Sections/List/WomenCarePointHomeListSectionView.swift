@@ -5,8 +5,10 @@ import FPresentation
 import MapKit
 import SwiftUI
 
+/// View representing the Women Care Point Home List section.
+/// Shows a map with centers and a list view depending on the render model.
 struct WomenCarePointHomeListSectionView: View {
-    // MARK: - Modular Variable
+    // MARK: - Modular Variables
     let viewModel: WomenCarePointHomeListSectionViewModelContract
     let publisher: AnyPublisher<WomenCarePointHomeListSectionRenderModel, Never>
 
@@ -34,29 +36,22 @@ struct WomenCarePointHomeListSectionView: View {
         .onReceive(publisher) { model in
             renderModel = model
 
-            let visibles = model.centers.filter {
-                $0.location.latitude != 0.0 && $0.location.longitude != 0.0
-            }
+            let visibles = model.centers.filter { $0.location.latitude != 0.0 && $0.location.longitude != 0.0 }
 
             let items: [(MKMapItem, WomenCarePointHomeListSectionRenderModel.Centers)] = visibles.map { center in
-                let coord = CLLocationCoordinate2D(
-                    latitude: center.location.latitude,
-                    longitude: center.location.longitude
-                )
+                let coord = CLLocationCoordinate2D(latitude: center.location.latitude,
+                                                   longitude: center.location.longitude)
                 let placemark = MKPlacemark(coordinate: coord)
                 let item = MKMapItem(placemark: placemark)
                 item.name = center.title
                 return (item, center)
             }
 
-            self.mapItemToCenter = Dictionary(uniqueKeysWithValues: items)
+            mapItemToCenter = Dictionary(uniqueKeysWithValues: items)
+            hiddenCenter = model.centers.first { $0.location.latitude == 0.0 && $0.location.longitude == 0.0 }
 
-            self.hiddenCenter = model.centers.first {
-                $0.location.latitude == 0.0 && $0.location.longitude == 0.0
-            }
-
-            if self.selectedMapItem == nil, let first = self.mapItemToCenter.keys.first {
-                self.selectedMapItem = first
+            if selectedMapItem == nil, let first = mapItemToCenter.keys.first {
+                selectedMapItem = first
             }
 
             if !items.isEmpty {
@@ -64,10 +59,9 @@ struct WomenCarePointHomeListSectionView: View {
                 let avgLongitude = items.map { $0.0.placemark.coordinate.longitude }.reduce(0, +) / Double(items.count)
                 let centerCoordinate = CLLocationCoordinate2D(latitude: avgLatitude, longitude: avgLongitude)
 
-                cameraPosition = .region(MKCoordinateRegion(
-                    center: centerCoordinate,
-                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-                ))
+                cameraPosition = .region(MKCoordinateRegion(center: centerCoordinate,
+                                                            span: MKCoordinateSpan(latitudeDelta: 0.2,
+                                                                                   longitudeDelta: 0.2)))
             }
         }
     }
@@ -81,10 +75,12 @@ private extension WomenCarePointHomeListSectionView {
                 mapView
                     .frame(height: 400)
                     .clipShape(RoundedRectangle(cornerRadius: 30))
+
                 if let selected = selectedMapItem,
                    let center = mapItemToCenter[selected] {
                     getItemView(item: center)
                 }
+
                 if let hidden = hiddenCenter {
                     Text("\(hidden.title) (no visible en el mapa)")
                         .font(.headline)
@@ -116,19 +112,12 @@ private extension WomenCarePointHomeListSectionView {
         }
         .mapStyle(.standard(pointsOfInterest: .excludingAll))
     }
-    
+
     @ViewBuilder
     func getItemView(item: WomenCarePointHomeListSectionRenderModel.Centers) -> some View {
         FCCard(viewModel: .init(
-            configuration: .init(
-                doubleCard: false,
-                maxWidth: true,
-                contentAlignment: .leading
-            ),
-            style: .init(
-                innerCardBgColor: .white,
-                innerCardBorderColor: Color.gray.opacity(0.3)
-            ),
+            configuration: .init(doubleCard: false, maxWidth: true, contentAlignment: .leading),
+            style: .init(innerCardBgColor: .white, innerCardBorderColor: Color.gray.opacity(0.3)),
             interaction: .init(onTap: {})
         )) {
             HStack {
@@ -139,32 +128,31 @@ private extension WomenCarePointHomeListSectionView {
                         .frame(width: 30, height: 30)
                     Spacer()
                 }
+
                 VStack(alignment: .leading) {
                     if renderModel.showList {
-                        Text(item.title)
-                            .bold()
-                        Text(item.streetAddress)
-                            .bold()
+                        Text(item.title).bold()
+                        Text(item.streetAddress).bold()
                         Text("Horario de atención:")
                         Text(item.schedule)
                     } else {
-                        Text(item.streetAddress)
-                            .bold()
+                        Text(item.streetAddress).bold()
                         Text("Horario de atención:")
                         Text(item.schedule)
                     }
                 }
                 .font(.subheadline)
                 .foregroundStyle(.black)
+
                 Spacer()
+
                 VStack {
                     Spacer()
                     Button(action: {
                         viewModel.navigateToCarePointDetail(centerId: item.id)
                     }, label: {
                         HStack(alignment: .center, spacing: 3) {
-                            Text("Más")
-                                .bold()
+                            Text("Más").bold()
                             Image(systemName: "chevron.forward")
                                 .font(.system(size: 12, weight: .bold))
                         }

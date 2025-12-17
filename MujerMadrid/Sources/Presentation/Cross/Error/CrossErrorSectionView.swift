@@ -12,6 +12,7 @@ struct CrossErrorSectionView: View {
     @SwiftUI.State private var isExpanded = false
 
     // MARK: - Life cycle
+    /// Initializes the view with a view model.
     init(viewModel: CrossErrorSectionViewModelContract) {
         self.viewModel = viewModel
     }

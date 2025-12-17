@@ -1,103 +1,118 @@
-//
-//  WomenCarePointDetailBuilder.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 17/7/25.
-//
-
 import FComponents
 import FDependencyInjector
 import FPresentation
 import SwiftUI
 
-/// Builder of Detail
+/// Builder for the WomenCarePoint Detail screen
+/// Handles construction of the screen, including top, content, bottom, error, and overlay sections
 @MainActor
 final class WomenCarePointDetailBuilder {
     /// ViewModel of the screen
     public var viewModel: WomenCarePointDetailViewModelContract
-    /// Identifier of the product needed to navigate to the screen.
+    
+    /// Identifier of the care point, injected via dependency injector
     @Dependency public var centerId: String
 
-    /// Default init required by the injector
+    /// Default initializer required by FDependencyInjector
     public required init() {
         @Injected var viewModel: WomenCarePointDetailViewModelContract
         self.viewModel = viewModel
     }
 
+    /// Custom initializer for manual injection (e.g., testing)
+    /// - Parameter viewModel: instance of the ViewModel
     init(viewModel: WomenCarePointDetailViewModelContract) {
         self.viewModel = viewModel
     }
     
-    /// This method builds the Detail screen.
-    /// If you want to override this method:
-    /// 1. Create a subclass of ClickToPayStep1Builder
-    /// 2. Set up dependencies of the viewModel Ex: `viewModel.setupDependencies()`
-    /// 3. Use ``WomenCarePointDetailScreen`` init using helper functions of this class, replacing the ones that you
-    ///   want to customize
+    // MARK: - Build Method
+    /// Builds the full Detail screen view
+    /// Steps to override:
+    /// 1. Subclass `WomenCarePointDetailBuilder`
+    /// 2. Set up ViewModel dependencies (`viewModel.setupDependencies(...)`)
+    /// 3. Use `WomenCarePointDetailScreen` init with the helper methods below
     public func build() -> any View {
         viewModel.setupDependencies(WomenCarePointDetailViewModelDependencies(centerId: centerId))
-        return WomenCarePointDetailScreen(viewModel: viewModel,
-                                          top: getTopView,
-                                          content: getContentView,
-                                          bottom: getBottomView,
-                                          error: getErrorView,
-                                          overlay: getOverlayView)
+        return WomenCarePointDetailScreen(
+            viewModel: viewModel,
+            top: getTopView,
+            content: getContentView,
+            bottom: getBottomView,
+            error: getErrorView,
+            overlay: getOverlayView
+        )
     }
     
-    /// Function that sets the current identifier
-    /// - Parameter centerId: identifier of the product
-    /// - Returns: Self view with modifications
+    // MARK: - Configuration
+    /// Sets the current center identifier
+    /// - Parameter centerId: identifier of the care point
+    /// - Returns: Self builder instance with the updated centerId
     public func setIdentifier(centerId: String) -> WomenCarePointDetailBuilder {
         self.centerId = centerId
         return self
     }
     
-    /// Returns a view containing the loader section.
-    ///
-    /// - Returns: A view representing the loader overlay section.
+    // MARK: - Overlay
+    /// Returns a loader overlay view for the screen
     @ViewBuilder
     public func getOverlayView() -> some View {
         WomenCarePointDetailLoaderSectionView()
     }
 
-    /// This function returns the elements to be placed as top view of the screen.
+    // MARK: - Top Section
+    /// Returns the top section of the screen (header)
     @ViewBuilder
     public func getTopView() -> some View {
         @Injected var mapper: any WomenCarePointDetailHeaderSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointDetailHeaderSectionMapper {
             let publisher = mapperInstance.getObservedPublisher(viewModel as! WomenCarePointDetailHeaderSectionViewModelContract)
-            let renderPublisher = publisher.map { domainModel in
-                mapperInstance.map(domainModel)
-            }.eraseToAnyPublisher()
-            WomenCarePointDetailHeaderSectionView(viewModel: viewModel as! WomenCarePointDetailHeaderSectionViewModelContract,
-                                                   publisher: renderPublisher)
+            let renderPublisher = publisher
+                .map { domainModel in mapperInstance.map(domainModel) }
+                .eraseToAnyPublisher()
+            
+            WomenCarePointDetailHeaderSectionView(
+                viewModel: viewModel as! WomenCarePointDetailHeaderSectionViewModelContract,
+                publisher: renderPublisher
+            )
         }
     }
     
+    // MARK: - Content Section
+    /// Returns the main content section of the screen
     @ViewBuilder
     public func getContentView() -> some View {
         @Injected var mapper: any WomenCarePointDetailContentSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointDetailContentSectionMapper {
             let publisher = mapperInstance.getObservedPublisher(viewModel as! WomenCarePointDetailContentSectionViewModelContract)
-            let renderPublisher = publisher.map { domainModel in
-                mapperInstance.map(domainModel)
-            }.eraseToAnyPublisher()
-            WomenCarePointDetailContentSectionView(viewModel: viewModel as! WomenCarePointDetailContentSectionViewModelContract,
-                                                   publisher: renderPublisher)
+            let renderPublisher = publisher
+                .map { domainModel in mapperInstance.map(domainModel) }
+                .eraseToAnyPublisher()
+            
+            WomenCarePointDetailContentSectionView(
+                viewModel: viewModel as! WomenCarePointDetailContentSectionViewModelContract,
+                publisher: renderPublisher
+            )
         }
     }
 
+    // MARK: - Error Section
+    /// Returns the error section view
     @ViewBuilder
     public func getErrorView() -> some View {
         WomenCarePointDetailErrorSectionView(viewModel: viewModel as! WomenCarePointDetailErrorSectionViewModelContract)
     }
     
+    // MARK: - Bottom Section
+    /// Returns the bottom section view; empty in this case
     @ViewBuilder
     public func getBottomView() -> some View {
         EmptyView()
     }
 }
 
+// MARK: - Typealiases
+/// Cross-error section used for the detail screen
 typealias WomenCarePointDetailErrorSectionViewModelContract = CrossErrorSectionViewModelContract
 typealias WomenCarePointDetailErrorSectionView = CrossErrorSectionView
+/// Cross-loader section used for the detail screen
 typealias WomenCarePointDetailLoaderSectionView = CrossLoaderSectionView

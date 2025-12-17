@@ -1,10 +1,3 @@
-//
-//  WomenCarePointDetailHeaderSectionObservedModel.swift
-//  MujerMadrid
-//
-//  Created by Javier Martin on 18/7/25.
-//
-
 struct WomenCarePointDetailHeaderSectionObservedModel {
     /// Center name
     public var title: String
