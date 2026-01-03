@@ -18,8 +18,6 @@ protocol WomenCarePointHomeViewModelContract: ViewModelContract {
     // MARK: Inputs
     /// Called when the view appears
     func notifyAppearance()
-    /// Load initial information of care points
-    func getWomenCarePointInformationData()
 
     // MARK: Publishers
     var errorPublisher: AnyPublisher<Bool, Never> { get }
@@ -88,16 +86,12 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     /// Called when the view appears
     public func notifyAppearance() {
         requestLocationPermissionsIfNeeded()
+        loadData()
     }
     
     /// Setup dependencies
     /// - Parameter dependencies: injected dependencies
     public func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
-    
-    /// Load the initial information of care points
-    public func getWomenCarePointInformationData() {
-        loadData()
-    }
     
     /// Navigate to the detail screen of a care point
     /// - Parameter centerId: identifier of the care point

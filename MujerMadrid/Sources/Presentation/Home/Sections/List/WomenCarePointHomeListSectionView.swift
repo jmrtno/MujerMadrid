@@ -30,9 +30,6 @@ struct WomenCarePointHomeListSectionView: View {
         ScrollView {
             contentView
         }
-        .onAppear {
-            viewModel.getWomenCarePointInformationData()
-        }
         .onReceive(publisher) { model in
             renderModel = model
 
@@ -126,6 +123,7 @@ private extension WomenCarePointHomeListSectionView {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
+                        .accessibilityHidden(true)
                     Spacer()
                 }
 
@@ -160,6 +158,7 @@ private extension WomenCarePointHomeListSectionView {
                     })
                 }
             }
+            .accessibilityElement(children: .combine)
             .padding()
         }
     }
