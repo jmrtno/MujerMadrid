@@ -70,6 +70,7 @@ private extension WomenCarePointDetailContentSectionView {
                     Image(systemName: icon)
                         .font(.system(size: 25, weight: .regular))
                         .foregroundColor(Color(hex: "9E67D5"))
+                        .accessibilityHidden(true)
                     Text(title)
                         .font(.title3)
                         .foregroundStyle(.black)
@@ -78,6 +79,7 @@ private extension WomenCarePointDetailContentSectionView {
                 .padding(.bottom, 4)
                 ExpandableText(content: content)
             }
+            .accessibilityElement(children: .combine)
             .padding()
         }
     }
@@ -111,6 +113,8 @@ private extension WomenCarePointDetailContentSectionView {
                                                  size: size,
                                                  interaction: interaction)
         FCButton(viewModelButton)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
     }
 
     private var noMapCard: some View {
@@ -164,6 +168,7 @@ private extension WomenCarePointDetailContentSectionView {
                         .scaledToFit()
                         .frame(width: 35, height: 35)
                         .foregroundColor(Color.black.opacity(0.7))
+                        .accessibilityHidden(true)
                     Text("\(renderModel.center.streetAddress), \(postalCode)\(renderModel.center.locality)")
                         .font(.subheadline)
                         .foregroundStyle(.black)
@@ -178,12 +183,15 @@ private extension WomenCarePointDetailContentSectionView {
                         .scaledToFit()
                         .frame(width: 35, height: 35)
                         .foregroundColor(Color.black.opacity(0.7))
+                        .accessibilityHidden(true)
                     Text(renderModel.center.schedule)
                         .font(.subheadline)
                         .foregroundStyle(.black)
                 }
                 .padding(.bottom, 4)
             }
+            .accessibilityElement(children: .contain)
+            .accessibilityLabel("Ubicación y horario de atención")
             .padding()
         }
     }

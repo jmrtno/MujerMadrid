@@ -65,6 +65,8 @@ private extension WomenCarePointDetailHeaderSectionView {
             Image(systemName: "arrow.backward")
                 .foregroundColor(.white)
         }
+        .accessibilityLabel("Back")
+        .accessibilitySortPriority(1)
     }
 
     var iconAndTitle: some View {
@@ -73,6 +75,7 @@ private extension WomenCarePointDetailHeaderSectionView {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 60, height: 60)
+                .accessibilityHidden(true)
             Text(renderModel.title)
                 .font(.title3)
                 .fontWeight(.bold)

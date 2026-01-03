@@ -70,6 +70,9 @@ private extension WomenCarePointHomeFooterSectionView {
                                                  size: size,
                                                  interaction: interaction)
         FCButton(viewModelButton)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Llamar al 016")
+            .accessibilityAddTraits(.isButton)
     }
 }
 
