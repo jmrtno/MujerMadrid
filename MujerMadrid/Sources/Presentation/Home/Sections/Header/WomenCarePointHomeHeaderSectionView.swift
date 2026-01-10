@@ -12,6 +12,8 @@ struct WomenCarePointHomeHeaderSectionView: View {
 
     @State private var isOn = false
     
+    @State private var isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
+    
     // MARK: Life cycle
     
     /// Initializes the view with the provided view model.
@@ -21,6 +23,9 @@ struct WomenCarePointHomeHeaderSectionView: View {
 
     var body: some View {
         contentView
+            .onReceive(NotificationCenter.default.publisher(for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
+                isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
+            }
     }
 }
 
@@ -41,8 +46,6 @@ private extension WomenCarePointHomeHeaderSectionView {
                         .font(.title)
                         .foregroundStyle(.black)
                         .bold()
-                        .accessibilityAddTraits(.isHeader)
-                        .accessibilitySortPriority(1)
                     Text("Información y acceso rápido a centros de atención a mujeres")
                         .font(.subheadline)
                         .foregroundStyle(.black)
@@ -50,9 +53,13 @@ private extension WomenCarePointHomeHeaderSectionView {
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isHeader)
             }
             .padding(.horizontal, 7)
-            toogleButton
+            if !isVoiceOverRunning {
+                toogleButton
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, verticalSizeClass == .compact ? 12 : 0)

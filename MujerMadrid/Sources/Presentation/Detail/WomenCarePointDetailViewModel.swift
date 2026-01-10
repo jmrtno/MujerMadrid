@@ -185,8 +185,8 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
 
     /// Called when the "Try Again" button is tapped.
     public func didTapTryAgain() {
-        self.isLoading = true
-        self.isError = false
+        isLoading = true
+        isError = false
         loadData(for: centerId)
     }
 }
@@ -212,6 +212,7 @@ private extension WomenCarePointDetailViewModel {
                 self.womenCarePointCenterHeaderInfoPublished.services = info.data.first?.organization?.services ?? ""
 
                 self.isError = false
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
                 self.isLoading = false
             } catch {
                 self.isLoading = false

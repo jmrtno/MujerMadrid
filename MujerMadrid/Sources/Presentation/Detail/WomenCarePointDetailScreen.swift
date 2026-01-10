@@ -18,6 +18,10 @@ struct WomenCarePointDetailScreen<Top: View,
     @SwiftUI.State private var viewSize: CGSize = .zero
     @SwiftUI.State private var showError = false
     @SwiftUI.State private var showLoader = false
+    
+    @AccessibilityFocusState private var isDetailTitleFocused: Bool
+    @AccessibilityFocusState private var loaderFocused: Bool
+    @AccessibilityFocusState private var errorFocused: Bool
 
     /// Init of ``WomenCarePointDetailScreen`
     /// - Parameters:
@@ -43,14 +47,15 @@ struct WomenCarePointDetailScreen<Top: View,
     public var body: some View {
         ZStack(alignment: .top) {
             top
-                .hiddenOrRemoved(showError, remove: true)
+                .hiddenOrRemoved(showError || showLoader, remove: true)
+                .accessibilityFocused($isDetailTitleFocused)
             VStack {
                 ScrollView {
                     content
                 }
                 bottom
             }
-            .hiddenOrRemoved(showError, remove: true)
+            .hiddenOrRemoved(showError || showLoader, remove: true)
             .background(.white)
             .clipShape(
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
@@ -59,9 +64,19 @@ struct WomenCarePointDetailScreen<Top: View,
             .ignoresSafeArea(edges: .bottom)
             if showError {
                 error
+                    /// Force error accessibility focus
+                    .accessibilityFocused($errorFocused)
+                    .onAppear {
+                        errorFocused = true
+                    }
             }
             if showLoader {
                 overlay
+                    /// Force loader accessibility focus
+                    .accessibilityFocused($loaderFocused)
+                    .onAppear {
+                        loaderFocused = true
+                    }
             }
         }
         .frame(maxWidth: .infinity)
@@ -71,9 +86,19 @@ struct WomenCarePointDetailScreen<Top: View,
         }
         .onReceive(viewModel.errorPublisher) {
             showError = $0
+            if !$0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    errorFocused = true
+                }
+            }
         }
         .onReceive(viewModel.loaderPublisher) {
             showLoader = $0
+            if !$0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    isDetailTitleFocused = true
+                }
+            }
         }
     }
 }
