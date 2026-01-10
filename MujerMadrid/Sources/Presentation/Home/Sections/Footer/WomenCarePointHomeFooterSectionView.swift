@@ -32,7 +32,7 @@ private extension WomenCarePointHomeFooterSectionView {
                     .foregroundStyle(.black)
                     .padding()
             } else {
-                Text("Servicio de atención gratuito a todas las formas de violencia de género")
+                Text("Número de atención gratuito a todas las formas de violencia de género")
                     .font(.caption)
                     .foregroundStyle(.black)
                 button

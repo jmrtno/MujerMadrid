@@ -33,7 +33,8 @@ private extension CrossLoaderSectionView {
                         .repeatForever(autoreverses: true),
                         value: isExpanded
                     )
-                Text("Cargando información...")
+                    .accessibilityHidden(true)
+                Text("Cargando información")
                     .foregroundColor(.gray.opacity(1))
             }
         }

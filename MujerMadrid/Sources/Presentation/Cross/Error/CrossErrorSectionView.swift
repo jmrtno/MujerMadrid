@@ -38,17 +38,22 @@ private extension CrossErrorSectionView {
                     .repeatForever(autoreverses: true),
                     value: isExpanded
                 )
-            Text("No se ha podido cargar la información.")
-                .font(.subheadline)
-                .bold()
-                .multilineTextAlignment(.center)
-            Text("""
-                 Puede que no tengas conexión a internet o que el servicio no esté disponible en este momento.
-                 Por favor, revisa tu conexión e inténtalo de nuevo.
-                 """)
-                .font(.subheadline)
-                .multilineTextAlignment(.center)
+                .accessibilityHidden(true)
+            VStack {
+                Text("No se ha podido cargar la información.")
+                    .font(.subheadline)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                Text("""
+                     Puede que no tengas conexión a internet o que el servicio no esté disponible en este momento.
+                     Por favor, revisa tu conexión e inténtalo de nuevo.
+                     """)
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+            }
+            .accessibilityElement(children: .combine)
             tryAgainButton
+                .accessibilityAddTraits(.isButton)
                 .padding(.top)
         }
         .padding(.horizontal)

@@ -21,6 +21,10 @@ struct WomenCarePointHomeScreen<Top: View,
     @SwiftUI.State private var scrollViewHeight: CGFloat = 0
 
     private let bottomDetectionMargin: CGFloat = 20
+    
+    @AccessibilityFocusState private var isTitleFocused: Bool
+    @AccessibilityFocusState private var loaderFocused: Bool
+    @AccessibilityFocusState private var errorFocused: Bool
 
     /// Init of ``WomenCarePointHomeScreen`
     /// - Parameters:
@@ -49,6 +53,7 @@ struct WomenCarePointHomeScreen<Top: View,
             BackgroundView()
             VStack {
                 top
+                    .accessibilityFocused($isTitleFocused)
                 ScrollView {
                     content
                         .background(
@@ -61,6 +66,7 @@ struct WomenCarePointHomeScreen<Top: View,
                             }
                         )
                 }
+                .scrollIndicators(.never)
                 .coordinateSpace(name: "WomenCarePointScroll")
                 .background(
                     GeometryReader { geo in
@@ -101,16 +107,37 @@ struct WomenCarePointHomeScreen<Top: View,
             .hiddenOrRemoved(showError, remove: true)
             if showError {
                 error
+                    /// Force error accessibility focus
+                    .accessibilityFocused($errorFocused)
+                    .onAppear {
+                        errorFocused = true
+                    }
+                
             }
             if showLoader {
                 overlay
+                    /// Force loader accessibility focus
+                    .accessibilityFocused($loaderFocused)
+                    .onAppear {
+                        loaderFocused = true
+                    }
             }
         }
         .onAppear {
             viewModel.notifyAppearance()
+            if !showLoader {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    isTitleFocused = true
+                }
+            }
         }
         .onReceive(viewModel.errorPublisher) {
             showError = $0
+            if !$0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    errorFocused = true
+                }
+            }
         }
         .onReceive(viewModel.loaderPublisher) {
             showLoader = $0

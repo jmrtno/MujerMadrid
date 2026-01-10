@@ -18,6 +18,7 @@ struct WomenCarePointHomeListSectionView: View {
     @State private var mapItemToCenter: [MKMapItem: WomenCarePointHomeListSectionRenderModel.Centers] = [:]
     @State private var cameraPosition: MapCameraPosition = .automatic
     @State private var hiddenCenter: WomenCarePointHomeListSectionRenderModel.Centers?
+    @State private var isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
 
     // MARK: - Life cycle
     init(viewModel: WomenCarePointHomeListSectionViewModelContract,
@@ -26,9 +27,14 @@ struct WomenCarePointHomeListSectionView: View {
         self.publisher = publisher
     }
 
+    var shouldShowList: Bool {
+        renderModel.showList || isVoiceOverRunning
+    }
+
     var body: some View {
-        ScrollView {
-            contentView
+        contentView
+        .onReceive(NotificationCenter.default.publisher(for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
+            isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
         }
         .onReceive(publisher) { model in
             renderModel = model
@@ -68,7 +74,11 @@ struct WomenCarePointHomeListSectionView: View {
 private extension WomenCarePointHomeListSectionView {
     var contentView: some View {
         VStack(alignment: .leading, spacing: 15) {
-            if !renderModel.showList {
+            if shouldShowList {
+                ForEach(renderModel.centers) { center in
+                    getItemView(item: center)
+                }
+            } else {
                 mapView
                     .frame(height: 400)
                     .clipShape(RoundedRectangle(cornerRadius: 30))
@@ -83,10 +93,6 @@ private extension WomenCarePointHomeListSectionView {
                         .font(.headline)
                         .foregroundStyle(.black)
                     getItemView(item: hidden)
-                }
-            } else {
-                ForEach(renderModel.centers) { center in
-                    getItemView(item: center)
                 }
             }
         }
@@ -128,7 +134,7 @@ private extension WomenCarePointHomeListSectionView {
                 }
 
                 VStack(alignment: .leading) {
-                    if renderModel.showList {
+                    if shouldShowList {
                         Text(item.title).bold()
                         Text(item.streetAddress).bold()
                         Text("Horario de atención:")
