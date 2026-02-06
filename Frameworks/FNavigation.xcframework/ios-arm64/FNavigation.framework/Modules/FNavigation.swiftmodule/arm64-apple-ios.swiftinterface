@@ -91,18 +91,20 @@ import _SwiftConcurrencyShims
 public protocol NavigationInfo {
   var presentationType: FNavigation.PresentationType { get }
 }
-@objc public enum PresentationType : Swift.Int {
-  case modal
+public enum PresentationType {
+  case modal(detents: [FNavigation.ModalDetent])
   case push
   case fullScreen
   case goToRoot
   case goBack
   case dismissModal
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+}
+public enum ModalDetent {
+  case medium
+  case large
+  public static func == (a: FNavigation.ModalDetent, b: FNavigation.ModalDetent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -113,6 +115,5 @@ public protocol ScreenNavigator : FDependencyInjector.Instanciable, Swift.Sendab
 }
 extension FNavigation.NavigationManager : Swift.Sendable {}
 extension FNavigation.NavigationManager.Coordinator : Swift.Sendable {}
-extension FNavigation.PresentationType : Swift.Equatable {}
-extension FNavigation.PresentationType : Swift.Hashable {}
-extension FNavigation.PresentationType : Swift.RawRepresentable {}
+extension FNavigation.ModalDetent : Swift.Equatable {}
+extension FNavigation.ModalDetent : Swift.Hashable {}

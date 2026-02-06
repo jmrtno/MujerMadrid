@@ -334,7 +334,7 @@
                 "kind": "TypeNominal",
                 "name": "PresentationType",
                 "printedName": "FNavigation.PresentationType",
-                "usr": "c:@M@FNavigation@E@PresentationType"
+                "usr": "s:11FNavigation16PresentationTypeO"
               }
             ],
             "declKind": "Var",
@@ -356,7 +356,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   }
                 ],
                 "declKind": "Accessor",
@@ -380,7 +380,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   }
                 ],
                 "declKind": "Accessor",
@@ -1552,7 +1552,7 @@
                 "kind": "TypeNominal",
                 "name": "PresentationType",
                 "printedName": "FNavigation.PresentationType",
-                "usr": "c:@M@FNavigation@E@PresentationType"
+                "usr": "s:11FNavigation16PresentationTypeO"
               }
             ],
             "declKind": "Var",
@@ -1570,7 +1570,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   }
                 ],
                 "declKind": "Accessor",
@@ -1623,13 +1623,41 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(FNavigation.PresentationType.Type) -> FNavigation.PresentationType",
+                "printedName": "(FNavigation.PresentationType.Type) -> ([FNavigation.ModalDetent]) -> FNavigation.PresentationType",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "PresentationType",
-                    "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([FNavigation.ModalDetent]) -> FNavigation.PresentationType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PresentationType",
+                        "printedName": "FNavigation.PresentationType",
+                        "usr": "s:11FNavigation16PresentationTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(detents: [FNavigation.ModalDetent])",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[FNavigation.ModalDetent]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ModalDetent",
+                                "printedName": "FNavigation.ModalDetent",
+                                "usr": "s:11FNavigation11ModalDetentO"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -1640,7 +1668,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1648,13 +1676,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeModal",
-            "mangledName": "$s11FNavigation16PresentationTypeO5modalyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
+            "usr": "s:11FNavigation16PresentationTypeO5modalyACSayAA11ModalDetentOG_tcACmF",
+            "mangledName": "$s11FNavigation16PresentationTypeO5modalyACSayAA11ModalDetentOG_tcACmF",
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
@@ -1670,7 +1694,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1681,7 +1705,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1689,13 +1713,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypePush",
+            "usr": "s:11FNavigation16PresentationTypeO4pushyA2CmF",
             "mangledName": "$s11FNavigation16PresentationTypeO4pushyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
@@ -1711,7 +1731,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1722,7 +1742,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1730,13 +1750,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeFullScreen",
+            "usr": "s:11FNavigation16PresentationTypeO10fullScreenyA2CmF",
             "mangledName": "$s11FNavigation16PresentationTypeO10fullScreenyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
@@ -1752,7 +1768,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1763,7 +1779,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1771,13 +1787,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeGoToRoot",
+            "usr": "s:11FNavigation16PresentationTypeO8goToRootyA2CmF",
             "mangledName": "$s11FNavigation16PresentationTypeO8goToRootyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
@@ -1793,7 +1805,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1804,7 +1816,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1812,13 +1824,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeGoBack",
+            "usr": "s:11FNavigation16PresentationTypeO6goBackyA2CmF",
             "mangledName": "$s11FNavigation16PresentationTypeO6goBackyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 4
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
@@ -1834,7 +1842,7 @@
                     "kind": "TypeNominal",
                     "name": "PresentationType",
                     "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "usr": "s:11FNavigation16PresentationTypeO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1845,7 +1853,7 @@
                         "kind": "TypeNominal",
                         "name": "PresentationType",
                         "printedName": "FNavigation.PresentationType",
-                        "usr": "c:@M@FNavigation@E@PresentationType"
+                        "usr": "s:11FNavigation16PresentationTypeO"
                       }
                     ]
                   }
@@ -1853,51 +1861,150 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FNavigation@E@PresentationType@PresentationTypeDismissModal",
+            "usr": "s:11FNavigation16PresentationTypeO12dismissModalyA2CmF",
             "mangledName": "$s11FNavigation16PresentationTypeO12dismissModalyA2CmF",
-            "moduleName": "FNavigation",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 5
+            "moduleName": "FNavigation"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11FNavigation16PresentationTypeO",
+        "mangledName": "$s11FNavigation16PresentationTypeO",
+        "moduleName": "FNavigation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ModalDetent",
+        "printedName": "ModalDetent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "FNavigation.PresentationType?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.ModalDetent.Type) -> FNavigation.ModalDetent",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "PresentationType",
-                    "printedName": "FNavigation.PresentationType",
-                    "usr": "c:@M@FNavigation@E@PresentationType"
+                    "name": "ModalDetent",
+                    "printedName": "FNavigation.ModalDetent",
+                    "usr": "s:11FNavigation11ModalDetentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.ModalDetent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ModalDetent",
+                        "printedName": "FNavigation.ModalDetent",
+                        "usr": "s:11FNavigation11ModalDetentO"
+                      }
+                    ]
                   }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                ]
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:11FNavigation16PresentationTypeO8rawValueACSgSi_tcfc",
-            "mangledName": "$s11FNavigation16PresentationTypeO8rawValueACSgSi_tcfc",
-            "moduleName": "FNavigation",
-            "implicit": true,
-            "init_kind": "Designated"
+            "declKind": "EnumElement",
+            "usr": "s:11FNavigation11ModalDetentO6mediumyA2CmF",
+            "mangledName": "$s11FNavigation11ModalDetentO6mediumyA2CmF",
+            "moduleName": "FNavigation"
           },
           {
             "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
+            "name": "large",
+            "printedName": "large",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FNavigation.ModalDetent.Type) -> FNavigation.ModalDetent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModalDetent",
+                    "printedName": "FNavigation.ModalDetent",
+                    "usr": "s:11FNavigation11ModalDetentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FNavigation.ModalDetent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ModalDetent",
+                        "printedName": "FNavigation.ModalDetent",
+                        "usr": "s:11FNavigation11ModalDetentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11FNavigation11ModalDetentO5largeyA2CmF",
+            "mangledName": "$s11FNavigation11ModalDetentO5largeyA2CmF",
+            "moduleName": "FNavigation"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModalDetent",
+                "printedName": "FNavigation.ModalDetent",
+                "usr": "s:11FNavigation11ModalDetentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModalDetent",
+                "printedName": "FNavigation.ModalDetent",
+                "usr": "s:11FNavigation11ModalDetentO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation11ModalDetentO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11FNavigation11ModalDetentO2eeoiySbAC_ACtFZ",
+            "moduleName": "FNavigation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1907,8 +2014,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:11FNavigation16PresentationTypeO8rawValueSivp",
-            "mangledName": "$s11FNavigation16PresentationTypeO8rawValueSivp",
+            "usr": "s:11FNavigation11ModalDetentO9hashValueSivp",
+            "mangledName": "$s11FNavigation11ModalDetentO9hashValueSivp",
             "moduleName": "FNavigation",
             "implicit": true,
             "accessors": [
@@ -1925,24 +2032,47 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11FNavigation16PresentationTypeO8rawValueSivg",
-                "mangledName": "$s11FNavigation16PresentationTypeO8rawValueSivg",
+                "usr": "s:11FNavigation11ModalDetentO9hashValueSivg",
+                "mangledName": "$s11FNavigation11ModalDetentO9hashValueSivg",
                 "moduleName": "FNavigation",
                 "implicit": true,
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FNavigation11ModalDetentO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11FNavigation11ModalDetentO4hash4intoys6HasherVz_tF",
+            "moduleName": "FNavigation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
-        "usr": "c:@M@FNavigation@E@PresentationType",
-        "mangledName": "$s11FNavigation16PresentationTypeO",
+        "usr": "s:11FNavigation11ModalDetentO",
+        "mangledName": "$s11FNavigation11ModalDetentO",
         "moduleName": "FNavigation",
         "declAttributes": [
-          "AccessControl",
-          "ObjC"
+          "AccessControl"
         ],
-        "enumRawTypeName": "Int",
         "conformances": [
           {
             "kind": "Conformance",
@@ -1971,28 +2101,6 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
           }
         ]
       },
@@ -2100,41 +2208,6 @@
       "offset": 760,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 201,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 215,
-      "length": 10,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 235,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 253,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/javiermartin\/Developer\/frameworks\/projects\/FNavigation\/FNavigation\/NavigationProtocols.swift",
-      "kind": "IntegerLiteral",
-      "offset": 269,
-      "length": 12,
-      "value": "5"
     }
   ]
 }

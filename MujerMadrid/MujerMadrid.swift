@@ -10,6 +10,7 @@ struct MujerMadrid: App {
         NavigationModule.inject()
         WomenCarePointHomeModule.inject()
         WomenCarePointHomeListSectionModule.inject()
+        WomenCarePointHomeHeaderSectionModule.inject()
         WomenCarePointDetailModule.inject()
         WomenCarePointDetailContentSectionModule.inject()
         WomenCarePointDetailHeaderSectionModule.inject()
