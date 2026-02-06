@@ -54,6 +54,12 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     // MARK: - Published Properties
     /// Observed model containing the list of care points to display in the Home screen.
     @Published public var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .init()
+    ///
+    @Published public var filterPublished = "" {
+        didSet {
+            applyFilter()
+        }
+    }
     /// Indicates whether the loader should be shown.
     @Published var isLoading = false
     /// Indicates whether an error occurred while fetching data.
@@ -61,6 +67,8 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
 
     /// CLLocationManager instance used to request location permissions if needed.
     private let locationManager = CLLocationManager()
+    
+    private var originalData: [WomenCarePointModel.EventModel] = []
 
     // MARK: - Publishers
     
@@ -110,6 +118,10 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
         }
     }
 
+    public func filterSelected(filter: String) {
+        filterPublished = filter
+    }
+
     /// Toggle between map/list view
     public func didTapToggle() {
         womenCarePointInformationPublished.showList.toggle()
@@ -132,7 +144,8 @@ private extension WomenCarePointHomeViewModel {
             self.isLoading = true
             do {
                 let info = try await self.getWomenCarePointUseCase.run()
-                self.womenCarePointInformationPublished.data = info.data
+                self.originalData = info.data
+                self.applyFilter()
                 self.isLoading = false
             } catch {
                 self.isLoading = false
@@ -142,10 +155,24 @@ private extension WomenCarePointHomeViewModel {
     }
     
     /// Requests location permissions if not yet determined
-    private func requestLocationPermissionsIfNeeded() {
+    func requestLocationPermissionsIfNeeded() {
         let status = locationManager.authorizationStatus
         if status == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func applyFilter() {
+        let filter = filterPublished.lowercased()
+        guard !filter.isEmpty, filter != "all" else {
+            womenCarePointInformationPublished.data = originalData
+            return
+        }
+        
+        womenCarePointInformationPublished.data = originalData.filter { event in
+            let descriptionMatches = event.description?.lowercased().contains(filter) ?? false
+            let servicesMatches = event.organization?.services?.lowercased().contains(filter) ?? false
+            return descriptionMatches || servicesMatches
         }
     }
 }

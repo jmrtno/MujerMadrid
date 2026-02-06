@@ -20,6 +20,8 @@ struct WomenCarePointHomeListSectionView: View {
     @State private var hiddenCenter: WomenCarePointHomeListSectionRenderModel.Centers?
     @State private var isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
 
+    private var showHidden = true
+    
     // MARK: - Life cycle
     init(viewModel: WomenCarePointHomeListSectionViewModelContract,
          publisher: AnyPublisher<WomenCarePointHomeListSectionRenderModel, Never>) {
@@ -33,40 +35,12 @@ struct WomenCarePointHomeListSectionView: View {
 
     var body: some View {
         contentView
-        .onReceive(NotificationCenter.default.publisher(for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
-            isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
-        }
-        .onReceive(publisher) { model in
-            renderModel = model
-
-            let visibles = model.centers.filter { $0.location.latitude != 0.0 && $0.location.longitude != 0.0 }
-
-            let items: [(MKMapItem, WomenCarePointHomeListSectionRenderModel.Centers)] = visibles.map { center in
-                let coord = CLLocationCoordinate2D(latitude: center.location.latitude,
-                                                   longitude: center.location.longitude)
-                let placemark = MKPlacemark(coordinate: coord)
-                let item = MKMapItem(placemark: placemark)
-                item.name = center.title
-                return (item, center)
+            .onReceive(NotificationCenter.default.publisher(for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
+                isVoiceOverRunning = UIAccessibility.isVoiceOverRunning
             }
-
-            mapItemToCenter = Dictionary(uniqueKeysWithValues: items)
-            hiddenCenter = model.centers.first { $0.location.latitude == 0.0 && $0.location.longitude == 0.0 }
-
-            if selectedMapItem == nil, let first = mapItemToCenter.keys.first {
-                selectedMapItem = first
+            .onReceive(publisher) { model in
+                handleModelUpdate(model)
             }
-
-            if !items.isEmpty {
-                let avgLatitude = items.map { $0.0.placemark.coordinate.latitude }.reduce(0, +) / Double(items.count)
-                let avgLongitude = items.map { $0.0.placemark.coordinate.longitude }.reduce(0, +) / Double(items.count)
-                let centerCoordinate = CLLocationCoordinate2D(latitude: avgLatitude, longitude: avgLongitude)
-
-                cameraPosition = .region(MKCoordinateRegion(center: centerCoordinate,
-                                                            span: MKCoordinateSpan(latitudeDelta: 0.2,
-                                                                                   longitudeDelta: 0.2)))
-            }
-        }
     }
 }
 
@@ -169,3 +143,40 @@ private extension WomenCarePointHomeListSectionView {
         }
     }
 }
+
+// MARK: - Private Methods
+
+private extension WomenCarePointHomeListSectionView {
+    func handleModelUpdate(_ model: WomenCarePointHomeListSectionRenderModel) {
+        renderModel = model
+
+        let visibles = model.centers.filter { $0.location.latitude != 0.0 && $0.location.longitude != 0.0 }
+
+        let items: [(MKMapItem, WomenCarePointHomeListSectionRenderModel.Centers)] = visibles.map { center in
+            let coord = CLLocationCoordinate2D(latitude: center.location.latitude,
+                                               longitude: center.location.longitude)
+            let placemark = MKPlacemark(coordinate: coord)
+            let item = MKMapItem(placemark: placemark)
+            item.name = center.title
+            return (item, center)
+        }
+
+        mapItemToCenter = Dictionary(uniqueKeysWithValues: items)
+        hiddenCenter = model.centers.first { $0.location.latitude == 0.0 && $0.location.longitude == 0.0 }
+
+        if selectedMapItem == nil || (selectedMapItem != nil && !mapItemToCenter.keys.contains(selectedMapItem!)) {
+            selectedMapItem = mapItemToCenter.keys.first
+        }
+
+        if !items.isEmpty {
+            let avgLatitude = items.map { $0.0.placemark.coordinate.latitude }.reduce(0, +) / Double(items.count)
+            let avgLongitude = items.map { $0.0.placemark.coordinate.longitude }.reduce(0, +) / Double(items.count)
+            let centerCoordinate = CLLocationCoordinate2D(latitude: avgLatitude, longitude: avgLongitude)
+
+            cameraPosition = .region(MKCoordinateRegion(center: centerCoordinate,
+                                                        span: MKCoordinateSpan(latitudeDelta: 0.2,
+                                                                               longitudeDelta: 0.2)))
+        }
+    }
+}
+
