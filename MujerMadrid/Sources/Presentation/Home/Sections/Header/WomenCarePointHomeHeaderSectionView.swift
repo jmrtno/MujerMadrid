@@ -84,22 +84,30 @@ private extension WomenCarePointHomeHeaderSectionView {
             viewModel.didTapToggle()
         }
     }
-
+    
     @ViewBuilder
     var filters: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
+            HStack(spacing: 8) {
                 ForEach(PickerFilter.allCases, id: \.self) { filter in
-                    Button {
+                    let configuration = FCPill.Configuration(text: filter.filterName)
+                    let viewState = FCPill.ViewState.enabled
+                    let style = FCPill.Style()
+                    let interaction = FCPill.Interaction(onTap: {
                         pickerFilters = filter
-                    } label: {
-                        Text(filter.filterName)
-                            .font(.subheadline)
-                            .foregroundStyle(.black)
-                            .padding(12)
-                            .background(pickerFilters == filter ? Color(hex: "734aca").opacity(0.2) : Color(.systemGray6))
-                            .cornerRadius(8)
-                    }
+                    })
+                    let FCPillViewModel = FCPill.ViewModel(configuration: configuration,
+                                                           viewState: viewState,
+                                                           variant: .secondary(textAndBorderColor: Color(hex: "734aca"),
+                                                                               backgroundColor: Color(hex: "734aca")),
+                                                           style: style,
+                                                           size: .medium,
+                                                           interaction: interaction)
+
+                    FCPill(viewModel: FCPillViewModel, isSelected: Binding(
+                        get: { pickerFilters == filter },
+                        set: { _ in pickerFilters = filter }
+                    ))
                 }
             }
             .padding(.horizontal, 16)
