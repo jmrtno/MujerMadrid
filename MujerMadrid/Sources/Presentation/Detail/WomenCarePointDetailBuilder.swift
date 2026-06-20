@@ -11,7 +11,7 @@ final class WomenCarePointDetailBuilder {
     public var viewModel: WomenCarePointDetailViewModelContract
     
     /// Complete data of the care point
-    public var centerData: WomenCarePointModel.EventModel = WomenCarePointModel.EventModel(id: nil, uid: nil, dtstart: nil, dtend: nil, title: nil, description: nil, link: nil, relation: nil, references: nil, eventLocation: nil, excludedDays: nil, price: nil, location: nil, address: nil, organization: nil, recurrence: nil, type: nil, url: nil)
+    public var centerData: WomenCarePointModel.EventModel?
 
     /// Default initializer required by FDependencyInjector
     public required init() {
@@ -32,14 +32,15 @@ final class WomenCarePointDetailBuilder {
     /// 2. Set up ViewModel dependencies (`viewModel.setupDependencies(...)`)
     /// 3. Use `WomenCarePointDetailScreen` init with the helper methods below
     public func build() -> any View {
+        guard let centerData else {
+            fatalError("centerData must be set before calling build()")
+        }
         viewModel.setupDependencies(WomenCarePointDetailViewModelDependencies(centerData: centerData))
         return WomenCarePointDetailScreen(
             viewModel: viewModel,
             top: getTopView,
             content: getContentView,
-            bottom: getBottomView,
-            error: getErrorView,
-            overlay: getOverlayView
+            bottom: getBottomView
         )
     }
     
@@ -52,13 +53,6 @@ final class WomenCarePointDetailBuilder {
         return self
     }
     
-    // MARK: - Overlay
-    /// Returns a loader overlay view for the screen
-    @ViewBuilder
-    public func getOverlayView() -> some View {
-        WomenCarePointDetailLoaderSectionView()
-    }
-
     // MARK: - Top Section
     /// Returns the top section of the screen (header)
     @ViewBuilder
@@ -95,13 +89,6 @@ final class WomenCarePointDetailBuilder {
         }
     }
 
-    // MARK: - Error Section
-    /// Returns the error section view
-    @ViewBuilder
-    public func getErrorView() -> some View {
-        WomenCarePointDetailErrorSectionView(viewModel: viewModel as! WomenCarePointDetailErrorSectionViewModelContract)
-    }
-    
     // MARK: - Bottom Section
     /// Returns the bottom section view; empty in this case
     @ViewBuilder
@@ -109,10 +96,3 @@ final class WomenCarePointDetailBuilder {
         EmptyView()
     }
 }
-
-// MARK: - Typealiases
-/// Cross-error section used for the detail screen
-typealias WomenCarePointDetailErrorSectionViewModelContract = CrossErrorSectionViewModelContract
-typealias WomenCarePointDetailErrorSectionView = CrossErrorSectionView
-/// Cross-loader section used for the detail screen
-typealias WomenCarePointDetailLoaderSectionView = CrossLoaderSectionView

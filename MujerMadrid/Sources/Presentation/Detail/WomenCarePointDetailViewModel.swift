@@ -31,24 +31,17 @@ protocol WomenCarePointDetailViewModelContract: ViewModelContract {
 
     // MARK: Publishers
 
-    /// Publisher emitting `true` when an error occurs.
-    var errorPublisher: AnyPublisher<Bool, Never> { get }
-
-    /// Publisher emitting `true` when loading data.
-    var loaderPublisher: AnyPublisher<Bool, Never> { get }
-
     /// Padding size for layout purposes.
     var paddingSize: CGFloat { get }
 }
 
 /// ViewModel for the Women Care Point detail screen.
 ///
-/// Conforms to multiple contracts to handle content sections, header section, and error handling.
+/// Conforms to multiple contracts to handle content sections and header section.
 final class WomenCarePointDetailViewModel: @unchecked Sendable,
                                            WomenCarePointDetailViewModelContract,
                                            WomenCarePointDetailContentSectionViewModelContract,
-                                           WomenCarePointDetailHeaderSectionViewModelContract,
-                                           CrossErrorSectionViewModelContract {
+                                           WomenCarePointDetailHeaderSectionViewModelContract {
     // MARK: - Dependencies
 
     /// Center identifier used for padding/height calculations.
@@ -72,10 +65,6 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     @Published public var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .init()
     /// Published Women Care Point header information.
     @Published public var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
-    /// Loading state.
-    @Published var isLoading = false
-    /// Error state.
-    @Published var isError = false
 
     private let locationManager = LocationManager()
     private let smallNameIds: Set<String> = ["5433767", "184260"]
@@ -91,16 +80,6 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     /// Publisher emitting the header section observed model.
     public var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
         $womenCarePointCenterHeaderInfoPublished.eraseToAnyPublisher()
-    }
-
-    /// Publisher emitting the loading state.
-    public var loaderPublisher: AnyPublisher<Bool, Never> {
-        $isLoading.eraseToAnyPublisher()
-    }
-
-    /// Publisher emitting the error state.
-    public var errorPublisher: AnyPublisher<Bool, Never> {
-        $isError.eraseToAnyPublisher()
     }
 
     // MARK: - Navigation
@@ -167,10 +146,5 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         } else {
             return 240
         }
-    }
-
-    /// Called when the "Try Again" button is tapped.
-    public func didTapTryAgain() {
-        isError = false
     }
 }
