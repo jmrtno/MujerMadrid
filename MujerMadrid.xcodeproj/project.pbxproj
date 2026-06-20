@@ -10,7 +10,6 @@
 		ED0F3C162F27D2AE002B4C6F /* WomenCarePointHomeHeaderSectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F3C152F27D2AE002B4C6F /* WomenCarePointHomeHeaderSectionModule.swift */; };
 		ED0F3C182F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F3C172F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift */; };
 		ED4CE2D42EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */; };
-		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
 		ED6B21EB2FE70C91008B17C3 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */; };
 		ED6B21EC2FE70C91008B17C3 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
@@ -29,7 +28,6 @@
 		EDB57D962E4166F100430CB0 /* WomenCarePointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D8C2E4166F100430CB0 /* WomenCarePointModel.swift */; };
 		EDB57D972E4166F100430CB0 /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D932E4166F100430CB0 /* DomainModule.swift */; };
 		EDB57D982E4166F100430CB0 /* WomenCarePointRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D8E2E4166F100430CB0 /* WomenCarePointRepositoryContract.swift */; };
-		EDB57D992E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */; };
 		EDB57DDE2E4166F500430CB0 /* IncomingNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD52E4166F500430CB0 /* IncomingNavigation.swift */; };
 		EDB57DDF2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DAB2E4166F500430CB0 /* WomenCarePointDetailHeaderSectionViewModelContract.swift */; };
 		EDB57DE22E4166F500430CB0 /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB57DD92E4166F500430CB0 /* ExpandableTextView.swift */; };
@@ -100,7 +98,6 @@
 		ED0F3C152F27D2AE002B4C6F /* WomenCarePointHomeHeaderSectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionModule.swift; sourceTree = "<group>"; };
 		ED0F3C172F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionMapper.swift; sourceTree = "<group>"; };
 		ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
-		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
 		ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FComponents.xcframework; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
 		EDAEF4082F1BC5E8006D7A37 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
@@ -116,7 +113,6 @@
 		EDB57D842E4166EC00430CB0 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
 		EDB57D8C2E4166F100430CB0 /* WomenCarePointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointModel.swift; sourceTree = "<group>"; };
 		EDB57D8E2E4166F100430CB0 /* WomenCarePointRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointRepositoryContract.swift; sourceTree = "<group>"; };
-		EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWomenCarePointDetailUseCase.swift; sourceTree = "<group>"; };
 		EDB57D912E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWomenCarePointHomeUseCase.swift; sourceTree = "<group>"; };
 		EDB57D932E4166F100430CB0 /* DomainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModule.swift; sourceTree = "<group>"; };
 		EDB57D9B2E4166F500430CB0 /* WomenCarePointDetailContentSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailContentSectionMapper.swift; sourceTree = "<group>"; };
@@ -191,7 +187,6 @@
 		ED5ED85C2E8418A700062C14 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */,
 				EDB57D7C2E4166EC00430CB0 /* WomenCarePointHomeRemoteDataSource.swift */,
 			);
 			path = Remote;
@@ -336,7 +331,6 @@
 		EDB57D922E4166F100430CB0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				EDB57D902E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift */,
 				EDB57D912E4166F100430CB0 /* GetWomenCarePointHomeUseCase.swift */,
 			);
 			path = UseCases;
@@ -635,13 +629,11 @@
 				EDB57E0E2E4166F500430CB0 /* WomenCarePointDetailScreen.swift in Sources */,
 				EDB57E102E4166F500430CB0 /* WomenCarePointDetailModule.swift in Sources */,
 				EDB57E112E4166F500430CB0 /* WomenCarePointHomeListSectionRenderModel.swift in Sources */,
-				ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */,
 				EDB57E122E4166F500430CB0 /* WomenCarePointDetailHeaderSectionMapper.swift in Sources */,
 				EDB57E132E4166F500430CB0 /* Navigator.swift in Sources */,
 				EDB57E142E4166F500430CB0 /* WomenCarePointHomeNavigationBuilder.swift in Sources */,
 				EDB57D972E4166F100430CB0 /* DomainModule.swift in Sources */,
 				EDB57D982E4166F100430CB0 /* WomenCarePointRepositoryContract.swift in Sources */,
-				EDB57D992E4166F100430CB0 /* GetWomenCarePointDetailUseCase.swift in Sources */,
 				EDB57D892E4166EC00430CB0 /* WomenCarePointDataEntity.swift in Sources */,
 				EDB57D8A2E4166EC00430CB0 /* WomenCarePointMapper.swift in Sources */,
 				EDB57D8B2E4166EC00430CB0 /* WomenCarePointAPI.swift in Sources */,

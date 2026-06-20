@@ -6,8 +6,6 @@ final class DataModule: ModuleContract {
                                             WomenCarePointRepository.self)
         DependencyContainer.shared.register((any WomenCarePointHomeRemoteDataSourceContract).self,
                                             WomenCarePointHomeRemoteDataSource.self)
-        DependencyContainer.shared.register((any WomenCarePointDetailRemoteDataSourceContract).self,
-                                            WomenCarePointDetailRemoteDataSource.self)
         DependencyContainer.shared.register((any WomenCarePointHomeLocalDataSourceContract).self,
                                             WomenCarePointHomeLocalDataSource.self)
         DependencyContainer.shared.register((any WomenCarePointMapperContract).self,

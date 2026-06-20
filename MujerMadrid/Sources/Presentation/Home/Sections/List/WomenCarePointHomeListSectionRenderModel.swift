@@ -34,6 +34,8 @@ struct WomenCarePointHomeListSectionRenderModel {
         public let schedule: String
         /// Centers location
         public let location: Location
+        /// Complete event data for navigation
+        public let eventData: WomenCarePointModel.EventModel
         
         /// Initializer for `Centers`
         /// - Parameters:
@@ -44,13 +46,15 @@ struct WomenCarePointHomeListSectionRenderModel {
         ///  - locality: Centers locality
         ///  - schedule: Centers schedule
         ///  - location: Centers location
+        ///  - eventData: Complete event data for navigation
         public init(id: String,
                     title: String,
                     streetAddress: String,
                     postalCode: String,
                     locality: String,
                     schedule: String,
-                    location: Location) {
+                    location: Location,
+                    eventData: WomenCarePointModel.EventModel) {
             self.id = id
             self.title = title
             self.streetAddress = streetAddress
@@ -58,6 +62,7 @@ struct WomenCarePointHomeListSectionRenderModel {
             self.locality = locality
             self.schedule = schedule
             self.location = location
+            self.eventData = eventData
         }
 
         /// empty init
@@ -69,6 +74,7 @@ struct WomenCarePointHomeListSectionRenderModel {
             locality = ""
             schedule = ""
             location = .init()
+            eventData = WomenCarePointModel.EventModel(id: nil, uid: nil, dtstart: nil, dtend: nil, title: nil, description: nil, link: nil, relation: nil, references: nil, eventLocation: nil, excludedDays: nil, price: nil, location: nil, address: nil, organization: nil, recurrence: nil, type: nil, url: nil)
         }
     }
     

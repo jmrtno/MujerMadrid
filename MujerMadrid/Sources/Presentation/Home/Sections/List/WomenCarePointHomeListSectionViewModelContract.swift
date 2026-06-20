@@ -9,5 +9,5 @@ protocol WomenCarePointHomeListSectionViewModelContract {
     // MARK: - Inputs
     
     /// Navigates to the detail screen for a selected center
-    func navigateToCarePointDetail(centerId: String)
+    func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel)
 }

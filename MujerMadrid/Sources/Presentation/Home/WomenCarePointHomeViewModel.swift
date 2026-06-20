@@ -102,9 +102,9 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     public func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
     
     /// Navigate to the detail screen of a care point
-    /// - Parameter centerId: identifier of the care point
-    public func navigateToCarePointDetail(centerId: String) {
-        navigationBuilder.navigateToCarePointDetail(centerId: centerId)
+    /// - Parameter centerData: Complete data of the care point
+    public func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
+        navigationBuilder.navigateToCarePointDetail(centerData: centerData)
     }
     
     /// Call a phone number

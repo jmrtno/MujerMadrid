@@ -33,9 +33,9 @@ final class Navigator: @unchecked Sendable, ScreenNavigator {
             return WomenCarePointHomeBuilder()
                 .build()
 
-        case let .detail(centerId):
+        case let .detail(centerData):
             return WomenCarePointDetailBuilder()
-                .setIdentifier(centerId: centerId)
+                .setCenterData(centerData)
                 .build()
         }
     }
