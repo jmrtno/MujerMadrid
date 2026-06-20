@@ -6,8 +6,8 @@ import UIKit
 /// Contract defining the navigation actions for the WomenCarePoint Home screen
 protocol WomenCarePointHomeNavigationBuilderContract: NavigationBuilder {
     /// Navigate to the detail screen of a care point
-    /// - Parameter centerId: Identifier of the care point
-    func navigateToCarePointDetail(centerId: String)
+    /// - Parameter centerData: Complete data of the care point
+    func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel)
 }
 
 /// Navigation builder implementation for WomenCarePoint Home
@@ -16,9 +16,9 @@ final class WomenCarePointHomeNavigationBuilder: WomenCarePointHomeNavigationBui
     public required init() { /* Required by injector */ }
     
     /// Navigate to the detail screen of a care point
-    /// - Parameter centerId: Identifier of the care point
-    public func navigateToCarePointDetail(centerId: String) {
-        Router.shared.navigateTo(IncomingNavigation.detail(centerId: centerId), animated: true)
+    /// - Parameter centerData: Complete data of the care point
+    public func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
+        Router.shared.navigateTo(IncomingNavigation.detail(centerData: centerData), animated: true)
     }
     
     /// Go back to the previous screen

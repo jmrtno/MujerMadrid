@@ -127,7 +127,7 @@ private extension WomenCarePointHomeListSectionView {
                 VStack {
                     Spacer()
                     Button(action: {
-                        viewModel.navigateToCarePointDetail(centerId: item.id)
+                        viewModel.navigateToCarePointDetail(centerData: item.eventData)
                     }, label: {
                         HStack(alignment: .center, spacing: 3) {
                             Text("Más").bold()

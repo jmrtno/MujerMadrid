@@ -53,10 +53,26 @@ final class WomenCarePointHomeRemoteDataSource: WomenCarePointHomeRemoteDataSour
     /// - Returns: A `WomenCarePointDataEntity` with the mapped home information.
     /// - Throws: An error if the request execution or data mapping fails.
     public func getHomeInformation() async throws -> WomenCarePointDataEntity {
-        let resultAPI: Data = try await womenCarePointAPI
-            .getWomanCarePointHomeInfo()
-            .execute()
+        do {
+            let resultAPI: Data = try await womenCarePointAPI
+                .getWomanCarePointHomeInfo()
+                .execute()
 
-        return try womenCarePointMapper.map(resultAPI)
+            return try womenCarePointMapper.map(resultAPI)
+        } catch {
+            let nsError = error as NSError
+            print("🔴 ERROR EN DATASOURCE (HOME):")
+            print("• Domain:", nsError.domain)
+            print("• Code:", nsError.code)
+            print("• Description:", nsError.localizedDescription)
+            if let response = nsError.userInfo["NSErrorFailingURLResponseKey"] as? HTTPURLResponse {
+                print("🌐 HTTP Status:", response.statusCode)
+            }
+            if let data = nsError.userInfo["NSErrorFailingURLResponseDataKey"] as? Data,
+               let body = String(data: data, encoding: .utf8) {
+                print("📦 Response Body:\n", body)
+            }
+            throw error
+        }
     }
 }

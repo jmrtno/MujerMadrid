@@ -4,7 +4,7 @@ import Foundation
 /// Repository responsible for orchestrating Women Care Points data.
 ///
 /// This repository coordinates data retrieval from:
-/// - Remote data sources (home and detail)
+/// - Remote data source (home)
 /// - Local data source (in-memory cache)
 ///
 /// It also handles mapping between data entities and domain models.
@@ -13,8 +13,6 @@ final class WomenCarePointRepository: @unchecked Sendable,
 
     /// Remote data source used to fetch home information.
     let homeRemoteDataSource:WomenCarePointHomeRemoteDataSourceContract
-    /// Remote data source used to fetch detail information.
-    let detailRemoteDataSource:WomenCarePointDetailRemoteDataSourceContract
     /// Local data source used to cache home information.
     let homeLocalDataSource:WomenCarePointHomeLocalDataSourceContract
     /// Mapper used to convert between data entities and domain models.
@@ -25,11 +23,9 @@ final class WomenCarePointRepository: @unchecked Sendable,
     /// All dependencies are resolved automatically using the injector.
     public required init() {
         @Injected var homeRemoteDataSource:WomenCarePointHomeRemoteDataSourceContract
-        @Injected var detailRemoteDataSource:WomenCarePointDetailRemoteDataSourceContract
         @Injected var homeLocalDataSource:WomenCarePointHomeLocalDataSourceContract
         @Injected var getWomenCarePointEntityMapper:WomenCarePointMapperContract
         self.homeRemoteDataSource = homeRemoteDataSource
-        self.detailRemoteDataSource = detailRemoteDataSource
         self.homeLocalDataSource = homeLocalDataSource
         self.getWomenCarePointEntityMapper = getWomenCarePointEntityMapper
     }
@@ -38,17 +34,14 @@ final class WomenCarePointRepository: @unchecked Sendable,
     ///
     /// - Parameters:
     ///   - homeRemoteDataSource: Remote data source for home information.
-    ///   - detailRemoteDataSource: Remote data source for detail information.
     ///   - homeLocalDataSource: Local data source for caching home information.
     ///   - getWomenCarePointEntityMapper: Mapper used to convert entities and models.
     init(
         homeRemoteDataSource:WomenCarePointHomeRemoteDataSourceContract,
-        detailRemoteDataSource:WomenCarePointDetailRemoteDataSourceContract,
         homeLocalDataSource:WomenCarePointHomeLocalDataSourceContract,
         getWomenCarePointEntityMapper:WomenCarePointMapperContract
     ) {
         self.homeRemoteDataSource = homeRemoteDataSource
-        self.detailRemoteDataSource = detailRemoteDataSource
         self.homeLocalDataSource = homeLocalDataSource
         self.getWomenCarePointEntityMapper = getWomenCarePointEntityMapper
     }
@@ -77,16 +70,6 @@ final class WomenCarePointRepository: @unchecked Sendable,
         await homeLocalDataSource.setLocalHomeInformation(entity: entity)
     }
 
-    /// Retrieves detailed information for a specific Women Care Point.
-    ///
-    /// Detail information is always fetched from the remote data source.
-    ///
-    /// - Parameter centerId: Unique identifier of the care center.
-    /// - Returns: A `WomenCarePointModel` containing detailed information.
-    /// - Throws: An error if remote fetching or mapping fails.
-    public func getWomanCarePointDetailInformation(centerId:String) async throws -> WomenCarePointModel {
-        return try await getCentersDetailInfoFromRemoteData(centerId: centerId)
-    }
 }
 
 private extension WomenCarePointRepository {
@@ -108,9 +91,4 @@ private extension WomenCarePointRepository {
         }
     }
 
-    /// Fetches detail information for a specific care center from the remote data source.
-    func getCentersDetailInfoFromRemoteData(centerId:String) async throws -> WomenCarePointModel {
-        let centerDetailsEntity = try await detailRemoteDataSource.getDetailInformation(centerId: centerId)
-        return try getWomenCarePointEntityMapper.map(centerDetailsEntity)
-    }
 }

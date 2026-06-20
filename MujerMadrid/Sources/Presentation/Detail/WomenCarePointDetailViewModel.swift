@@ -6,13 +6,13 @@ import MapKit
 
 /// Dependencies required to initialize `WomenCarePointDetailViewModel`.
 final class WomenCarePointDetailViewModelDependencies {
-    /// Identifier of the Women Care Point center.
-    public let centerId: String
+    /// Complete data of the Women Care Point center.
+    public let centerData: WomenCarePointModel.EventModel
 
     /// Initializes the dependencies.
-    /// - Parameter centerId: Identifier of the center.
-    public init(centerId: String) {
-        self.centerId = centerId
+    /// - Parameter centerData: Complete data of the center.
+    public init(centerData: WomenCarePointModel.EventModel) {
+        self.centerData = centerData
     }
 }
 
@@ -28,9 +28,6 @@ protocol WomenCarePointDetailViewModelContract: ViewModelContract {
 
     /// Called when the view appears.
     func notifyAppearance()
-
-    /// Triggers fetching of Women Care Point detail data.
-    func getWomenCarePointDetailData()
 
     // MARK: Publishers
 
@@ -54,29 +51,18 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
                                            CrossErrorSectionViewModelContract {
     // MARK: - Dependencies
 
-    /// Injected center identifier.
-    @Dependency public var centerId: String
-
-    // MARK: - Use Case
-
-    /// Use case for fetching Women Care Point detail data.
-    let getWomenCarePointUseCase: GetWomenCarePointDetailUseCaseContract
+    /// Center identifier used for padding/height calculations.
+    private var centerId: String = ""
 
     /// Required initializer for dependency injection.
     public required init() {
-        @Injected var useCase: GetWomenCarePointDetailUseCaseContract
         @Injected var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
-        self.getWomenCarePointUseCase = useCase
         self.navigationBuilder = navigationBuilder
     }
 
     /// Initializes with explicit dependencies.
-    /// - Parameters:
-    ///   - useCase: Use case for fetching detail data.
-    ///   - navigationBuilder: Navigation builder for handling navigation actions.
-    init(useCase: GetWomenCarePointDetailUseCaseContract,
-         navigationBuilder: WomenCarePointDetailNavigationBuilderContract) {
-        self.getWomenCarePointUseCase = useCase
+    /// - Parameter navigationBuilder: Navigation builder for handling navigation actions.
+    init(navigationBuilder: WomenCarePointDetailNavigationBuilderContract) {
         self.navigationBuilder = navigationBuilder
     }
 
@@ -124,20 +110,20 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
 
     // MARK: - Inputs
 
-    /// Called when the view appears to fetch initial data.
+    /// Called when the view appears.
     public func notifyAppearance() {
-        getWomenCarePointDetailData()
+        // Data is already populated via setupDependencies
     }
 
-    /// Sets up the dependencies of the view model.
+    /// Sets up the dependencies of the view model with the complete center data.
     /// - Parameter dependencies: Dependencies required by the view model.
     public func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
-        self.centerId = dependencies.centerId
-    }
-
-    /// Fetches initial data for the current center.
-    public func getWomenCarePointDetailData() {
-        loadData(for: centerId)
+        let data = dependencies.centerData
+        self.centerId = data.id ?? ""
+        self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(data: [data])
+        self.womenCarePointCenterHeaderInfoPublished.title = data.title ?? ""
+        self.womenCarePointCenterHeaderInfoPublished.description = data.organization?.organizationDesc ?? ""
+        self.womenCarePointCenterHeaderInfoPublished.services = data.organization?.services ?? ""
     }
 
     /// Navigates back to the previous screen.
@@ -185,55 +171,6 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
 
     /// Called when the "Try Again" button is tapped.
     public func didTapTryAgain() {
-        isLoading = true
         isError = false
-        loadData(for: centerId)
-    }
-}
-
-// MARK: - Private Helpers
-
-private extension WomenCarePointDetailViewModel {
-
-    /// Loads Women Care Point data asynchronously.
-    /// - Parameter id: Identifier of the center.
-    func loadData(for id: String) {
-        Task { @MainActor [weak self] in
-            guard let self else { return }
-            self.isLoading = true
-            do {
-                let useCase = self.getWomenCarePointUseCase
-                let params = GetWomenCarePointDetailParameters(centerId: self.centerId)
-                let info = try await useCase.run(params)
-
-                self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(data: info.data)
-                self.womenCarePointCenterHeaderInfoPublished.title = info.data.first?.title ?? ""
-                self.womenCarePointCenterHeaderInfoPublished.description = info.data.first?.organization?.organizationDesc ?? ""
-                self.womenCarePointCenterHeaderInfoPublished.services = info.data.first?.organization?.services ?? ""
-
-                self.isError = false
-                try? await Task.sleep(nanoseconds: 1_500_000_000)
-                self.isLoading = false
-            } catch {
-                self.isLoading = false
-                self.isError = true
-
-                let nsError = error as NSError
-                print("🔴 ERROR EN DETAIL:")
-                print("• Domain:", nsError.domain)
-                print("• Code:", nsError.code)
-                print("• Description:", nsError.localizedDescription)
-                print("• UserInfo:", nsError.userInfo)
-
-                if let response = nsError.userInfo["NSErrorFailingURLResponseKey"] as? HTTPURLResponse {
-                    print("🌐 HTTP Status:", response.statusCode)
-                }
-
-                if let data = nsError.userInfo["NSErrorFailingURLResponseDataKey"] as? Data,
-                   let body = String(data: data, encoding: .utf8) {
-                    print("📦 Response Body:\n", body)
-                }
-            }
-        }
     }
 }

@@ -10,8 +10,8 @@ final class WomenCarePointDetailBuilder {
     /// ViewModel of the screen
     public var viewModel: WomenCarePointDetailViewModelContract
     
-    /// Identifier of the care point, injected via dependency injector
-    @Dependency public var centerId: String
+    /// Complete data of the care point
+    public var centerData: WomenCarePointModel.EventModel = WomenCarePointModel.EventModel(id: nil, uid: nil, dtstart: nil, dtend: nil, title: nil, description: nil, link: nil, relation: nil, references: nil, eventLocation: nil, excludedDays: nil, price: nil, location: nil, address: nil, organization: nil, recurrence: nil, type: nil, url: nil)
 
     /// Default initializer required by FDependencyInjector
     public required init() {
@@ -32,7 +32,7 @@ final class WomenCarePointDetailBuilder {
     /// 2. Set up ViewModel dependencies (`viewModel.setupDependencies(...)`)
     /// 3. Use `WomenCarePointDetailScreen` init with the helper methods below
     public func build() -> any View {
-        viewModel.setupDependencies(WomenCarePointDetailViewModelDependencies(centerId: centerId))
+        viewModel.setupDependencies(WomenCarePointDetailViewModelDependencies(centerData: centerData))
         return WomenCarePointDetailScreen(
             viewModel: viewModel,
             top: getTopView,
@@ -44,11 +44,11 @@ final class WomenCarePointDetailBuilder {
     }
     
     // MARK: - Configuration
-    /// Sets the current center identifier
-    /// - Parameter centerId: identifier of the care point
-    /// - Returns: Self builder instance with the updated centerId
-    public func setIdentifier(centerId: String) -> WomenCarePointDetailBuilder {
-        self.centerId = centerId
+    /// Sets the complete center data
+    /// - Parameter centerData: complete data of the care point
+    /// - Returns: Self builder instance with the updated centerData
+    public func setCenterData(_ centerData: WomenCarePointModel.EventModel) -> WomenCarePointDetailBuilder {
+        self.centerData = centerData
         return self
     }
     

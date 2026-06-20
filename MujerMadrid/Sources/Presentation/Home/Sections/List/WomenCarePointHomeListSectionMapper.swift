@@ -45,7 +45,8 @@ private extension WomenCarePointHomeListSectionMapper {
                 location: WomenCarePointHomeListSectionRenderModel.Location(
                     latitude: data.location?.latitude ?? 0.0,
                     longitude: data.location?.longitude ?? 0.0
-                )
+                ),
+                eventData: data
             )
         } ?? []
         return WomenCarePointHomeListSectionRenderModel(centers: centers, showList: model.showList)
