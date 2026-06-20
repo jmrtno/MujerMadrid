@@ -11,8 +11,8 @@
 		ED0F3C182F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0F3C172F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift */; };
 		ED4CE2D42EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */; };
 		ED5ED85A2E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */; };
-		ED6B21E72FE70630008B17C3 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E52FE70629008B17C3 /* FComponents.xcframework */; };
-		ED6B21E82FE70630008B17C3 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E52FE70629008B17C3 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED6B21EB2FE70C91008B17C3 /* FComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */; };
+		ED6B21EC2FE70C91008B17C3 /* FComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED73289B2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */; };
 		EDAEF4092F1BC5E8006D7A37 /* FNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAEF4082F1BC5E8006D7A37 /* FNavigation.xcframework */; };
 		EDAEF40A2F1BC5E8006D7A37 /* FNavigation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDAEF4082F1BC5E8006D7A37 /* FNavigation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,7 +89,7 @@
 				EDAEF40A2F1BC5E8006D7A37 /* FNavigation.xcframework in Embed Frameworks */,
 				EDD8DD002EF0DF8700CDBB31 /* FPresentation.xcframework in Embed Frameworks */,
 				EDD8DD042EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Embed Frameworks */,
-				ED6B21E82FE70630008B17C3 /* FComponents.xcframework in Embed Frameworks */,
+				ED6B21EC2FE70C91008B17C3 /* FComponents.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +101,7 @@
 		ED0F3C172F27D2FA002B4C6F /* WomenCarePointHomeHeaderSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeHeaderSectionMapper.swift; sourceTree = "<group>"; };
 		ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
 		ED5ED8592E84130300062C14 /* WomenCarePointDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointDetailRemoteDataSource.swift; sourceTree = "<group>"; };
-		ED6B21E52FE70629008B17C3 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FComponents.xcframework; sourceTree = "<group>"; };
+		ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FComponents.xcframework; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
 		EDAEF4082F1BC5E8006D7A37 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
 		EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mujer Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +173,7 @@
 				EDAEF4092F1BC5E8006D7A37 /* FNavigation.xcframework in Frameworks */,
 				EDD8DCFF2EF0DF8700CDBB31 /* FPresentation.xcframework in Frameworks */,
 				EDD8DD032EF0DF8700CDBB31 /* FDependencyInjector.xcframework in Frameworks */,
-				ED6B21E72FE70630008B17C3 /* FComponents.xcframework in Frameworks */,
+				ED6B21EB2FE70C91008B17C3 /* FComponents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +212,7 @@
 				EDD8DCF92EF0DF8700CDBB31 /* FData.xcframework */,
 				EDD8DCFA2EF0DF8700CDBB31 /* FDependencyInjector.xcframework */,
 				EDD8DCF82EF0DF8700CDBB31 /* FPresentation.xcframework */,
-				ED6B21E52FE70629008B17C3 /* FComponents.xcframework */,
+				ED6B21E92FE70C8A008B17C3 /* FComponents.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

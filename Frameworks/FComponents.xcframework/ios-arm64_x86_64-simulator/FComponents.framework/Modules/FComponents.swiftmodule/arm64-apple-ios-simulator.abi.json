@@ -2889,8 +2889,8 @@
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbcvp",
-                "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbcvp",
+                "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvp",
+                "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvp",
                 "moduleName": "FComponents",
                 "declAttributes": [
                   "HasStorage",
@@ -2922,8 +2922,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbcvg",
-                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbcvg",
+                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvg",
+                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvg",
                     "moduleName": "FComponents",
                     "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
                     "sugared_genericSig": "<Content where Content : SwiftUI.View>",
@@ -2959,8 +2959,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbcvs",
-                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbcvs",
+                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvs",
+                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvs",
                     "moduleName": "FComponents",
                     "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
                     "sugared_genericSig": "<Content where Content : SwiftUI.View>",
@@ -2979,8 +2979,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbcvM",
-                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbcvM",
+                    "usr": "s:11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvM",
+                    "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapyyYbScMYccvM",
                     "moduleName": "FComponents",
                     "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
                     "sugared_genericSig": "<Content where Content : SwiftUI.View>",
@@ -3019,8 +3019,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11FComponents6FCCardV11InteractionV5onTapAEyx_GyyYbc_tcfc",
-                "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapAEyx_GyyYbc_tcfc",
+                "usr": "s:11FComponents6FCCardV11InteractionV5onTapAEyx_GyyYbScMYcc_tcfc",
+                "mangledName": "$s11FComponents6FCCardV11InteractionV5onTapAEyx_GyyYbScMYcc_tcfc",
                 "moduleName": "FComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
                 "sugared_genericSig": "<Content where Content : SwiftUI.View>",
@@ -5053,8 +5053,8 @@
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbcvp",
-                "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbcvp",
+                "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvp",
+                "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvp",
                 "moduleName": "FComponents",
                 "declAttributes": [
                   "HasStorage",
@@ -5086,8 +5086,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbcvg",
-                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbcvg",
+                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvg",
+                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvg",
                     "moduleName": "FComponents",
                     "implicit": true,
                     "accessorKind": "get"
@@ -5121,8 +5121,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbcvs",
-                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbcvs",
+                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvs",
+                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvs",
                     "moduleName": "FComponents",
                     "implicit": true,
                     "accessorKind": "set"
@@ -5139,8 +5139,8 @@
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbcvM",
-                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbcvM",
+                    "usr": "s:11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvM",
+                    "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapyyYbScMYccvM",
                     "moduleName": "FComponents",
                     "implicit": true,
                     "accessorKind": "_modify"
@@ -5177,8 +5177,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11FComponents8FCButtonV11InteractionV5onTapAEyyYbc_tcfc",
-                "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapAEyyYbc_tcfc",
+                "usr": "s:11FComponents8FCButtonV11InteractionV5onTapAEyyYbScMYcc_tcfc",
+                "mangledName": "$s11FComponents8FCButtonV11InteractionV5onTapAEyyYbScMYcc_tcfc",
                 "moduleName": "FComponents",
                 "declAttributes": [
                   "AccessControl"

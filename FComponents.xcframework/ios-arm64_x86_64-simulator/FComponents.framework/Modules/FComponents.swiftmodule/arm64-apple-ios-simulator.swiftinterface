@@ -22,8 +22,8 @@ extension FComponents.FCCard {
     public init(doubleCardBgColor: SwiftUICore.Color = .clear, innerCardBgColor: SwiftUICore.Color, doubleCardBorderColor: SwiftUICore.Color = .clear, innerCardBorderColor: SwiftUICore.Color, topLeadingContentColor: SwiftUICore.Color = .black, topTrailingContentColor: SwiftUICore.Color = .black)
   }
   public struct Interaction : Swift.Sendable {
-    public var onTap: @Sendable () -> Swift.Void
-    public init(onTap: @escaping @Sendable () -> Swift.Void)
+    public var onTap: @_Concurrency.MainActor @Sendable () -> Swift.Void
+    public init(onTap: @escaping @_Concurrency.MainActor @Sendable () -> Swift.Void)
   }
   @_Concurrency.MainActor final public class ViewModel {
     @_Concurrency.MainActor public init(configuration: FComponents.FCCard<Content>.Configuration, style: FComponents.FCCard<Content>.Style, interaction: FComponents.FCCard<Content>.Interaction)
@@ -176,8 +176,8 @@ extension FComponents.FCButton {
     }
   }
   public struct Interaction : Swift.Sendable {
-    public var onTap: @Sendable () -> Swift.Void
-    public init(onTap: @escaping @Sendable () -> Swift.Void)
+    public var onTap: @_Concurrency.MainActor @Sendable () -> Swift.Void
+    public init(onTap: @escaping @_Concurrency.MainActor @Sendable () -> Swift.Void)
   }
   @_Concurrency.MainActor final public class ViewModel {
     @_Concurrency.MainActor public init(configuration: FComponents.FCButton.Configuration, viewState: FComponents.FCButton.ViewState, variant: FComponents.FCButton.Variant, style: FComponents.FCButton.Style, size: FComponents.FCButton.Size, interaction: FComponents.FCButton.Interaction)
