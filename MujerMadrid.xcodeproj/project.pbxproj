@@ -100,6 +100,7 @@
 		ED4CE2D32EE8BC2C00F20F85 /* WomenCarePointHomeListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeListSectionView.swift; sourceTree = "<group>"; };
 		ED6B21ED2FE71935008B17C3 /* FComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FComponents.xcframework; sourceTree = "<group>"; };
 		ED73289A2E43FA0E00D3264D /* WomenCarePointHomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCarePointHomeLocalDataSource.swift; sourceTree = "<group>"; };
+		ED8F7F88305AD66000D462A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDAEF4082F1BC5E8006D7A37 /* FNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FNavigation.xcframework; path = Frameworks/FNavigation.xcframework; sourceTree = "<group>"; };
 		EDB57D5E2E41667200430CB0 /* Mujer Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mujer Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB57D6F2E41667A00430CB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 		EDB57D742E41667A00430CB0 /* MujerMadrid */ = {
 			isa = PBXGroup;
 			children = (
+				ED8F7F88305AD66000D462A6 /* Info.plist */,
 				EDB57D792E4166DE00430CB0 /* Sources */,
 				EDB57D702E41667A00430CB0 /* Preview Content */,
 				EDB57D712E41667A00430CB0 /* Assets.xcassets */,
@@ -784,7 +786,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = MujerMadrid/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -824,7 +826,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = MujerMadrid/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos acceder a tu ubicación para mostrarte la ruta al centro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

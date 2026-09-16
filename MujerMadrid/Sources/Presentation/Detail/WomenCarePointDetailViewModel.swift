@@ -16,6 +16,12 @@ final class WomenCarePointDetailViewModelDependencies {
     }
 }
 
+/// Maps applications available for navigation directions.
+enum MapsApp {
+    case appleMaps
+    case googleMaps
+}
+
 /// Contract defining the interface for the `WomenCarePointDetailViewModel`.
 protocol WomenCarePointDetailViewModelContract: ViewModelContract {
     // MARK: Dependencies
@@ -110,11 +116,35 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
         navigationBuilder.goBack(animated: true, screen: nil, nil)
     }
 
+    /// Whether Google Maps is installed on the device.
+    @MainActor
+    public var isGoogleMapsAvailable: Bool {
+        guard let googleMapsURL = URL(string: "comgooglemaps://") else { return false }
+        return UIApplication.shared.canOpenURL(googleMapsURL)
+    }
+
+    /// Opens the selected maps app for directions to the specified coordinates.
+    /// - Parameters:
+    ///   - latitud: Latitude of the destination.
+    ///   - longitud: Longitude of the destination.
+    ///   - app: The maps application to use for directions.
+    @MainActor
+    public func navigateTo(latitud: Double, longitud: Double, using app: MapsApp) {
+        switch app {
+        case .googleMaps:
+            guard let url = URL(string: "comgooglemaps://?daddr=\(latitud),\(longitud)&directionsmode=driving") else { return }
+            UIApplication.shared.open(url)
+        case .appleMaps:
+            openDirectionsInAppleMaps(latitud: latitud, longitud: longitud)
+        }
+    }
+
     /// Opens Apple Maps for directions to the specified coordinates.
     /// - Parameters:
     ///   - latitud: Latitude of the destination.
     ///   - longitud: Longitude of the destination.
-    public func navigateTo(latitud: Double, longitud: Double) {
+    @MainActor
+    private func openDirectionsInAppleMaps(latitud: Double, longitud: Double) {
         let destinationCoordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
         let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate)
         let destinationMapItem = MKMapItem(placemark: destinationPlacemark)

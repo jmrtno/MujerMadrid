@@ -13,6 +13,7 @@ struct WomenCarePointDetailContentSectionView: View {
     // MARK: Environments & State
     @SwiftUI.State private var renderModel: WomenCarePointDetailContentSectionRenderModel = .init()
     @SwiftUI.State private var route: MKRoute?
+    @SwiftUI.State private var isMapsPickerPresented = false
 
     
     // MARK: Life cycle
@@ -28,6 +29,19 @@ struct WomenCarePointDetailContentSectionView: View {
         contentView
             .onReceive(publisher) {
                 renderModel = $0
+            }
+            .confirmationDialog("Cómo llegar", isPresented: $isMapsPickerPresented, titleVisibility: .visible) {
+                Button("Apple Maps") {
+                    viewModel.navigateTo(latitud: renderModel.center.location.latitude,
+                                         longitud: renderModel.center.location.longitude,
+                                         using: .appleMaps)
+                }
+                Button("Google Maps") {
+                    viewModel.navigateTo(latitud: renderModel.center.location.latitude,
+                                         longitud: renderModel.center.location.longitude,
+                                         using: .googleMaps)
+                }
+                Button("Cancelar", role: .cancel) {}
             }
     }
 }
@@ -102,8 +116,13 @@ private extension WomenCarePointDetailContentSectionView {
                                    leadingIconColor: .white)
         let size = FCButton.Size.large
         let interaction = FCButton.Interaction(onTap: {
-            viewModel.navigateTo(latitud: renderModel.center.location.latitude,
-                                 longitud: renderModel.center.location.longitude)
+            if viewModel.isGoogleMapsAvailable {
+                isMapsPickerPresented = true
+            } else {
+                viewModel.navigateTo(latitud: renderModel.center.location.latitude,
+                                     longitud: renderModel.center.location.longitude,
+                                     using: .appleMaps)
+            }
         })
 
         let viewModelButton = FCButton.ViewModel(configuration: configuration,
