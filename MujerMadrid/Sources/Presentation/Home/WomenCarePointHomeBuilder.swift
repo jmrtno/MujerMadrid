@@ -7,10 +7,10 @@ import SwiftUI
 @MainActor
 final class WomenCarePointHomeBuilder {
     /// ViewModel of the screen
-    public var viewModel: WomenCarePointHomeViewModelContract
+    var viewModel: WomenCarePointHomeViewModelContract
 
     /// Default init required by the injector
-    public required init() {
+    required init() {
         @Injected var viewModel: WomenCarePointHomeViewModelContract
         self.viewModel = viewModel
     }
@@ -22,7 +22,7 @@ final class WomenCarePointHomeBuilder {
     
     /// Builds the Home screen.
     /// - Returns: A SwiftUI View representing the Women Care Point Home screen
-    public func build() -> some View {
+    func build() -> some View {
         viewModel.setupDependencies(WomenCarePointHomeViewModelDependencies())
         return WomenCarePointHomeScreen(viewModel: viewModel,
                                         top: getTopView,
@@ -35,14 +35,14 @@ final class WomenCarePointHomeBuilder {
     // MARK: - Overlay
     /// Returns a view containing the loader section
     @ViewBuilder
-    public func getOverlayView() -> some View {
+    func getOverlayView() -> some View {
         WomenCarePointHomeLoaderSectionView()
     }
 
     // MARK: - Top View
     /// Returns the top view of the screen
     @ViewBuilder
-    public func getTopView() -> some View {
+    func getTopView() -> some View {
         WomenCarePointHomeHeaderSectionView(
             viewModel: viewModel as! WomenCarePointHomeHeaderSectionViewModelContract
         )
@@ -51,7 +51,7 @@ final class WomenCarePointHomeBuilder {
     // MARK: - Content
     /// Returns the content view of the screen
     @ViewBuilder
-    public func getContentView() -> some View {
+    func getContentView() -> some View {
         @Injected var mapper: any WomenCarePointHomeListSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointHomeListSectionMapper {
             let publisher = mapperInstance.getObservedPublisher(
@@ -70,7 +70,7 @@ final class WomenCarePointHomeBuilder {
     // MARK: - Bottom View
     /// Returns the bottom view of the screen
     @ViewBuilder
-    public func getBottomView() -> some View {
+    func getBottomView() -> some View {
         WomenCarePointHomeFooterSectionView(
             viewModel: viewModel as! WomenCarePointHomeFooterSectionViewModelContract
         )
@@ -79,7 +79,7 @@ final class WomenCarePointHomeBuilder {
     // MARK: - Error View
     /// Returns the error view of the screen
     @ViewBuilder
-    public func getErrorView() -> some View {
+    func getErrorView() -> some View {
         WomenCarePointHomeErrorSectionView(
             viewModel: viewModel as! WomenCarePointHomeErrorSectionViewModelContract
         )

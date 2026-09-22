@@ -34,7 +34,7 @@ struct WomenCarePointHomeScreen<Top: View,
     ///   - bottom: View to be shown as bottom or footer of sections.
     ///   - error: View to be shown as error section.
     ///   - overlay: View to be shown as z-indexed overlay.
-    public init(viewModel: WomenCarePointHomeViewModelContract,
+    init(viewModel: WomenCarePointHomeViewModelContract,
                 @ViewBuilder top: () -> Top,
                 @ViewBuilder content: () -> Content,
                 @ViewBuilder bottom: () -> Bottom,
@@ -48,7 +48,7 @@ struct WomenCarePointHomeScreen<Top: View,
         self.viewModel = viewModel
     }
     
-    public var body: some View {
+    var body: some View {
         ZStack {
             BackgroundView()
             VStack {

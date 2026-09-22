@@ -37,7 +37,7 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     let getWomenCarePointUseCase: GetWomenCarePointHomeUseCaseContract
     
     /// Default initializer injected by FDependencyInjector
-    public required init() {
+    required init() {
         @Injected var useCase: GetWomenCarePointHomeUseCaseContract
         @Injected var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
         self.getWomenCarePointUseCase = useCase
@@ -53,9 +53,9 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
 
     // MARK: - Published Properties
     /// Observed model containing the list of care points to display in the Home screen.
-    @Published public var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .init()
+    @Published var womenCarePointInformationPublished: WomenCarePointHomeListSectionObservedModel = .init()
     ///
-    @Published public var filterPublished = "" {
+    @Published var filterPublished = "" {
         didSet {
             applyFilter()
         }
@@ -73,43 +73,43 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
     // MARK: - Publishers
     
     /// Publisher that emits updates of the Home list section model.
-    public var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> {
+    var womenCarePointInformationPublisher: AnyPublisher<WomenCarePointHomeListSectionObservedModel, Never> {
         $womenCarePointInformationPublished.eraseToAnyPublisher()
     }
 
     /// Publisher that emits the loading state.
-    public var loaderPublisher: AnyPublisher<Bool, Never> {
+    var loaderPublisher: AnyPublisher<Bool, Never> {
         $isLoading.eraseToAnyPublisher()
     }
 
     /// Publisher that emits the error state.
-    public var errorPublisher: AnyPublisher<Bool, Never> {
+    var errorPublisher: AnyPublisher<Bool, Never> {
         $isError.eraseToAnyPublisher()
     }
 
     /// NavigationBuilder used to navigate to another screen
-    public var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
+    var navigationBuilder: WomenCarePointHomeNavigationBuilderContract
     
     // MARK: - Inputs
     /// Called when the view appears
-    public func notifyAppearance() {
+    func notifyAppearance() {
         requestLocationPermissionsIfNeeded()
         loadData()
     }
     
     /// Setup dependencies
     /// - Parameter dependencies: injected dependencies
-    public func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
+    func setupDependencies(_ dependencies: WomenCarePointHomeViewModelDependencies) { }
     
     /// Navigate to the detail screen of a care point
     /// - Parameter centerData: Complete data of the care point
-    public func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
+    func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
         navigationBuilder.navigateToCarePointDetail(centerData: centerData)
     }
     
     /// Call a phone number
     /// - Parameter number: phone number as a string
-    public func callNumber(number: String) {
+    func callNumber(number: String) {
         Task { @MainActor in
             if let url = URL(string: "tel://\(number)"),
                UIApplication.shared.canOpenURL(url) {
@@ -118,17 +118,17 @@ final class WomenCarePointHomeViewModel: @unchecked Sendable,
         }
     }
 
-    public func filterSelected(filter: String) {
+    func filterSelected(filter: String) {
         filterPublished = filter
     }
 
     /// Toggle between map/list view
-    public func didTapToggle() {
+    func didTapToggle() {
         womenCarePointInformationPublished.showList.toggle()
     }
 
     /// Retry loading data after an error
-    public func didTapTryAgain() {
+    func didTapTryAgain() {
         self.isLoading = true
         self.isError = false
         loadData()

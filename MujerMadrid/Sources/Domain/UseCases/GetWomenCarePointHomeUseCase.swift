@@ -31,7 +31,7 @@ class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract, @unche
     ///
     /// - Returns: A `WomenCarePointModel` containing home information.
     /// - Throws: An error if data fetching, mapping, or caching fails.
-    public func run() async throws -> WomenCarePointModel {
+    func run() async throws -> WomenCarePointModel {
         let centers = try await womenCarePointRepository.getWomanCarePointHomeInformation()
         try await womenCarePointRepository.saveHomeDataToLocal(centers: centers)
         return WomenCarePointModel(data: centers.data)

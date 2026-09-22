@@ -13,11 +13,11 @@ protocol WomenCarePointHomeNavigationBuilderContract: NavigationBuilder {
 /// Navigation builder implementation for WomenCarePoint Home
 final class WomenCarePointHomeNavigationBuilder: WomenCarePointHomeNavigationBuilderContract {
     /// Default initializer required by the dependency injector
-    public required init() { /* Required by injector */ }
+    required init() { /* Required by injector */ }
     
     /// Navigate to the detail screen of a care point
     /// - Parameter centerData: Complete data of the care point
-    public func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
+    func navigateToCarePointDetail(centerData: WomenCarePointModel.EventModel) {
         Router.shared.navigateTo(IncomingNavigation.detail(centerData: centerData), animated: true)
     }
     
@@ -26,7 +26,7 @@ final class WomenCarePointHomeNavigationBuilder: WomenCarePointHomeNavigationBui
     ///   - animated: Whether the transition should be animated
     ///   - screen: Optional screen info (not used here)
     ///   - completion: Optional completion block executed after navigation
-    public func goBack(animated: Bool, screen: (any NavigationInfo)?, _ completion: (() -> Void)?) {
+    func goBack(animated: Bool, screen: (any NavigationInfo)?, _ completion: (() -> Void)?) {
         Router.shared.goBack(animated: true, completion: completion)
     }
 }

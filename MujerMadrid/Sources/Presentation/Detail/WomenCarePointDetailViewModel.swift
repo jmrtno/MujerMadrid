@@ -7,11 +7,11 @@ import MapKit
 /// Dependencies required to initialize `WomenCarePointDetailViewModel`.
 final class WomenCarePointDetailViewModelDependencies {
     /// Complete data of the Women Care Point center.
-    public let centerData: WomenCarePointModel.EventModel
+    let centerData: WomenCarePointModel.EventModel
 
     /// Initializes the dependencies.
     /// - Parameter centerData: Complete data of the center.
-    public init(centerData: WomenCarePointModel.EventModel) {
+    init(centerData: WomenCarePointModel.EventModel) {
         self.centerData = centerData
     }
 }
@@ -54,7 +54,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     private var centerId: String = ""
 
     /// Required initializer for dependency injection.
-    public required init() {
+    required init() {
         @Injected var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
         self.navigationBuilder = navigationBuilder
     }
@@ -68,9 +68,9 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     // MARK: - Published Properties
 
     /// Published Women Care Point detail content.
-    @Published public var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .init()
+    @Published var womenCarePointDetailInformationPublished: WomenCarePointDetailContentSectionObservedModel = .init()
     /// Published Women Care Point header information.
-    @Published public var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
+    @Published var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
 
     private let locationManager = LocationManager()
     private let smallNameIds: Set<String> = ["5433767", "184260"]
@@ -79,30 +79,30 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     // MARK: - Publishers
 
     /// Publisher emitting the detail content section observed model.
-    public var womenCarePointDetailInformationPublisher: AnyPublisher<WomenCarePointDetailContentSectionObservedModel, Never> {
+    var womenCarePointDetailInformationPublisher: AnyPublisher<WomenCarePointDetailContentSectionObservedModel, Never> {
         $womenCarePointDetailInformationPublished.eraseToAnyPublisher()
     }
 
     /// Publisher emitting the header section observed model.
-    public var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
+    var womenCarePointCenterHeaderInfoPublisher: AnyPublisher<WomenCarePointDetailHeaderSectionObservedModel, Never> {
         $womenCarePointCenterHeaderInfoPublished.eraseToAnyPublisher()
     }
 
     // MARK: - Navigation
 
     /// Navigation builder used to navigate between screens.
-    public var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
+    var navigationBuilder: WomenCarePointDetailNavigationBuilderContract
 
     // MARK: - Inputs
 
     /// Called when the view appears.
-    public func notifyAppearance() {
+    func notifyAppearance() {
         // Data is already populated via setupDependencies
     }
 
     /// Sets up the dependencies of the view model with the complete center data.
     /// - Parameter dependencies: Dependencies required by the view model.
-    public func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
+    func setupDependencies(_ dependencies: WomenCarePointDetailViewModelDependencies) {
         let data = dependencies.centerData
         self.centerId = data.id ?? ""
         self.womenCarePointDetailInformationPublished = WomenCarePointDetailContentSectionObservedModel(data: [data])
@@ -112,13 +112,13 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     }
 
     /// Navigates back to the previous screen.
-    public func goBack() {
+    func goBack() {
         navigationBuilder.goBack(animated: true, screen: nil, nil)
     }
 
     /// Whether Google Maps is installed on the device.
     @MainActor
-    public var isGoogleMapsAvailable: Bool {
+    var isGoogleMapsAvailable: Bool {
         guard let googleMapsURL = URL(string: "comgooglemaps://") else { return false }
         return UIApplication.shared.canOpenURL(googleMapsURL)
     }
@@ -129,7 +129,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     ///   - longitud: Longitude of the destination.
     ///   - app: The maps application to use for directions.
     @MainActor
-    public func navigateTo(latitud: Double, longitud: Double, using app: MapsApp) {
+    func navigateTo(latitud: Double, longitud: Double, using app: MapsApp) {
         switch app {
         case .googleMaps:
             guard let url = URL(string: "comgooglemaps://?daddr=\(latitud),\(longitud)&directionsmode=driving") else { return }
@@ -157,7 +157,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     }
 
     /// Returns the padding size depending on the center ID.
-    public var paddingSize: CGFloat {
+    var paddingSize: CGFloat {
         if smallNameIds.contains(centerId) {
             return 150
         } else if longNameIds.contains(centerId) {
@@ -168,7 +168,7 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     }
 
     /// Returns the header height depending on the center ID.
-    public var headerHeight: CGFloat {
+    var headerHeight: CGFloat {
         if smallNameIds.contains(centerId) {
             return 220
         } else if longNameIds.contains(centerId) {

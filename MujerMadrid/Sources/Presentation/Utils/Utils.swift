@@ -89,7 +89,7 @@ extension View {
     ///   - remove: If true and hide is true, the view will be removed from the hierarchy
     @ViewBuilder
     @MainActor
-    public func hiddenOrRemoved(_ hide: Bool, remove: Bool = false) -> some View {
+    func hiddenOrRemoved(_ hide: Bool, remove: Bool = false) -> some View {
         if hide {
             if remove {
                 EmptyView()

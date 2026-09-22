@@ -8,13 +8,13 @@ import SwiftUI
 @MainActor
 final class WomenCarePointDetailBuilder {
     /// ViewModel of the screen
-    public var viewModel: WomenCarePointDetailViewModelContract
+    var viewModel: WomenCarePointDetailViewModelContract
     
     /// Complete data of the care point
-    public var centerData: WomenCarePointModel.EventModel?
+    var centerData: WomenCarePointModel.EventModel?
 
     /// Default initializer required by FDependencyInjector
-    public required init() {
+    required init() {
         @Injected var viewModel: WomenCarePointDetailViewModelContract
         self.viewModel = viewModel
     }
@@ -31,7 +31,7 @@ final class WomenCarePointDetailBuilder {
     /// 1. Subclass `WomenCarePointDetailBuilder`
     /// 2. Set up ViewModel dependencies (`viewModel.setupDependencies(...)`)
     /// 3. Use `WomenCarePointDetailScreen` init with the helper methods below
-    public func build() -> any View {
+    func build() -> any View {
         guard let centerData else {
             fatalError("centerData must be set before calling build()")
         }
@@ -48,7 +48,7 @@ final class WomenCarePointDetailBuilder {
     /// Sets the complete center data
     /// - Parameter centerData: complete data of the care point
     /// - Returns: Self builder instance with the updated centerData
-    public func setCenterData(_ centerData: WomenCarePointModel.EventModel) -> WomenCarePointDetailBuilder {
+    func setCenterData(_ centerData: WomenCarePointModel.EventModel) -> WomenCarePointDetailBuilder {
         self.centerData = centerData
         return self
     }
@@ -56,7 +56,7 @@ final class WomenCarePointDetailBuilder {
     // MARK: - Top Section
     /// Returns the top section of the screen (header)
     @ViewBuilder
-    public func getTopView() -> some View {
+    func getTopView() -> some View {
         @Injected var mapper: any WomenCarePointDetailHeaderSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointDetailHeaderSectionMapper {
             let publisher = mapperInstance.getObservedPublisher(viewModel as! WomenCarePointDetailHeaderSectionViewModelContract)
@@ -74,7 +74,7 @@ final class WomenCarePointDetailBuilder {
     // MARK: - Content Section
     /// Returns the main content section of the screen
     @ViewBuilder
-    public func getContentView() -> some View {
+    func getContentView() -> some View {
         @Injected var mapper: any WomenCarePointDetailContentSectionMapperContract
         if let mapperInstance = mapper as? WomenCarePointDetailContentSectionMapper {
             let publisher = mapperInstance.getObservedPublisher(viewModel as! WomenCarePointDetailContentSectionViewModelContract)
@@ -92,7 +92,7 @@ final class WomenCarePointDetailBuilder {
     // MARK: - Bottom Section
     /// Returns the bottom section view; empty in this case
     @ViewBuilder
-    public func getBottomView() -> some View {
+    func getBottomView() -> some View {
         EmptyView()
     }
 }

@@ -3,7 +3,7 @@ import Foundation
 
 /// Contract that defines the remote data source responsible for retrieving
 /// home information related to Women Care Points.
-public protocol WomenCarePointHomeRemoteDataSourceContract: Instanciable {
+protocol WomenCarePointHomeRemoteDataSourceContract: Instanciable {
 
     /// Fetches the home information for Women Care Points from a remote source.
     ///
@@ -27,7 +27,7 @@ final class WomenCarePointHomeRemoteDataSource: WomenCarePointHomeRemoteDataSour
     /// Required initializer for dependency injection.
     ///
     /// Dependencies are resolved automatically using the injector.
-    public required init() {
+    required init() {
         @Injected var womenCarePointMapper: WomenCarePointMapperContract
         @Injected var womenCarePointAPI: WomenCarePointAPIContract
         self.womenCarePointMapper = womenCarePointMapper
@@ -52,7 +52,7 @@ final class WomenCarePointHomeRemoteDataSource: WomenCarePointHomeRemoteDataSour
     ///
     /// - Returns: A `WomenCarePointDataEntity` with the mapped home information.
     /// - Throws: An error if the request execution or data mapping fails.
-    public func getHomeInformation() async throws -> WomenCarePointDataEntity {
+    func getHomeInformation() async throws -> WomenCarePointDataEntity {
         do {
             let resultAPI: Data = try await womenCarePointAPI
                 .getWomanCarePointHomeInfo()

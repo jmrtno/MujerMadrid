@@ -3,7 +3,7 @@ import FDependencyInjector
 import FPresentation
 
 ///
-public protocol WomenCarePointHomeHeaderSectionMapperContract: SectionMapperContract {}
+protocol WomenCarePointHomeHeaderSectionMapperContract: SectionMapperContract {}
 
 ///
 final class WomenCarePointHomeHeaderSectionMapper: WomenCarePointHomeHeaderSectionMapperContract {

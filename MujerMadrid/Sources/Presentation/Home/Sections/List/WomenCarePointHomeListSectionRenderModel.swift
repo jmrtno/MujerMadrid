@@ -1,14 +1,14 @@
 struct WomenCarePointHomeListSectionRenderModel {
     /// information from centers
-    public let centers: [Centers]
+    let centers: [Centers]
     /// Boolean that show/hide centers list
-    public var showList: Bool
+    var showList: Bool
     
     /// Initializer for `WomenCarePointHomeListSectionRenderModel`
     /// - Parameters:
     ///  - centers: information from centers
     ///  - showList: Boolean that show/hide centers list
-    public init(centers: [Centers], showList: Bool) {
+    init(centers: [Centers], showList: Bool) {
         self.centers = centers
         self.showList = showList
     }
@@ -21,21 +21,21 @@ struct WomenCarePointHomeListSectionRenderModel {
 
     struct Centers: Identifiable {
         /// Centers id
-        public let id: String
+        let id: String
         /// Centers name
-        public let title: String
+        let title: String
         /// Center saddress
-        public let streetAddress: String
+        let streetAddress: String
         /// Centers postal code
-        public let postalCode: String
+        let postalCode: String
         /// Centesr locality
-        public let locality: String
+        let locality: String
         /// Centers schedule
-        public let schedule: String
+        let schedule: String
         /// Centers location
-        public let location: Location
+        let location: Location
         /// Complete event data for navigation
-        public let eventData: WomenCarePointModel.EventModel
+        let eventData: WomenCarePointModel.EventModel
         
         /// Initializer for `Centers`
         /// - Parameters:
@@ -47,7 +47,7 @@ struct WomenCarePointHomeListSectionRenderModel {
         ///  - schedule: Centers schedule
         ///  - location: Centers location
         ///  - eventData: Complete event data for navigation
-        public init(id: String,
+        init(id: String,
                     title: String,
                     streetAddress: String,
                     postalCode: String,
@@ -80,15 +80,15 @@ struct WomenCarePointHomeListSectionRenderModel {
     
     final class Location: Codable {
         /// Centers latitude
-        public let latitude: Double
+        let latitude: Double
         /// Centers longitude
-        public let longitude: Double
+        let longitude: Double
         
         /// Initializer for `Location`
         /// - Parameters:
         ///  - latitude: Cente's latitude
         ///  - longitude: Centers longitude
-        public init(latitude: Double, longitude: Double) {
+        init(latitude: Double, longitude: Double) {
             self.latitude = latitude
             self.longitude = longitude
         }

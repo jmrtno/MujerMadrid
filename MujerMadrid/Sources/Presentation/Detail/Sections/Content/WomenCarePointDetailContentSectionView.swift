@@ -30,19 +30,6 @@ struct WomenCarePointDetailContentSectionView: View {
             .onReceive(publisher) {
                 renderModel = $0
             }
-            .confirmationDialog("Cómo llegar", isPresented: $isMapsPickerPresented, titleVisibility: .visible) {
-                Button("Apple Maps") {
-                    viewModel.navigateTo(latitud: renderModel.center.location.latitude,
-                                         longitud: renderModel.center.location.longitude,
-                                         using: .appleMaps)
-                }
-                Button("Google Maps") {
-                    viewModel.navigateTo(latitud: renderModel.center.location.latitude,
-                                         longitud: renderModel.center.location.longitude,
-                                         using: .googleMaps)
-                }
-                Button("Cancelar", role: .cancel) {}
-            }
     }
 }
 
@@ -58,6 +45,21 @@ private extension WomenCarePointDetailContentSectionView {
                        content: renderModel.center.services)
             if hasValidCoordinates {
                 showMapButton
+                    .confirmationDialog("¿Que aplicación quieres usar para navegar?",
+                                        isPresented: $isMapsPickerPresented,
+                                        titleVisibility: .visible) {
+                        Button("Apple Maps") {
+                            viewModel.navigateTo(latitud: renderModel.center.location.latitude,
+                                                 longitud: renderModel.center.location.longitude,
+                                                 using: .appleMaps)
+                        }
+                        Button("Google Maps") {
+                            viewModel.navigateTo(latitud: renderModel.center.location.latitude,
+                                                 longitud: renderModel.center.location.longitude,
+                                                 using: .googleMaps)
+                        }
+                        Button("Cancelar", role: .cancel) {}
+                    }
             } else {
                 noMapCard
             }

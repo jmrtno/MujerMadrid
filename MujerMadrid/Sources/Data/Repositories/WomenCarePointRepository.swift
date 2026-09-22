@@ -21,7 +21,7 @@ final class WomenCarePointRepository: @unchecked Sendable,
     /// Required initializer for dependency injection.
     ///
     /// All dependencies are resolved automatically using the injector.
-    public required init() {
+    required init() {
         @Injected var homeRemoteDataSource:WomenCarePointHomeRemoteDataSourceContract
         @Injected var homeLocalDataSource:WomenCarePointHomeLocalDataSourceContract
         @Injected var getWomenCarePointEntityMapper:WomenCarePointMapperContract
@@ -53,7 +53,7 @@ final class WomenCarePointRepository: @unchecked Sendable,
     ///
     /// - Returns: A `WomenCarePointModel` containing home information.
     /// - Throws: An error if remote fetching or mapping fails.
-    public func getWomanCarePointHomeInformation() async throws -> WomenCarePointModel {
+    func getWomanCarePointHomeInformation() async throws -> WomenCarePointModel {
         let localCenters = try await getCentersHomeInfoFromLocalData()
         if localCenters.data.isEmpty {
             return try await getCentersHomeInfoFromRemoteData()
@@ -65,7 +65,7 @@ final class WomenCarePointRepository: @unchecked Sendable,
     ///
     /// - Parameter centers: Domain model containing Women Care Points home information.
     /// - Throws: An error if mapping fails.
-    public func saveHomeDataToLocal(centers:WomenCarePointModel) async throws {
+    func saveHomeDataToLocal(centers:WomenCarePointModel) async throws {
         let entity = try getWomenCarePointEntityMapper.map(centers)
         await homeLocalDataSource.setLocalHomeInformation(entity: entity)
     }

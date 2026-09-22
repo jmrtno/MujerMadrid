@@ -3,7 +3,7 @@ import FDependencyInjector
 import FPresentation
 
 /// Contract defining the interface for mapping the Women Care Point Home list section.
-public protocol WomenCarePointHomeListSectionMapperContract: SectionMapperContract {}
+protocol WomenCarePointHomeListSectionMapperContract: SectionMapperContract {}
 
 /// Mapper for the Women Care Point Home list section.
 /// Responsible for converting the observed model from the view model into a render model suitable for the view.

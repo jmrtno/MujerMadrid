@@ -13,12 +13,12 @@ let jsonDecoder: JSONDecoder = {
 ///
 /// This entity directly mirrors the API JSON format and is intended
 /// to be used in the data layer before mapping into domain models.
-public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
+class WomenCarePointDataEntity: @unchecked Sendable, Codable {
 
     /// Main container of events returned by the API.
     ///
     /// This property maps the `@graph` key from the JSON response.
-    public let graph: [Event?]?
+    let graph: [Event?]?
 
     /// Coding keys to map special JSON keys.
     enum CodingKeys: String, CodingKey {
@@ -28,7 +28,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     /// Initializes the root data entity.
     ///
     /// - Parameter graph: Array of optional `Event` objects.
-    public init(graph: [Event?]?) {
+    init(graph: [Event?]?) {
         self.graph = graph
     }
 
@@ -36,7 +36,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     ///
     /// This entity contains general information, location data,
     /// organizational details and recurrence rules.
-    public class Event: Codable {
+    class Event: Codable {
 
         /// Unique identifier of the event.
         let id: String?
@@ -104,7 +104,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         ///   - recurrence: Recurrence rules.
         ///   - type: Event type metadata.
         ///   - url: Canonical event identifier.
-        public init(id: String?,
+        init(id: String?,
                     uid: String?,
                     dtstart: String?,
                     dtend: String?,
@@ -144,7 +144,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents geographic coordinates.
-    public class Location: Codable {
+    class Location: Codable {
         /// Latitude coordinate.
         let latitude: Double?
         /// Longitude coordinate.
@@ -155,14 +155,14 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         /// - Parameters:
         ///   - latitude: Latitude coordinate.
         ///   - longitude: Longitude coordinate.
-        public init(latitude: Double?, longitude: Double?) {
+        init(latitude: Double?, longitude: Double?) {
             self.latitude = latitude
             self.longitude = longitude
         }
     }
 
     /// Represents postal address information.
-    public class Address: Codable {
+    class Address: Codable {
         /// City or locality name.
         let locality: String?
         /// Postal code.
@@ -190,7 +190,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         ///   - streetAddress: Street name and number.
         ///   - area: Administrative area identifier.
         ///   - district: District identifier.
-        public init(locality: String?,
+        init(locality: String?,
                     postalCode: String?,
                     streetAddress: String?,
                     area: IDWrapper?,
@@ -204,7 +204,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Wrapper used to decode objects that only expose an `@id` field.
-    public class IDWrapper: Codable {
+    class IDWrapper: Codable {
         /// Identifier value.
         let id: String?
 
@@ -217,13 +217,13 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         ///
         /// - Parameters:
         ///   - id: Identifier value.
-        public init(id: String?) {
+        init(id: String?) {
             self.id = id
         }
     }
 
     /// Represents organizational information related to a care point.
-    public class Organization: Codable {
+    class Organization: Codable {
         /// Accessibility information.
         let accesibility: String?
         /// Services offered by the organization.
@@ -250,7 +250,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         ///   - schedule: Opening hours or schedule.
         ///   - organizationName: Organization name.
         ///   - organizationDesc: Organization description.itializes an `Organization`.
-        public init(accesibility: String?,
+        init(accesibility: String?,
                     services: String?,
                     schedule: String?,
                     organizationName: String?,
@@ -264,7 +264,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents recurrence rules for repeated events.
-    public class Recurrence: Codable {
+    class Recurrence: Codable {
         /// Interval between recurrences.
         let interval: Int?
         /// Days on which the event occurs.
@@ -278,7 +278,7 @@ public class WomenCarePointDataEntity: @unchecked Sendable, Codable {
         ///   - interval: Interval between recurrences.
         ///   - days: Days on which the event occurs.
         ///   - frequency: Recurrence frequency.
-        public init(interval: Int?, days: String?, frequency: String?) {
+        init(interval: Int?, days: String?, frequency: String?) {
             self.interval = interval
             self.days = days
             self.frequency = frequency

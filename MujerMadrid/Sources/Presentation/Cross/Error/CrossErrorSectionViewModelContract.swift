@@ -4,7 +4,7 @@ import Combine
 ///
 /// This protocol exposes inputs that the view model can respond to, typically
 /// from user interactions in the UI.
-public protocol CrossErrorSectionViewModelContract {
+protocol CrossErrorSectionViewModelContract {
 
     // MARK: - Inputs
 

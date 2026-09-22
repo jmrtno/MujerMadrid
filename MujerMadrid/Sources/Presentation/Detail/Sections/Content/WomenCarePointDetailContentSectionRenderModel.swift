@@ -2,12 +2,12 @@ import MapKit
 
 struct WomenCarePointDetailContentSectionRenderModel {
     /// information from centers
-    public let center: Center
+    let center: Center
 
     /// Initializer for `WomenCarePointDetailContentSectionRenderModel`
     /// - Parameters:
     ///  - centers: information from centers
-    public init(center: Center) {
+    init(center: Center) {
         self.center = center
     }
     
@@ -18,23 +18,23 @@ struct WomenCarePointDetailContentSectionRenderModel {
     
     struct Center: Identifiable {
         /// Center id
-        public let id: String
+        let id: String
         /// Center name
-        public let title: String
+        let title: String
         /// Center description
-        public let description: String
+        let description: String
         /// Center services
-        public let services: String
+        let services: String
         /// Center street address
-        public let streetAddress: String
+        let streetAddress: String
         /// Center postal code
-        public let postalCode: String
+        let postalCode: String
         /// Center locality
-        public let locality: String
+        let locality: String
         /// Center schedule
-        public let schedule: String
+        let schedule: String
         /// Center location
-        public let location: Location
+        let location: Location
         
         /// Initializer for `Center`
         /// - Parameters:
@@ -47,7 +47,7 @@ struct WomenCarePointDetailContentSectionRenderModel {
         ///  - locality: Center locality
         ///  - schedule: Center schedule
         ///  - location: Center location
-        public init(id: String,
+        init(id: String,
                     title: String,
                     description: String,
                     services: String,
@@ -83,15 +83,15 @@ struct WomenCarePointDetailContentSectionRenderModel {
     
     struct Location: Codable {
         /// Center latitude
-        public let latitude: Double
+        let latitude: Double
         /// Center longitude
-        public let longitude: Double
+        let longitude: Double
         
         /// Initializer for `Location`
         /// - Parameters:
         ///  - latitude: Center latitude
         ///  - longitude: Center longitude
-        public init(latitude: Double, longitude: Double) {
+        init(latitude: Double, longitude: Double) {
             self.latitude = latitude
             self.longitude = longitude
         }

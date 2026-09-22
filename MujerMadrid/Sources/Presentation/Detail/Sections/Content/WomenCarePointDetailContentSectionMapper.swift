@@ -3,7 +3,7 @@ import FDependencyInjector
 import FPresentation
 
 /// Contract defining the interface for mapping Women Care Point detail content sections.
-public protocol WomenCarePointDetailContentSectionMapperContract: SectionMapperContract {}
+protocol WomenCarePointDetailContentSectionMapperContract: SectionMapperContract {}
 
 /// Mapper responsible for converting observed models into render models
 /// for the Women Care Point detail content section.
