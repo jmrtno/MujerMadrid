@@ -2,7 +2,7 @@ import FDependencyInjector
 
 /// Contract that defines the interface for a repository handling
 /// Women Care Points data.
-protocol WomenCarePointRepositoryContract: Instanciable {
+protocol WomenCarePointRepositoryContract: Sendable, Instanciable {
 
     /// Retrieves the home information for all Women Care Points.
     ///

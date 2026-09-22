@@ -20,7 +20,7 @@ struct WomenCarePointDetailScreen<Top: View,
     ///   - top: View to be shown as top of the view (Fixed to the top).
     ///   - content: View to be shown as content of sections.
     ///   - bottom: View to be shown as bottom or footer of sections.
-    public init(viewModel: WomenCarePointDetailViewModelContract,
+    init(viewModel: WomenCarePointDetailViewModelContract,
                 @ViewBuilder top: () -> Top,
                 @ViewBuilder content: () -> Content,
                 @ViewBuilder bottom: () -> Bottom) {
@@ -30,7 +30,7 @@ struct WomenCarePointDetailScreen<Top: View,
         self.viewModel = viewModel
     }
     
-    public var body: some View {
+    var body: some View {
         ZStack(alignment: .top) {
             top
                 .accessibilityFocused($isDetailTitleFocused)

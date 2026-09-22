@@ -3,7 +3,7 @@ import FData
 import Foundation
 
 /// Contract that defines the available API endpoints related to Women Care Points.
-public protocol WomenCarePointAPIContract: Instanciable {
+protocol WomenCarePointAPIContract: Sendable, Instanciable {
 
     /// Creates an API request to fetch the information displayed on the Women Care Points home screen.
     ///
@@ -19,7 +19,7 @@ public protocol WomenCarePointAPIContract: Instanciable {
 final class WomenCarePointAPI: WomenCarePointAPIContract {
 
     /// Required initializer for dependency injection.
-    public required init() {
+    required init() {
         /* Required by the injector */
     }
 
@@ -27,7 +27,7 @@ final class WomenCarePointAPI: WomenCarePointAPIContract {
     /// for all Women Care Points.
     ///
     /// - Returns: A `HTTPAPIContract` representing the home information endpoint.
-    public func getWomanCarePointHomeInfo() -> any HTTPAPIContract {
+    func getWomanCarePointHomeInfo() -> any HTTPAPIContract {
         FetchHomeInformationEndpoint()
     }
 

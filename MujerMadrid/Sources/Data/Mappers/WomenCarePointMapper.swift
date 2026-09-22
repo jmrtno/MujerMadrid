@@ -36,17 +36,17 @@ protocol WomenCarePointMapperContract: Sendable, Instanciable {
 /// - Raw API responses (`Data`)
 /// - Data entities (`WomenCarePointDataEntity`)
 /// - Domain models (`WomenCarePointModel`)
-final class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContract {
+final class WomenCarePointMapper: WomenCarePointMapperContract {
 
     /// Required initializer for dependency injection.
-    public required init() {}
+    required init() {}
 
     /// Decodes raw API data into a `WomenCarePointDataEntity`.
     ///
     /// - Parameter input: Raw data returned by the API.
     /// - Returns: A decoded `WomenCarePointDataEntity`.
     /// - Throws: An error if decoding fails.
-    public func map(_ input: Data) throws -> WomenCarePointDataEntity {
+    func map(_ input: Data) throws -> WomenCarePointDataEntity {
         return try input.map(WomenCarePointDataEntity.self)
     }
 
@@ -58,7 +58,7 @@ final class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContr
     /// - Parameter input: Data entity containing raw API information.
     /// - Returns: A `WomenCarePointModel` with mapped domain data.
     /// - Throws: An error if mapping fails.
-    public func map(_ input: WomenCarePointDataEntity) throws -> WomenCarePointModel {
+    func map(_ input: WomenCarePointDataEntity) throws -> WomenCarePointModel {
         guard let dataInfo = input.graph else {
             return WomenCarePointModel(data: [])
         }
@@ -140,7 +140,7 @@ final class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContr
     /// - Parameter input: Domain model containing Women Care Points information.
     /// - Returns: A `WomenCarePointDataEntity` suitable for persistence.
     /// - Throws: An error if mapping fails.
-    public func map(_ input: WomenCarePointModel) throws -> WomenCarePointDataEntity {
+    func map(_ input: WomenCarePointModel) throws -> WomenCarePointDataEntity {
         let events:[WomenCarePointDataEntity.Event?] = input.data.map { modelEvent in
 
             let location = modelEvent.location.map {

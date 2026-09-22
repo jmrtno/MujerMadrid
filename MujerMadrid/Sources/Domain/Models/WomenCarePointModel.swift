@@ -4,21 +4,21 @@ import Foundation
 ///
 /// This model is used by the domain and presentation layers and
 /// is independent from the API response structure.
-final class WomenCarePointModel: @unchecked Sendable, Codable {
+struct WomenCarePointModel: Codable {
 
     /// Collection of care point events.
-    public let data: [EventModel]
+    let data: [EventModel]
 
     /// Initializes the model with a list of events.
     ///
     /// - Parameters:
     ///   - data: Array of `EventModel` representing care points.
-    public init(data: [EventModel]) {
+    init(data: [EventModel]) {
         self.data = data
     }
 
     /// Domain representation of a single care point event.
-    final class EventModel: Codable {
+    struct EventModel: Codable {
 
         /// Unique identifier of the event.
         let id: String?
@@ -78,7 +78,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         ///   - recurrence: Recurrence rules.
         ///   - type: Type metadata.
         ///   - url: Canonical identifier or URL.
-        public init(
+        init(
             id: String?,
             uid: String?,
             dtstart: String?,
@@ -120,7 +120,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of geographic coordinates.
-    final class LocationModel: Codable {
+    struct LocationModel: Codable {
 
         /// Latitude coordinate.
         let latitude: Double?
@@ -132,14 +132,14 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         /// - Parameters:
         ///   - latitude: Latitude coordinate.
         ///   - longitude: Longitude coordinate.
-        public init(latitude: Double?, longitude: Double?) {
+        init(latitude: Double?, longitude: Double?) {
             self.latitude = latitude
             self.longitude = longitude
         }
     }
 
     /// Domain representation of postal address information.
-    final class AddressModel: Codable {
+    struct AddressModel: Codable {
 
         /// City or locality name.
         let locality: String?
@@ -160,7 +160,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         ///   - streetAddress: Street name and number.
         ///   - area: Administrative area identifier.
         ///   - district: District identifier.
-        public init(
+        init(
             locality: String?,
             postalCode: String?,
             streetAddress: String?,
@@ -176,7 +176,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Wrapper model for identifier-based objects.
-    final class IDWrapperModel: Codable {
+    struct IDWrapperModel: Codable {
 
         /// Identifier value.
         let id: String?
@@ -185,13 +185,13 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         ///
         /// - Parameters:
         ///   - id: Identifier value.
-        public init(id: String?) {
+        init(id: String?) {
             self.id = id
         }
     }
 
     /// Domain representation of organization information.
-    public class OrganizationModel: Codable {
+    struct OrganizationModel: Codable {
 
         /// Accessibility information.
         let accesibility: String?
@@ -212,7 +212,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         ///   - schedule: Opening hours or schedule.
         ///   - organizationName: Organization name.
         ///   - organizationDesc: Organization description.
-        public init(
+        init(
             accesibility: String?,
             services: String?,
             schedule: String?,
@@ -228,7 +228,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of recurrence rules.
-    public class RecurrenceModel: Codable {
+    struct RecurrenceModel: Codable {
 
         /// Interval between recurrences.
         let interval: Int?
@@ -243,7 +243,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
         ///   - interval: Interval between recurrences.
         ///   - days: Days on which the event occurs.
         ///   - frequency: Recurrence frequency.
-        public init(interval: Int?, days: String?, frequency: String?) {
+        init(interval: Int?, days: String?, frequency: String?) {
             self.interval = interval
             self.days = days
             self.frequency = frequency

@@ -6,7 +6,7 @@ import Foundation
 ///
 /// This data source is actor-isolated to ensure thread-safe access
 /// in concurrent environments.
-public protocol WomenCarePointHomeLocalDataSourceContract: Actor, Sendable, Instanciable {
+protocol WomenCarePointHomeLocalDataSourceContract: Actor, Sendable, Instanciable {
 
     /// Retrieves the locally cached home information for Women Care Points.
     ///
@@ -23,25 +23,25 @@ public protocol WomenCarePointHomeLocalDataSourceContract: Actor, Sendable, Inst
 ///
 /// This actor acts as an in-memory cache for the Women Care Points home information,
 /// providing safe access across multiple concurrent contexts.
-public actor WomenCarePointHomeLocalDataSource: @unchecked Sendable, WomenCarePointHomeLocalDataSourceContract {
+actor WomenCarePointHomeLocalDataSource: WomenCarePointHomeLocalDataSourceContract {
 
     /// Cached home information stored in memory.
     private var informationLocalDataSource: WomenCarePointDataEntity?
 
     /// Initializes the local data source.
-    public init() { }
+    init() { }
 
     /// Returns the locally stored home information, if any.
     ///
     /// - Returns: A `WomenCarePointDataEntity` if cached, otherwise `nil`.
-    public func getLocalHomeInformation() -> WomenCarePointDataEntity? {
+    func getLocalHomeInformation() -> WomenCarePointDataEntity? {
         return informationLocalDataSource
     }
 
     /// Updates the locally stored home information.
     ///
     /// - Parameter entity: The `WomenCarePointDataEntity` to store.
-    public func setLocalHomeInformation(entity: WomenCarePointDataEntity) {
+    func setLocalHomeInformation(entity: WomenCarePointDataEntity) {
         self.informationLocalDataSource = entity
     }
 }

@@ -13,7 +13,7 @@ protocol GetWomenCarePointHomeUseCaseContract: UseCaseContract, Sendable {
 
 /// Use case implementation responsible for fetching home information
 /// for all Women Care Points and caching it locally.
-class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract, @unchecked Sendable {
+final class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract {
 
     /// Repository used to access Women Care Point data.
     let womenCarePointRepository: WomenCarePointRepositoryContract
@@ -31,7 +31,7 @@ class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract, @unche
     ///
     /// - Returns: A `WomenCarePointModel` containing home information.
     /// - Throws: An error if data fetching, mapping, or caching fails.
-    public func run() async throws -> WomenCarePointModel {
+    func run() async throws -> WomenCarePointModel {
         let centers = try await womenCarePointRepository.getWomanCarePointHomeInformation()
         try await womenCarePointRepository.saveHomeDataToLocal(centers: centers)
         return WomenCarePointModel(data: centers.data)

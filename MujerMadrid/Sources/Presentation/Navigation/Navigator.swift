@@ -4,16 +4,16 @@ import SwiftUI
 
 /// Central navigator that resolves `NavigationInfo` into SwiftUI views.
 /// Conforms to `ScreenNavigator` to be used by `Router`.
-final class Navigator: @unchecked Sendable, ScreenNavigator {
+final class Navigator: ScreenNavigator {
     
     /// Required initializer
-    public required init() {}
+    required init() {}
     
     /// Resolves a `NavigationInfo` into a SwiftUI destination view
     /// - Parameter navigationInfo: The navigation info to resolve
     /// - Throws: If the navigation info cannot be handled
     /// - Returns: An optional SwiftUI view corresponding to the navigation info
-    public func destinationFor(navigationInfo: NavigationInfo) throws -> (any View)? {
+    func destinationFor(navigationInfo: NavigationInfo) throws -> (any View)? {
         // Ensure the navigation info is of type IncomingNavigation
         guard let navigation = navigationInfo as? IncomingNavigation else {
             return nil

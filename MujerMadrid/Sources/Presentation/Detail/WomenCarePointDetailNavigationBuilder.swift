@@ -12,7 +12,7 @@ protocol WomenCarePointDetailNavigationBuilderContract: NavigationBuilder {}
 final class WomenCarePointDetailNavigationBuilder: WomenCarePointDetailNavigationBuilderContract {
 
     /// Required initializer for dependency injection.
-    public required init() { /* Required by injector */ }
+    required init() { /* Required by injector */ }
 
     /// Performs the action to navigate back from the current screen.
     ///
@@ -20,7 +20,7 @@ final class WomenCarePointDetailNavigationBuilder: WomenCarePointDetailNavigatio
     ///   - animated: Boolean indicating whether the transition should be animated.
     ///   - screen: Optional `NavigationInfo` representing the screen to navigate back to.
     ///   - completion: Optional closure to execute after navigation completes.
-    public func goBack(animated: Bool, screen: (any NavigationInfo)?, _ completion: (() -> Void)?) {
+    func goBack(animated: Bool, screen: (any NavigationInfo)?, _ completion: (() -> Void)?) {
         Router.shared.goBack(animated: true, completion: completion)
     }
 }

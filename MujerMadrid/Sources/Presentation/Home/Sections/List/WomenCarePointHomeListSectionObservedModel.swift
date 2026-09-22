@@ -1,14 +1,14 @@
 struct WomenCarePointHomeListSectionObservedModel {
     /// information from centers
-    public var data: [WomenCarePointModel.EventModel]?
+    var data: [WomenCarePointModel.EventModel]?
     /// Boolean that show/hide centers list
-    public var showList: Bool
+    var showList: Bool
     
     /// Initializer for `WomenCarePointHomeListSectionObservedModel`
     /// - Parameters:
     ///  - data: information from centers
     ///  - showList: Boolean that show/hide centers list
-    public init(data: [WomenCarePointModel.EventModel]?, showList: Bool) {
+    init(data: [WomenCarePointModel.EventModel]?, showList: Bool) {
         self.data = data
         self.showList = showList
     }
