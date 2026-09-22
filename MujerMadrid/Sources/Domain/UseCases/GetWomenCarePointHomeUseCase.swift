@@ -13,7 +13,7 @@ protocol GetWomenCarePointHomeUseCaseContract: UseCaseContract, Sendable {
 
 /// Use case implementation responsible for fetching home information
 /// for all Women Care Points and caching it locally.
-class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract, @unchecked Sendable {
+final class GetWomenCarePointHomeUseCase: GetWomenCarePointHomeUseCaseContract {
 
     /// Repository used to access Women Care Point data.
     let womenCarePointRepository: WomenCarePointRepositoryContract

@@ -3,7 +3,7 @@ import FData
 import Foundation
 
 /// Contract that defines the available API endpoints related to Women Care Points.
-protocol WomenCarePointAPIContract: Instanciable {
+protocol WomenCarePointAPIContract: Sendable, Instanciable {
 
     /// Creates an API request to fetch the information displayed on the Women Care Points home screen.
     ///

@@ -36,7 +36,7 @@ protocol WomenCarePointMapperContract: Sendable, Instanciable {
 /// - Raw API responses (`Data`)
 /// - Data entities (`WomenCarePointDataEntity`)
 /// - Domain models (`WomenCarePointModel`)
-final class WomenCarePointMapper: @unchecked Sendable, WomenCarePointMapperContract {
+final class WomenCarePointMapper: WomenCarePointMapperContract {
 
     /// Required initializer for dependency injection.
     required init() {}

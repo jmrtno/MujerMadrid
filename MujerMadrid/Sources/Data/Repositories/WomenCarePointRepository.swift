@@ -8,8 +8,7 @@ import Foundation
 /// - Local data source (in-memory cache)
 ///
 /// It also handles mapping between data entities and domain models.
-final class WomenCarePointRepository: @unchecked Sendable,
-                                     WomenCarePointRepositoryContract {
+final class WomenCarePointRepository: WomenCarePointRepositoryContract {
 
     /// Remote data source used to fetch home information.
     let homeRemoteDataSource:WomenCarePointHomeRemoteDataSourceContract

@@ -13,7 +13,7 @@ let jsonDecoder: JSONDecoder = {
 ///
 /// This entity directly mirrors the API JSON format and is intended
 /// to be used in the data layer before mapping into domain models.
-class WomenCarePointDataEntity: @unchecked Sendable, Codable {
+struct WomenCarePointDataEntity: Codable {
 
     /// Main container of events returned by the API.
     ///
@@ -36,7 +36,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     ///
     /// This entity contains general information, location data,
     /// organizational details and recurrence rules.
-    class Event: Codable {
+    struct Event: Codable {
 
         /// Unique identifier of the event.
         let id: String?
@@ -144,7 +144,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents geographic coordinates.
-    class Location: Codable {
+    struct Location: Codable {
         /// Latitude coordinate.
         let latitude: Double?
         /// Longitude coordinate.
@@ -162,7 +162,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents postal address information.
-    class Address: Codable {
+    struct Address: Codable {
         /// City or locality name.
         let locality: String?
         /// Postal code.
@@ -204,7 +204,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Wrapper used to decode objects that only expose an `@id` field.
-    class IDWrapper: Codable {
+    struct IDWrapper: Codable {
         /// Identifier value.
         let id: String?
 
@@ -223,7 +223,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents organizational information related to a care point.
-    class Organization: Codable {
+    struct Organization: Codable {
         /// Accessibility information.
         let accesibility: String?
         /// Services offered by the organization.
@@ -264,7 +264,7 @@ class WomenCarePointDataEntity: @unchecked Sendable, Codable {
     }
 
     /// Represents recurrence rules for repeated events.
-    class Recurrence: Codable {
+    struct Recurrence: Codable {
         /// Interval between recurrences.
         let interval: Int?
         /// Days on which the event occurs.

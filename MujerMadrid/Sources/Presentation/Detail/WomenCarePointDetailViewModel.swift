@@ -5,7 +5,7 @@ import Foundation
 import MapKit
 
 /// Dependencies required to initialize `WomenCarePointDetailViewModel`.
-final class WomenCarePointDetailViewModelDependencies {
+struct WomenCarePointDetailViewModelDependencies {
     /// Complete data of the Women Care Point center.
     let centerData: WomenCarePointModel.EventModel
 
@@ -72,7 +72,6 @@ final class WomenCarePointDetailViewModel: @unchecked Sendable,
     /// Published Women Care Point header information.
     @Published var womenCarePointCenterHeaderInfoPublished: WomenCarePointDetailHeaderSectionObservedModel = .init()
 
-    private let locationManager = LocationManager()
     private let smallNameIds: Set<String> = ["5433767", "184260"]
     private let longNameIds: Set<String> = ["11952990", "11089192"]
 

@@ -4,7 +4,7 @@ import SwiftUI
 
 /// Central navigator that resolves `NavigationInfo` into SwiftUI views.
 /// Conforms to `ScreenNavigator` to be used by `Router`.
-final class Navigator: @unchecked Sendable, ScreenNavigator {
+final class Navigator: ScreenNavigator {
     
     /// Required initializer
     required init() {}

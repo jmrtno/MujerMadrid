@@ -3,7 +3,7 @@ import Foundation
 
 /// Contract that defines the remote data source responsible for retrieving
 /// home information related to Women Care Points.
-protocol WomenCarePointHomeRemoteDataSourceContract: Instanciable {
+protocol WomenCarePointHomeRemoteDataSourceContract: Sendable, Instanciable {
 
     /// Fetches the home information for Women Care Points from a remote source.
     ///
@@ -19,10 +19,10 @@ protocol WomenCarePointHomeRemoteDataSourceContract: Instanciable {
 final class WomenCarePointHomeRemoteDataSource: WomenCarePointHomeRemoteDataSourceContract {
 
     /// Mapper responsible for converting raw API data into `WomenCarePointDataEntity`.
-    var womenCarePointMapper: WomenCarePointMapperContract
+    let womenCarePointMapper: WomenCarePointMapperContract
 
     /// API used to perform network requests related to Women Care Points.
-    var womenCarePointAPI: WomenCarePointAPIContract
+    let womenCarePointAPI: WomenCarePointAPIContract
 
     /// Required initializer for dependency injection.
     ///

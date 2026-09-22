@@ -23,7 +23,7 @@ protocol WomenCarePointHomeLocalDataSourceContract: Actor, Sendable, Instanciabl
 ///
 /// This actor acts as an in-memory cache for the Women Care Points home information,
 /// providing safe access across multiple concurrent contexts.
-actor WomenCarePointHomeLocalDataSource: @unchecked Sendable, WomenCarePointHomeLocalDataSourceContract {
+actor WomenCarePointHomeLocalDataSource: WomenCarePointHomeLocalDataSourceContract {
 
     /// Cached home information stored in memory.
     private var informationLocalDataSource: WomenCarePointDataEntity?

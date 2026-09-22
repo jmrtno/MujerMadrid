@@ -4,7 +4,7 @@ import Foundation
 ///
 /// This model is used by the domain and presentation layers and
 /// is independent from the API response structure.
-final class WomenCarePointModel: @unchecked Sendable, Codable {
+struct WomenCarePointModel: Codable {
 
     /// Collection of care point events.
     let data: [EventModel]
@@ -18,7 +18,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of a single care point event.
-    final class EventModel: Codable {
+    struct EventModel: Codable {
 
         /// Unique identifier of the event.
         let id: String?
@@ -120,7 +120,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of geographic coordinates.
-    final class LocationModel: Codable {
+    struct LocationModel: Codable {
 
         /// Latitude coordinate.
         let latitude: Double?
@@ -139,7 +139,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of postal address information.
-    final class AddressModel: Codable {
+    struct AddressModel: Codable {
 
         /// City or locality name.
         let locality: String?
@@ -176,7 +176,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Wrapper model for identifier-based objects.
-    final class IDWrapperModel: Codable {
+    struct IDWrapperModel: Codable {
 
         /// Identifier value.
         let id: String?
@@ -191,7 +191,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of organization information.
-    class OrganizationModel: Codable {
+    struct OrganizationModel: Codable {
 
         /// Accessibility information.
         let accesibility: String?
@@ -228,7 +228,7 @@ final class WomenCarePointModel: @unchecked Sendable, Codable {
     }
 
     /// Domain representation of recurrence rules.
-    class RecurrenceModel: Codable {
+    struct RecurrenceModel: Codable {
 
         /// Interval between recurrences.
         let interval: Int?

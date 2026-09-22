@@ -78,7 +78,7 @@ struct WomenCarePointHomeListSectionRenderModel {
         }
     }
     
-    final class Location: Codable {
+    struct Location: Codable {
         /// Centers latitude
         let latitude: Double
         /// Centers longitude

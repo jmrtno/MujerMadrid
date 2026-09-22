@@ -6,7 +6,7 @@ import MapKit
 import SwiftUI
 
 /// Dependencies of the WomenCarePointHomeViewModel
-final class WomenCarePointHomeViewModelDependencies {}
+struct WomenCarePointHomeViewModelDependencies {}
 
 /// Contract defining the public interface of the WomenCarePointHomeViewModel
 protocol WomenCarePointHomeViewModelContract: ViewModelContract {
